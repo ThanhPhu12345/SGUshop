@@ -16,42 +16,29 @@ body {
 /* Thanh top-bar chứa thông báo, liên hệ */
 .top-bar {
     background-color: #0078d7;
-    /* Màu nền cho thanh điều hướng */
     color: white;
-    /* Màu chữ */
     padding: 0px 10px;
-    /* Padding cho thanh điều hướng */
     display: flex;
-    /* Sử dụng flexbox */
     justify-content: flex-end;
-    /* Căn phải các liên kết */
     gap: 10px;
-    /* Khoảng cách giữa các liên kết */
     font-size: 14px;
-    /* Kích thước chữ */
 }
 
-/* Định dạng cho các liên kết trong top bar */
 .top-bar a {
     text-decoration: none;
-    /* Không gạch chân */
     color: white;
-    /* Màu chữ cho các liên kết */
     padding: 8px 8px;
     /* Padding cho các liên kết */
     border-radius: 4px;
     /* Bo tròn góc cho các liên kết */
     transition: background-color 0.3s ease;
-    /* Hiệu ứng chuyển tiếp cho màu nền */
 }
 
-/* Hiệu ứng hover cho các liên kết */
 .top-bar a:hover {
     background-color: rgba(255, 255, 255, 0.2);
     /* Nền sáng hơn khi hover */
 }
 
-/* Định dạng icon trong các liên kết */
 .top-bar i {
     margin-right: 5px;
     /* Khoảng cách giữa icon và văn bản */
@@ -68,11 +55,10 @@ body {
 }
 
 
-
 /* Header chính chứa logo, tìm kiếm, và giỏ hàng */
 .header {
     background-color: #0078d7;
-    padding: 0px 20px 10px 10px;
+    padding: 0px 20px 0px 10px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -100,11 +86,10 @@ body {
 
 }
 
-/* Logo */
 .logo_saigonuni a {
     /* font-family: 'Poppins', sans-serif; */
     font-weight: bold;
-    font-size: 48px;
+    font-size: 38px;
     letter-spacing: 2px;
     color: #ffffff;
     /* Màu trắng */
@@ -117,11 +102,12 @@ body {
     display: inline-block;
     position: relative;
     text-decoration: none;
-    top: 20px;
+    top: 24px;
     /* Để cho hiệu ứng lửa được chính xác */
     transition: transform 0.3s ease;
     /* Hiệu ứng chuyển tiếp */
 }
+
 
 .header .search-bar {
     display: flex;
@@ -164,6 +150,24 @@ body {
     margin-right: 10px;
 }
 
+.icart {
+    display: flex;
+    align-items: center;
+    background-color: #005bb5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    left: -100px;
+}
+
+
+
+.cart i {
+    margin-right: 10px;
+}
+
 .cart-count {
     background-color: #e5e5e5;
     color: black;
@@ -200,7 +204,7 @@ body {
 
 .nav-bar .Home {
     box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid white;
+    /* border-bottom: px solid white; */
     transition: box-shadow 0.3s ease;
 }
 
@@ -225,7 +229,7 @@ body {
     z-index: 1;
     padding: 20px;
     /* Thêm padding cho dropdown */
-    top: 28px;
+    top: 29px;
     border-radius: 4px;
 }
 
@@ -243,7 +247,6 @@ body {
     /* Chiếm toàn bộ chiều cao */
 }
 
-/* Cải thiện màu sắc cho chữ trong dropdown */
 .dropdown-content a {
     color: #333;
     /* Màu chữ tối cho các liên kết */
@@ -378,18 +381,240 @@ body {
 
 
 
-/* Main content chiếm không gian còn lại */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Main content */
 .main-content {
-    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    /* Restrict maximum width to avoid overflow */
+    margin: 0 auto;
+    /* Center the content horizontally */
+    padding: 15px;
+    box-sizing: border-box;
+    /* Ensures padding doesn’t cause overflow */
     display: flex;
-    flex-direction: column;
 }
 
-/* Contenttest chiếm toàn bộ chiều rộng và chiều cao */
-.contenttest {
-    flex: 1;
-    display: flex;
+/* Sidebar */
+.sidebar {
+    flex-basis: 25%;
+    /* Adjust width based on layout preference */
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
 }
+
+/* Content */
+.contenttest {
+    flex-basis: 70%;
+    /* Adjust width based on layout preference */
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.sidebar .tool_1 {
+    margin: 0 auto;
+    padding: 10px;
+    align-items: center;
+}
+
+.contenttest img {
+    width: 100%;
+    height: cover;
+    margin: 10px auto 5px auto;
+    padding-left: 10px;
+}
+
+.contenttest h1 {
+    text-align: center;
+    width: auto;
+    border-bottom: 1px solid #E8E8E8;
+}
+
+.product-gallery {
+    width: 850px;
+    height: cover;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Allow items to wrap */
+    padding: 15px;
+    /* Remove padding if needed */
+}
+
+.product-item {
+    height: 350px;
+    /* Adjust this value as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    flex: 0 1 150px;
+    font-size: 14px;
+    font-family: 'Open Sans', sans-serif;
+    color: #555;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: solid #E8E8E8;
+}
+
+
+.product-item p {
+    display: inline-block;
+    text-overflow: ellipsis;
+    width: 150px;
+    white-space: normal;
+    /* Allows text to wrap to the next line */
+    height: auto;
+    /* Ensure it adapts to content */
+    max-height: 3em;
+    /* Adjust as needed */
+}
+
+
+.product-item img {
+    width: 100%;
+    height: 150px;
+    /* Adjust based on your layout */
+    object-fit: cover;
+    /* Ensures images maintain aspect ratio within the fixed height */
+}
+
+
+.product-item .muahang {
+    display: inline-block;
+    border: solid white;
+    border-radius: 5px;
+    margin-left: 10px;
+    background-color: whitesmoke;
+    text-decoration: none;
+    margin-bottom: 5px;
+    color: black;
+    padding: 10px;
+    /* Add padding for better appearance */
+}
+
+.product-item .muahang:hover {
+    color: whitesmoke;
+    background-color: black;
+}
+
+.banner2 {
+    display: flex;
+    justify-content: space-between;
+    /* Đảm bảo các thẻ div có khoảng cách đều nhau */
+    align-items: center;
+    /* Căn giữa các phần tử theo chiều dọc */
+    width: 100%;
+    /* Phù hợp với chiều rộng của thẻ .contenttest */
+    gap: 10px;
+    /* Khoảng cách giữa các phần tử */
+}
+
+.banner2 div {
+    flex: 1;
+    /* Chia đều không gian cho các thẻ div */
+}
+
+.banner2 img {
+    width: 100%;
+    /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng thẻ div */
+    height: auto;
+    /* Đảm bảo tỷ lệ hình ảnh không bị méo */
+    object-fit: cover;
+}
+
+.banner3 {
+    position: relative;
+    /* Để thẻ <h2> nằm chồng lên hình ảnh */
+    width: 100%;
+    /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng của khung */
+}
+
+.banner3 img {
+    width: 100%;
+    /* Đảm bảo ảnh không vượt quá kích thước của khung */
+    display: block;
+    /* Loại bỏ khoảng trống dưới ảnh */
+}
+
+.text-overlay {
+    position: absolute;
+    top: 20%;
+    /* Điều chỉnh vị trí dọc */
+    left: 10%;
+    /* Điều chỉnh vị trí ngang */
+    color: white;
+    /* Màu chữ mặc định */
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Nền mờ để dễ đọc */
+    padding: 10px;
+    font-size: 24px;
+    /* Kích thước chữ */
+    border-radius: 5px;
+    /* Bo góc (tùy chọn) */
+}
+
+.text-overlay .highlight-text {
+    color: yellow;
+    /* Tô màu vàng cho phần chữ này */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
