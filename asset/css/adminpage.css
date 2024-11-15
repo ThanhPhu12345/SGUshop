@@ -62,7 +62,8 @@ admin-profile {
 
 
 .pageadmin-content-prdmg,
-.pageadmin-content-fix {
+.pageadmin-content-fix,
+.pageadmin-trashbox {
     position: fixed;
     top: 0;
     left: 0;
@@ -74,6 +75,38 @@ admin-profile {
     align-items: center;
     z-index: 9999; 
     display: none;
+}
+.pageadmin-trashbox{
+    justify-content: center;
+    align-items: center;
+}
+.pageadmin-trashbox-content{
+    width: 30%;
+    height: 40vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+   
+   
+}
+
+.pageadmin-trashbox-content span{
+    font-size: 25px;
+}
+.pageadmin-trashbox-button button{
+    width: 70px;
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 30px;
+}
+.pageadmin-trashbox-button button:hover {
+    background-color:#888888;
 }
 
 #preview-img{
