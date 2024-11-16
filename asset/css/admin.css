@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.page-admin {
+    display: flex;
+
+}
+
+.admin-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.admin-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.admin-name {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pageadmin-bar {
+    height: auto;
+    width: 20%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+
+}
+
+.pageadmin-bar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.pageadmin-bar a:hover {
+    background-color: #444;
+}
+
+#prdmgn {
+    background-color: #444;
+}
+.content {
+    padding: 20px;
+    width: 80%;
+}

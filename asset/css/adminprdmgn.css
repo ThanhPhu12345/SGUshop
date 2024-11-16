@@ -34,7 +34,7 @@ admin-profile {
 
 .pageadmin-bar {
     height: auto;
-    width: 250px;
+    width: 20%;
     background-color: #333;
     color: #fff;
     padding: 20px;
@@ -106,7 +106,7 @@ admin-profile {
     margin-top: 30px;
 }
 .pageadmin-trashbox-button button:hover {
-    background-color:#888888;
+    background-color:rgb(30, 213, 134);
 }
 
 #preview-img{
@@ -222,21 +222,21 @@ button {
 
 }
 .page-wrap a{
+    width: 10px;
+    height: 10px;
     padding: 5px;
-    text-decoration: none;
-    color: white;
-    background-color:#888888;
     border-radius: 3px;
-    font-size: 20px;
-    font-weight: 1000;
+    background-color: #888;
+    color: white;
+    text-decoration: none;
 }
 .page-wrap a:hover{
-    background-color: #108bea;
+    background-color: #555;
     color: #f2f2f2;
 }
 #wrap1 {
     font-weight: bold;
-    color: #6200ea; 
+    color: #dc3545; 
 }
 
 .product-main{
@@ -326,3 +326,10 @@ button {
     
 }
 
+.product-tail{
+    display: flex;
+    width: 100%;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}
