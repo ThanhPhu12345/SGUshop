@@ -7,13 +7,14 @@ body {
 
 .page-admin {
     display: flex;
-    
+
 }
-admin-profile {
+
+.admin-profile {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 30px; 
+    margin-bottom: 30px;
     width: 100%;
 }
 
@@ -21,9 +22,9 @@ admin-profile {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    object-fit: cover; 
-    margin-left: 30%;
-
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
 }
 
 .admin-name {
@@ -34,10 +35,10 @@ admin-profile {
 
 .pageadmin-bar {
     height: auto;
-    width: 250px;
+    width: 20%;
     background-color: #333;
     color: #fff;
-    padding: 20px;
+    padding: 15px;
 
 }
 
@@ -55,30 +56,66 @@ admin-profile {
     background-color: #444;
 }
 
-#prdmgn{
-    background-color: #444 ;
+#prdmgn {
+    background-color: #444;
 }
 
-
-
 .pageadmin-content-prdmg,
-.pageadmin-content-fix {
+.pageadmin-content-fix,
+.pageadmin-trashbox {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); 
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999; 
+    z-index: 9999;
     display: none;
 }
 
-#preview-img{
+.pageadmin-trashbox {
+    justify-content: center;
+    align-items: center;
+}
+
+.pageadmin-trashbox-content {
+    width: 30%;
+    height: 40vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
+
+}
+
+.pageadmin-trashbox-content span {
+    font-size: 25px;
+}
+
+.pageadmin-trashbox-button button {
+    width: 70px;
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 30px;
+}
+
+.pageadmin-trashbox-button button:hover {
+    background-color: rgb(30, 213, 134);
+}
+
+#preview-img {
     width: 40%;
 }
+
 .prdadd {
     background-color: #fff;
     padding: 20px;
@@ -136,11 +173,14 @@ table {
     background-color: #fff;
 }
 
-table, th, td {
+table,
+th,
+td {
     border: 1px solid #ddd;
 }
 
-th, td {
+th,
+td {
     padding: 12px;
     text-align: center;
 }
@@ -154,7 +194,7 @@ button {
     cursor: pointer;
 }
 
-.product{
+.product {
     width: 80%;
     margin: 10px;
     margin-top: 10px;
@@ -164,7 +204,7 @@ button {
     border-radius: 10px;
 }
 
-.product-head{
+.product-head {
     width: 100%;
     height: 10vh;
     display: flex;
@@ -173,80 +213,93 @@ button {
     border-bottom: 1px solid black;
 
 }
-.product-head-classify{
+
+.product-head-classify {
     padding: 10px;
     display: block;
-   
+
 }
-.product-head-classify a{
+
+.product-head-classify a {
     margin-left: 20px;
     text-decoration: none;
     color: black;
     cursor: pointer;
 }
+
 .product-head-classify a:hover {
-    color:blue;
+    color: blue;
 
 }
-.page-wrap a{
+
+.page-wrap a {
+    width: 10px;
+    height: 10px;
     padding: 5px;
-    text-decoration: none;
-    color: white;
-    background-color:#888888;
     border-radius: 3px;
-    font-size: 20px;
-    font-weight: 1000;
+    background-color: #888;
+    color: white;
+    text-decoration: none;
 }
-.page-wrap a:hover{
-    background-color: #108bea;
+
+.page-wrap a:hover {
+    background-color: #555;
     color: #f2f2f2;
 }
+
 #wrap1 {
     font-weight: bold;
-    color: #6200ea; 
+    color: #dc3545;
 }
 
-.product-main{
+.product-main {
     width: 100%;
     padding: 10px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
-.product-list{
+
+.product-list {
     width: 30%;
     height: 50vh;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
     position: relative;
 }
-.product-img{
+
+.product-img {
     width: 100%;
     height: 60%;
 }
-.product-img img{
+
+.product-img img {
     width: 100%;
-    height:100%;
+    height: 100%;
     object-fit: cover;
 }
 
-.product-name{
+.product-name {
     color: black;
     font-size: 20px;
     font-weight: 550;
     margin: 10px;
 }
-.product-star{
+
+.product-star {
     margin: 10px;
 }
-.product-star i{
+
+.product-star i {
     color: #fdd922;
     border: 1px solid #f2f2f2;
 }
-.product-price{
+
+.product-price {
     margin: 10px;
 }
-.product-btn{
+
+.product-btn {
     position: absolute;
     margin: 10px;
     width: 90%;
@@ -258,7 +311,7 @@ button {
     align-items: flex-end;
 }
 
-.product-btn i{
+.product-btn i {
     color: white;
     margin-right: 10px;
     padding: 10px;
@@ -267,29 +320,40 @@ button {
     visibility: hidden;
     opacity: 0;
     transform: translateY(-80px);
-    transition: transform 0.5s ease, opacity 0.3s ease; 
+    transition: transform 0.5s ease, opacity 0.3s ease;
 }
-.product-btn:hover i{
-   visibility: visible;
+
+.product-btn:hover i {
+    visibility: visible;
     opacity: 1;
     transform: translateY(0px);
 }
-.product-btn i:hover{
+
+.product-btn i:hover {
     background-color: #fdd922;
     color: black;
 }
 
 
 
-.addproduct{
-  width: 100%;
-  height: 100%;
-  background-color: white;
-  border: none;
-  font-size: 50px;
-}
-.addproduct:hover {
-    background-color:rgba(0, 0, 0, 0.1);;
-    
+.addproduct {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: none;
+    font-size: 50px;
 }
 
+.addproduct:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    ;
+
+}
+
+.product-tail {
+    display: flex;
+    width: 100%;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}

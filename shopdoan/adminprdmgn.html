@@ -4,60 +4,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/adminpage.css">
+    <link rel="stylesheet" href="assets/css/adminprdmgn.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-    <title>Adminpage</title>
+    <title>Adminproductmangane</title>
 </head>
 
 <body>
     <div class="page-admin">
+
         <div class="pageadmin-bar">
             <div class="admin-profile">
                 <img src="assets/img/avt.jpg" alt="Admin Avatar" class="admin-avatar">
                 <p class="admin-name">Admin</p>
             </div>
 
-            <a href="" class="pageadmin-bar-dashboard">
-                <i class="fa-solid fa-house"></i>Dashboard</a>
-            <a href="" class="pageadmin-bar-usermg">
-                <i class="fa-solid fa-user"></i> User Management</a>
-            <a href="" class="pageadmin-bar-prdmg" id="prdmgn">
-                <i class="fa-solid fa-car"></i>Product Management</a>
-            <a href="" class="pageadmin-bar-ordermg">
-                <i class="fa-solid fa-cart-shopping"></i>Order Management</a>
+            <a href="admin-dashboard.html" class="pageadmin-bar-dashboard">
+                <i class="fa-solid fa-house"></i> Dashboard
+            </a>
+            <a href="adminusermgn.html" class="pageadmin-bar-usermg">
+                <i class="fa-solid fa-user"></i> User Management
+            </a>
+            <a href="adminprdmgn.html" class="pageadmin-bar-prdmg" id="prdmgn">
+                <i class="fa-solid fa-car"></i> Product Management
+            </a>
+            <a href="admin-qlgiohang.html" class="pageadmin-bar-ordermg">
+                <i class="fa-solid fa-cart-shopping"></i> Order Management
+            </a>
         </div>
 
-        <div class="pageadmin-content-prdmg">
-            <div class="prdadd">
-                <i class="fa-solid fa-x" id="xadd"></i>
-                <label for="prdame">Name</label>
-                <input type="text" id="proadd-name" required>
-                <label for="prdescribe">Describe</label>
-                <input type="text" id="proadd-describe" required>
-                <label for="prprice">Price</label>
-                <input type="text" id="proadd-price" required>
-                <label for="primg">Image</label>
-                <input type="file" id="prodadd-image" accept="image/*" required>
-                <button type="submit" class="prdadd-submit">Save</button>
+
+        <!-- noi dung trang  -->
+        <div class="pageadmin-trashbox">
+            <div class="pageadmin-trashbox-content">
+                <span>Are you sure</span>
+                <div class="pageadmin-trashbox-button">
+                    <button type="submit" id="trash-cancel">Cancel</button>
+                    <button type="submit" id="trash-ok">Ok</button>
+                </div>
+
             </div>
-        </div>
 
-        <div class="pageadmin-content-fix">
-            <div class="prdadd">
-                <i class="fa-solid fa-x" id="xfix"></i>
-                <label for="prdame">Name</label>
-                <input type="text" id="proadd-name" value="Ao" required>
-                <label for="prdescribe">Describe</label>
-                <input type="text" id="proadd-describe" value="hihi" required>
-                <label for="prprice">Price</label>
-                <input type="text" id="proadd-price" value="100$" required>
-                <label for="primg">Image</label>
-                <img src="asset/img/p14.jpg" id="preview-img" alt="">
-                <input type="file" id="prodadd-image" accept="image/*" required>
-                <button type="submit" class="prdadd-submit">Save</button>
-            </div>
         </div>
-
         <div class="product">
             <div class="product-head">
                 <div class="product-head-classify">
@@ -67,13 +54,6 @@
                     <a href="">Shoe</a>
                 </div>
 
-                <div class="page-wrap">
-                    <a href="#"></a>
-                    <span id="wrap1">1</span>
-                    <span>2</span>
-                    <span>3</span>
-                    <a href="#">></a>
-                </div>
             </div>
             <div class="product-main">
                 <div class="product-list">
@@ -96,8 +76,8 @@
                         <span class="old-price">$100</span>
                     </div>
                     <div class="product-btn">
-                        <a href="#"><i class="fa-solid fa-wrench" id="fix-icon"></i></a>
-                        <a href="#"><i class="fa-solid fa-trash"></i></a>
+                        <a href="editproduct.html"><i class="fa-solid fa-wrench" id="fix-icon"></i></a>
+                        <a href="#"><i class="fa-solid fa-trash" id="trash-icon"></i></a>
 
                     </div>
                 </div>
@@ -121,7 +101,7 @@
                         <span class="old-price">$100</span>
                     </div>
                     <div class="product-btn">
-                        <a href="#"><i class="fa-solid fa-wrench" id="fix-icon"></i></a>
+                        <a href="editproduct.html"><i class="fa-solid fa-wrench" id="fix-icon"></i></a>
                         <a href="#"><i class="fa-solid fa-trash"></i></a>
 
                     </div>
@@ -204,13 +184,23 @@
 
 
                 <div class="product-list">
-                    <button class="addproduct">+</button>
+                    <a href="newproduct.html"><button class="addproduct">+</button></a>
+                </div>
+
+                <div class="product-tail">
+                    <div class="page-wrap">
+                        <a href="#"></a>
+                        <span id="wrap1">1</span>
+                        <span>2</span>
+                        <span>3</span>
+                        <a href="#">></a>
+                    </div>
                 </div>
 
 
 
             </div>
-            <script src="assets/js/admin.js"></script>
+            <script src="assets/js/adminprdmgn.js"></script>
 </body>
 
 </html>

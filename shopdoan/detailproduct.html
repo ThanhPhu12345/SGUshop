@@ -169,16 +169,18 @@
                     <h2>Tags</h2>
                 </div>
                 <div class="page-tag-box">
-                    <a href="#" class="tag">Phone</a>
                     <a href="#" class="tag">Vest</a>
-                    <a href="#" class="tag">Smartphone</a>
-                    <a href="#" class="tag">Furniture</a>
-                    <a href="#" class="tag">T-shirt</a>
-                    <a href="#" class="tag">Sweatpants</a>
-                    <a href="#" class="tag">Sneaker</a>
-                    <a href="#" class="tag">Toys</a>
-                    <a href="#" class="tag">Rose</a>
+                    <a href="#" class="tag">Blazer</a>
+                    <a href="#" class="tag">Suit</a>
+                    <a href="#" class="tag">Jacket</a>
+                    <a href="#" class="tag">Coat</a>
+                    <a href="#" class="tag">Sweater</a>
+                    <a href="#" class="tag">Pants</a>
+                    <a href="#" class="tag">Shorts</a>
+                    <a href="#" class="tag">Jeans</a>
                 </div>
+
+
             </div>
         </div>
 
@@ -188,9 +190,7 @@
                 <a href="#">Home</a> / <a href="#">Clothing</a> / <a href="#">Floral Print Buttoned</a>
             </div>
             <div class="product-layout">
-                <!-- Product Image and Thumbnails -->
-                <!-- Product Image and Thumbnails -->
-                <!-- Product Image and Thumbnails -->
+
                 <div class="product-image">
                     <button class="prev" onclick="prevImage()">&#10094;</button>
                     <img id="main-image" src="assets/img/j5.jpg" alt="Floral Print Buttoned Jacket">
@@ -207,20 +207,21 @@
 
                 <!-- Product Details -->
                 <div class="product-details">
-                    <h1 class="product-title">Floral Print Buttoned</h1>
+                    <h1 class="product-title">Áo Sơ Mi Họa Tiết Hoa</h1>
                     <div class="product-rating">
-                        ★★★★☆ <span>(13 Reviews)</span>
+                        ★★★★☆ <span>(13 Đánh Giá)</span>
                     </div>
                     <div class="product-availability">
-                        Availability: <span>In Stock</span>
+                        Tình Trạng: <span>Còn Hàng</span>
                     </div>
                     <p class="product-description">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua.
+                        Áo sơ mi cotton mềm mại, thoáng mát, họa tiết hoa tươi sáng, dễ phối đồ, phù hợp cho mùa hè.
                     </p>
+
                     <div class="product-price">
+                        <label>
+                            GIÁ
+                        </label>
                         $800.00 <del>$900.00</del>
                     </div>
                     <div class="product-options">
@@ -262,17 +263,10 @@
                         </div>
                     </div>
                     <div class="product-quantity">
-                        <label for="quantity">
-                            Số Lượng
-                        </label>
-
-                        <button>
-                            -
-                        </button>
-                        <input id="quantity" type="text" value="1" />
-                        <button>
-                            +
-                        </button>
+                        <label for="quantity">Số Lượng</label>
+                        <button onclick="decrease()">-</button>
+                        <input type="text" id="quantity" value="1" />
+                        <button onclick="increase()">+</button>
                     </div>
                     <div class="product-actions">
                         <button class="add-to-cart">
@@ -281,11 +275,6 @@
                         <button class="buy-now">
                             Mua Ngay
                         </button>
-                    </div>
-                    <div class="product-icons">
-                        <i class="fa fa-heart"></i>
-                        <i class="fa fa-bar-chart"></i>
-                        <i class="fa fa-envelope"></i>
                     </div>
                 </div>
             </div>
@@ -342,28 +331,34 @@
             </div>
 
             <div class="review-section">
-                <h2>Product Reviews</h2>
+                <h2>Đánh Giá Sản Phẩm</h2>
                 <div class="review">
                     <div class="review-header">
                         <span class="reviewer-name">John Doe</span>
-                        <span class="review-date">October 1, 2024</span>
+                        <span class="review-date">1 Tháng Mười, 2024</span>
                     </div>
                     <div class="review-rating">★★★★☆</div>
-                    <p class="review-text">Great product! Very warm and comfortable, perfect for the winter season. The
-                        color is just as pictured, and it arrived on time. Highly recommend!</p>
+                    <p class="review-text">Sản phẩm rất tuyệt! Rất ấm áp và thoải mái, hoàn hảo cho mùa đông. Màu sắc
+                        giống hệt như
+                        hình và hàng giao đúng thời gian. Rất đáng để mua!</p>
                 </div>
 
                 <div class="review">
                     <div class="review-header">
                         <span class="reviewer-name">Jane Smith</span>
-                        <span class="review-date">September 28, 2024</span>
+                        <span class="review-date">28 Tháng Chín, 2024</span>
                     </div>
                     <div class="review-rating">★★★☆☆</div>
-                    <p class="review-text">Nice jacket, but the sizing runs a bit small. I'd recommend ordering one size
-                        up. Overall, it's good quality but could improve on sizing accuracy.</p>
+                    <p class="review-text">Áo khoác đẹp, nhưng kích thước hơi nhỏ. Tôi khuyên nên đặt lớn hơn một cỡ.
+                        Nhìn chung,
+                        chất lượng tốt nhưng cần cải thiện độ chính xác về kích cỡ.</p>
                 </div>
+                <button class="view-more-btn">Xem Thêm</button>
             </div>
+
         </div>
+
+    </div>
 
 
     </div>
@@ -379,7 +374,11 @@
 
         function updateMainImage() {
             const mainImage = document.getElementById('main-image');
-            mainImage.src = imageList[currentIndex];
+            mainImage.style.opacity = 0; // Đưa ảnh về trạng thái mờ trước khi thay đổi
+            setTimeout(() => {
+                mainImage.src = imageList[currentIndex]; // Cập nhật ảnh chính
+                mainImage.style.opacity = 1; // Hiển thị lại ảnh với hiệu ứng mượt mà
+            }, 500); // Đảm bảo thời gian để opacity chuyển qua
         }
 
         function nextImage() {
@@ -394,11 +393,14 @@
 
         function changeImage(thumbnail) {
             const mainImage = document.getElementById('main-image');
-            mainImage.src = thumbnail.src; // Lấy đường dẫn của ảnh thu nhỏ và đặt cho ảnh chính
-
-            // Cập nhật chỉ mục hình ảnh hiện tại
-            currentIndex = imageList.indexOf(thumbnail.src);
+            mainImage.style.opacity = 0; // Đưa ảnh về trạng thái mờ trước khi thay đổi
+            setTimeout(() => {
+                mainImage.src = thumbnail.src; // Lấy đường dẫn của ảnh thu nhỏ và đặt cho ảnh chính
+                currentIndex = imageList.indexOf(thumbnail.src); // Cập nhật chỉ mục hình ảnh hiện tại
+                mainImage.style.opacity = 1; // Hiển thị lại ảnh với hiệu ứng mượt mà
+            }, 500); // Đảm bảo thời gian để opacity chuyển qua
         }
+
     </script>
 
     <!-- Footer -->
@@ -431,6 +433,20 @@
         </div>
     </footer>
 
+    <script>
+        function decrease() {
+            let quantity = document.getElementById("quantity");
+            let currentValue = parseInt(quantity.value);
+            if (currentValue > 1) {
+                quantity.value = currentValue - 1;
+            }
+        }
+
+        function increase() {
+            let quantity = document.getElementById("quantity");
+            quantity.value = parseInt(quantity.value) + 1;
+        }
+    </script>
 
 
 
