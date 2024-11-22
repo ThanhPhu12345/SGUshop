@@ -222,6 +222,15 @@
     background-color: #fdd922;
     color: black;
 }
+
+.product-tail{
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
 @media (max-width:1000px){
     .left-page{
         display: none;
