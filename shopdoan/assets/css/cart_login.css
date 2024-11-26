@@ -5,6 +5,9 @@
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cart {
@@ -106,7 +109,7 @@
     left: 0;
     background-color: white;
     border: 1px solid #ddd;
-    width: 180px;  
+    width: 180px;
     padding: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     z-index: 10;
@@ -123,7 +126,8 @@
 }
 
 .cart-item img {
-    width: 50px;    height: 50px;
+    width: 50px;
+    height: 50px;
     margin-right: 10px;
     object-fit: cover;
 }
@@ -150,6 +154,7 @@
     align-items: center;
     gap: 5px;
 }
+
 .counter button {
     width: 30px;
     height: 30px;
@@ -162,9 +167,11 @@
     cursor: pointer;
     transition: background-color 0.3s;
 }
+
 .counter button:hover {
     background-color: #0056b3;
 }
+
 .counter input[type="number"] {
     width: 50px;
     height: 40px;
@@ -176,15 +183,22 @@
 
 
 .cart-item-total-price {
-    font-size: 16px; /* Kích thước chữ vừa phải */
-    font-weight: bold; /* Làm chữ đậm để nổi bật */
-    color: #28a745; /* Màu sắc của tổng tiền - chọn màu xanh lá để nổi bật */
-    margin-top: 10px; /* Khoảng cách phía trên để không bị dính với các phần tử khác */
+    font-size: 16px;
+    /* Kích thước chữ vừa phải */
+    font-weight: bold;
+    /* Làm chữ đậm để nổi bật */
+    color: #28a745;
+    /* Màu sắc của tổng tiền - chọn màu xanh lá để nổi bật */
+    margin-top: 10px;
+    /* Khoảng cách phía trên để không bị dính với các phần tử khác */
     margin-right: 10px;
-    text-align: right; /* Căn phải để tổng tiền nằm ở góc phải */
+    text-align: right;
+    /* Căn phải để tổng tiền nằm ở góc phải */
     display: flex;
-    justify-content: space-between; /* Đảm bảo nội dung bên trong là căn đều */
+    justify-content: space-between;
+    /* Đảm bảo nội dung bên trong là căn đều */
 }
+
 .cart-summary {
     display: flex;
     justify-content: flex-end;
@@ -192,16 +206,17 @@
     margin-top: 20px;
     padding: 20px;
     gap: 20px;
-    background-color: #f9f9f9; 
-    border-radius: 8px; 
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); 
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     font-size: 18px;
-    font-family: 'Arial', sans-serif; 
-    
+    font-family: 'Arial', sans-serif;
+
 }
 
 .order-btn {
-    background-color: #4CAF50; /* Màu xanh lá cho nút đặt hàng */
+    background-color: #4CAF50;
+    /* Màu xanh lá cho nút đặt hàng */
     color: white;
     border: none;
     padding: 12px 25px;
@@ -209,15 +224,20 @@
     font-size: 18px;
     font-weight: bold;
     border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease; /* Thêm hiệu ứng chuyển màu và phóng to */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Thêm hiệu ứng chuyển màu và phóng to */
 }
+
 .order-btn:hover {
-    background-color: #45a049; /* Màu xanh lá đậm khi hover */
-    transform: scale(1.05); /* Phóng to nút khi hover */
+    background-color: #45a049;
+    /* Màu xanh lá đậm khi hover */
+    transform: scale(1.05);
+    /* Phóng to nút khi hover */
 }
 
 .order-btn:active {
-    transform: scale(0.98); /* Giảm kích thước khi nhấn */
+    transform: scale(0.98);
+    /* Giảm kích thước khi nhấn */
 }
 
 .cart-item-checkbox {
@@ -227,13 +247,87 @@
 }
 
 .cart-item-checkbox:checked {
-    background-color: #4CAF50; /* Màu nền khi được chọn */
-    border-color: #4CAF50; /* Màu viền khi được chọn */
+    background-color: #4CAF50;
+    /* Màu nền khi được chọn */
+    border-color: #4CAF50;
+    /* Màu viền khi được chọn */
 }
 
 
 
+.cart_login {
+    background-color: #4CAF50;
+    /* Màu xanh lá cho nút đặt hàng */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    /* Thêm hiệu ứng chuyển màu và phóng to */
+}
 
+.cart_login:hover {
+    background-color: #45a049;
+    /* Màu xanh lá đậm khi hover */
+    transform: scale(1.05);
+    /* Phóng to nút khi hover */
+}
 
+.cart_login:active {
+    transform: scale(0.98);
+    /* Giảm kích thước khi nhấn */
+}
 
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Chiều cao 100% màn hình */
+    background-color: #f9f9f9;
+    /* Màu nền */
+}
 
+.cart-container {
+    text-align: center;
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.cart-message h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.cart-message p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.cart-message a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.cart-login-btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cart-login-btn:hover {
+    background-color: #0056b3;
+}

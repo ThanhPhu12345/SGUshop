@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing admin vip pro</title>
+    <link rel="stylesheet" href="css\admin-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta name="google" content="notranslate">
+</head>
+
+<body>
+    <div class="page-admin">
+        <div class="pageadmin-bar">
+            <div class="admin-profile">
+                <img src="img/avt.jpg" alt="Admin Avatar" class="admin-avatar">
+                <p class="admin-name">Thanh Phu</p>
+            </div>
+
+            <a href="admin-dashboard.html" class="pageadmin-bar-dashboard" id="prdmgn">
+                <i class=" fa-solid fa-house"></i> Dashboard
+            </a>
+            <a href="adminusermgn.html" class="pageadmin-bar-usermg">
+                <i class="fa-solid fa-user"></i> User Management
+            </a>
+            <a href="adminprdmgn.html" class="pageadmin-bar-prdmg">
+                <i class="fa-solid fa-car"></i> Product Management
+            </a>
+            <a href="admin-qlgiohang.html" class="pageadmin-bar-ordermg">
+                <i class=" fa-solid fa-cart-shopping"></i> Order Management
+            </a>
+            <a href="login.html" class="pageadmin-bar-ordermg">
+                <i class="fa-sharp fa-solid fa-right-from-bracket"></i>
+                LogOut
+            </a>
+        </div>
+        <!-- content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>
+                    Dashboard
+                </h1>
+                <div class="welcome-text">
+                    <span id="welcome-message">Chào mừng đến với SGUNI</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-bell"></i>
+                    <div class="user-profile-container">
+                        <i class="fas fa-user-circle" id="user-icon"></i>
+                        <div class="user-profile" id="user-profile">
+                            <p><strong>Admin Name:</strong> Thanh Phú </p>
+                            <p><strong>Email:</strong> admin@example.com</p>
+                            <p><strong>Số điện thoại:</strong> 098342322</p>
+                            <p><strong>Địa chỉ:</strong>Tp.HCM</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <i class="fas fa-dollar-sign" style="color: #28a745;">
+                    </i>
+                    <div>
+                        <h3>
+                            Revenue
+                        </h3>
+                        <p>
+                            $34,245
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-users" style="color: #007bff;">
+                    </i>
+                    <div>
+                        <h3>
+                            Users
+                        </h3>
+                        <p>
+                            1,245
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shopping-cart" style="color: #ffc107;">
+                    </i>
+                    <div>
+                        <h3>
+                            Orders
+                        </h3>
+                        <p>
+                            765
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-comments" style="color: #dc3545;">
+                    </i>
+                    <div>
+                        <h3>
+                            Feedback
+                        </h3>
+                        <p>
+                            89
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="chart">
+                    <h3>
+                        Sales Overview
+                    </h3>
+                    <img alt="Line chart showing sales overview" height="400"
+                        src="https://storage.googleapis.com/a1aa/image/F8yUJlMGShL6ANvcQ87AqLjcSnCEBml4jEfbeXMqaRhATmxTA.jpg"
+                        width="600" />
+                </div>
+                <div class="chart">
+                    <h3>
+                        User Growth
+                    </h3>
+                    <img alt="Bar chart showing user growth" height="400"
+                        src="https://storage.googleapis.com/a1aa/image/fc60AeykpguOrEvUjbLTG0xcqVeO9FFk4yGbJ1JH8qeEMZGPB.jpg"
+                        width="600" />
+                </div>
+            </div>
+            <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-user-circle" style="color: #007bff;"></i>
+                        <p><strong>John Doe</strong> signed up. <span>2 hours ago</span></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-dollar-sign" style="color: #28a745;"></i>
+                        <p><strong>Jane Smith</strong> made a purchase. <span>3 hours ago</span></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-cart-shopping" style="color: #ffc107;"></i>
+                        <p><strong>Michael Brown</strong> placed an order. <span>5 hours ago</span></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-comment-dots" style="color: #dc3545;"></i>
+                        <p><strong>Emily Davis</strong> left a feedback. <span>6 hours ago</span></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="post-section">
+                <h3>Đăng bài viết thông báo</h3>
+                <form id="post-form">
+                    <label for="post-title">Tiêu đề:</label>
+                    <input type="text" id="post-title" placeholder="Nhập tiêu đề bài viết" required>
+
+                    <label for="post-content">Nội dung:</label>
+                    <textarea id="post-content" placeholder="Nhập nội dung bài viết" rows="5" required></textarea>
+
+                    <button type="submit">Đăng bài</button>
+                </form>
+                <div class="posted-articles">
+                    <h4>Bài viết đã đăng</h4>
+                    <ul id="article-list">
+                        <!-- Danh sách bài viết sẽ được thêm tự động -->
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            // document.addEventListener("DOMContentLoaded", function () {
+            //     var welcomeMessage = document.getElementById("welcome-message");
+
+            //     // Lặp lại văn bản trong vài giây rồi dừng
+            //     setTimeout(function () {
+            //         welcomeMessage.style.animationPlayState = "paused"; // Dừng animation
+            //     }, 10000); // 10s là thời gian bạn muốn chạy hết đoạn văn bản
+            // });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const userIcon = document.getElementById("user-icon");
+                const userProfile = document.getElementById("user-profile");
+
+                userIcon.addEventListener("click", function () {
+                    // Toggle hiển thị
+                    if (userProfile.style.display === "block") {
+                        userProfile.style.display = "none";
+                    } else {
+                        userProfile.style.display = "block";
+                    }
+                });
+
+                // Ẩn profile khi click ra ngoài
+                document.addEventListener("click", function (e) {
+                    if (!userIcon.contains(e.target) && !userProfile.contains(e.target)) {
+                        userProfile.style.display = "none";
+                    }
+                });
+            });
+            //  bài viết 
+            document.addEventListener("DOMContentLoaded", function () {
+                const postForm = document.getElementById("post-form");
+                const articleList = document.getElementById("article-list");
+
+                postForm.addEventListener("submit", function (e) {
+                    e.preventDefault(); // Ngăn chặn reload trang
+
+                    // Lấy dữ liệu từ form
+                    const title = document.getElementById("post-title").value;
+                    const content = document.getElementById("post-content").value;
+
+                    // Tạo bài viết mới
+                    const listItem = document.createElement("li");
+                    listItem.innerHTML = `<strong>${title}</strong><p>${content}</p>`;
+
+                    // Thêm bài viết vào danh sách
+                    articleList.appendChild(listItem);
+
+                    // Reset form sau khi đăng
+                    postForm.reset();
+                });
+            });
+
+
+        </script>
+    </div>
+</body>
+
+</html>

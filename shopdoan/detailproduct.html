@@ -13,16 +13,14 @@
 </head>
 
 <body>
-
     <!-- Top bar: Thông báo, hỗ trợ, liên hệ -->
     <div class="top-bar">
         <a href="#"><i class="fas fa-bell"></i> Thông báo</a>
         <a href="#"><i class="fas fa-headset"></i> Hỗ trợ</a>
         <a href="#"><i class="fas fa-phone"></i> Liên hệ</a>
         <a href="#"><i class="fa-solid fa-user"></i> THANHPHU</a>
-        <a href="home.html"><i class="fa-solid fa-right-from-bracket"></i>Đăng Xuất</a>
+        <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i>Đăng Xuất</a>
     </div>
-
 
     <div class="header_luot">
         <!-- Header -->
@@ -42,26 +40,6 @@
             <div class="icart">
                 <i class="fas fa-shopping-cart"></i> Cart
                 <span class="cart-count">8</span>
-                <div class="cart-dropdown">
-                    <!-- Sản phẩm trong giỏ hàng -->
-                    <div class="cart-item">
-                        <img src="assets/img/istockphoto-185301626-1024x1024.jpg" alt="Product 1" class="cart-item-img">
-                        <div class="cart-item-details">
-                            <p class="cart-item-name">Giày Nam Phong Cách</p>
-                            <p class="cart-item-price">100,000 VND</p>
-                            <p class="cart-item-quantity">số lượng: 1</p>
-                        </div>
-                    </div>
-
-                    <div class="cart-item">
-                        <img src="assets/img/istockphoto-136795035-1024x1024.jpg" alt="Product 2" class="cart-item-img">
-                        <div class="cart-item-details">
-                            <p class="cart-item-name">Áo Nam</p>
-                            <p class="cart-item-price">150,000 VND</p>
-                            <p class="cart-item-quantity">số lượng: 1</p>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
 
@@ -192,22 +170,33 @@
             <div class="product-layout">
 
                 <div class="product-image">
+                    <!-- Nút chuyển ảnh trước -->
                     <button class="prev" onclick="prevImage()">&#10094;</button>
-                    <img id="main-image" src="assets/img/j5.jpg" alt="Floral Print Buttoned Jacket">
+
+                    <!-- Hình ảnh chính, khi click vào sẽ mở hình ảnh full -->
+                    <img id="main-image" src="assets/img/chitietsp1.webp" alt="Floral Print Buttoned Jacket"
+                        onclick="openFullImage(this.src)">
+
+                    <!-- Nút chuyển ảnh sau -->
                     <button class="next" onclick="nextImage()">&#10095;</button>
+
                     <div class="product-thumbnails">
-                        <img src="assets/img/j5.jpg" alt="Thumbnail 1" onclick="changeImage(this)">
-                        <img src="assets/img/j5.jpg" alt="Thumbnail 2" onclick="changeImage(this)">
-                        <img src="assets/img/j5.jpg" alt="Thumbnail 3" onclick="changeImage(this)">
-                        <img src="assets/img/j5.jpg" alt="Thumbnail 4" onclick="changeImage(this)">
+                        <img src="assets/img/chitietsp1.webp" alt="Thumbnail 1" onclick="changeImage(this)">
+                        <img src="assets/img/chitietsp2.webp" alt="Thumbnail 2" onclick="changeImage(this)">
+                        <img src="assets/img/chitietsp3.webp" alt="Thumbnail 3" onclick="changeImage(this)">
+                        <img src="assets/img/Bang-size-ao-thun.png" alt="Thumbnail 4" onclick="changeImage(this)">
                     </div>
                 </div>
 
-
+                <!-- Mô tả phần ảnh full -->
+                <div id="full-image-container" style="display: none;">
+                    <span onclick="closeFullImage()" style="cursor: pointer;">&times; Đóng</span>
+                    <img id="full-image" src="" alt="Full Image">
+                </div>
 
                 <!-- Product Details -->
                 <div class="product-details">
-                    <h1 class="product-title">Áo Sơ Mi Họa Tiết Hoa</h1>
+                    <h1 class="product-title">Áo Thun Mùa Hè Unisex</h1>
                     <div class="product-rating">
                         ★★★★☆ <span>(13 Đánh Giá)</span>
                     </div>
@@ -269,20 +258,21 @@
                         <button onclick="increase()">+</button>
                     </div>
                     <div class="product-actions">
-                        <button class="add-to-cart">
+                        <button class="add-to-cart" onclick="addToCart(this)">
                             Thêm Vào Giỏ Hàng
                         </button>
                         <button class="buy-now">
                             Mua Ngay
                         </button>
                     </div>
+
                 </div>
             </div>
             <div class="product-info">
                 <h3>Chi Tiết Sản Phẩm</h3>
                 <div class="info-item">
                     <span class="info-label">Danh Mục:</span>
-                    <span class="info-value">Shopee &gt; Thời Trang Nam &gt; Áo &gt; Áo Thun</span>
+                    <span class="info-value">SGUNI &gt; Thời Trang Nam &gt; Áo &gt; Áo Thun</span>
                 </div>
                 <div class="info-item">
                     <span class="info-label">Số lượng hàng khuyến mãi:</span>
@@ -338,7 +328,8 @@
                         <span class="review-date">1 Tháng Mười, 2024</span>
                     </div>
                     <div class="review-rating">★★★★☆</div>
-                    <p class="review-text">Sản phẩm rất tuyệt! Rất ấm áp và thoải mái, hoàn hảo cho mùa đông. Màu sắc
+                    <p class="review-text">Sản phẩm rất tuyệt! Rất ấm áp và thoải mái, hoàn hảo cho mùa đông. Màu
+                        sắc
                         giống hệt như
                         hình và hàng giao đúng thời gian. Rất đáng để mua!</p>
                 </div>
@@ -349,7 +340,8 @@
                         <span class="review-date">28 Tháng Chín, 2024</span>
                     </div>
                     <div class="review-rating">★★★☆☆</div>
-                    <p class="review-text">Áo khoác đẹp, nhưng kích thước hơi nhỏ. Tôi khuyên nên đặt lớn hơn một cỡ.
+                    <p class="review-text">Áo khoác đẹp, nhưng kích thước hơi nhỏ. Tôi khuyên nên đặt lớn hơn một
+                        cỡ.
                         Nhìn chung,
                         chất lượng tốt nhưng cần cải thiện độ chính xác về kích cỡ.</p>
                 </div>
@@ -364,42 +356,48 @@
     </div>
 
     <script>
-        const imageList = [
-            "assets/img/j5.jpg",
-            "assets/img/j6.jpg",
-            "assets/img/j4.jpg",
-            "assets/img/j5.jpg"
+        const images = [
+            'assets/img/chitietsp1.webp',
+            'assets/img/chitietsp2.webp',
+            'assets/img/chitietsp3.webp',
+            'assets/img/Bang-size-ao-thun.png'
         ];
+
+        // Index to track the current main image
         let currentIndex = 0;
 
-        function updateMainImage() {
-            const mainImage = document.getElementById('main-image');
-            mainImage.style.opacity = 0; // Đưa ảnh về trạng thái mờ trước khi thay đổi
-            setTimeout(() => {
-                mainImage.src = imageList[currentIndex]; // Cập nhật ảnh chính
-                mainImage.style.opacity = 1; // Hiển thị lại ảnh với hiệu ứng mượt mà
-            }, 500); // Đảm bảo thời gian để opacity chuyển qua
-        }
-
-        function nextImage() {
-            currentIndex = (currentIndex + 1) % imageList.length; // Vòng lại từ đầu nếu ở cuối danh sách
-            updateMainImage();
-        }
-
-        function prevImage() {
-            currentIndex = (currentIndex - 1 + imageList.length) % imageList.length; // Vòng lại cuối nếu ở đầu danh sách
-            updateMainImage();
-        }
-
+        // Function to change the main image based on the clicked thumbnail
         function changeImage(thumbnail) {
             const mainImage = document.getElementById('main-image');
-            mainImage.style.opacity = 0; // Đưa ảnh về trạng thái mờ trước khi thay đổi
-            setTimeout(() => {
-                mainImage.src = thumbnail.src; // Lấy đường dẫn của ảnh thu nhỏ và đặt cho ảnh chính
-                currentIndex = imageList.indexOf(thumbnail.src); // Cập nhật chỉ mục hình ảnh hiện tại
-                mainImage.style.opacity = 1; // Hiển thị lại ảnh với hiệu ứng mượt mà
-            }, 500); // Đảm bảo thời gian để opacity chuyển qua
+            mainImage.src = thumbnail.src; // Set the main image to the clicked thumbnail
+            currentIndex = images.indexOf(thumbnail.src); // Update current index
         }
+
+        // Function to show the next image
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % images.length; // Move to the next index
+            const mainImage = document.getElementById('main-image');
+            mainImage.src = images[currentIndex]; // Update the main image
+        }
+
+        // Function to show the previous image
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + images.length) % images.length; // Move to the previous index
+            const mainImage = document.getElementById('main-image');
+            mainImage.src = images[currentIndex]; // Update the main image
+        }
+
+        // Function to open the full image in a new tab or modal
+        function openFullImage(src) {
+            // You can implement this to open a modal or a new window
+            window.open(src, '_blank'); // Opens the full image in a new tab
+        }
+
+        // Initialize the main image on page load
+        window.onload = function () {
+            const mainImage = document.getElementById('main-image');
+            mainImage.src = images[currentIndex]; // Set initial image
+        };
 
     </script>
 
@@ -446,6 +444,9 @@
             let quantity = document.getElementById("quantity");
             quantity.value = parseInt(quantity.value) + 1;
         }
+
+        // them gio 
+
     </script>
 
 

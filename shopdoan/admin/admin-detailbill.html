@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admin-detailbill.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Adminpage</title>
+</head>
+
+<body>
+    <div class="page-admin">
+        <div class="pageadmin-bar">
+            <div class="admin-profile">
+                <img src="img/avt.jpg" alt="Admin Avatar" class="admin-avatar">
+                <p class="admin-name">Thanh Phu</p>
+            </div>
+
+            <a href="admin-dashboard.html" class="pageadmin-bar-dashboard">
+                <i class=" fa-solid fa-house"></i> Dashboard
+            </a>
+            <a href="adminusermgn.html" class="pageadmin-bar-usermg">
+                <i class="fa-solid fa-user"></i> User Management
+            </a>
+            <a href="adminprdmgn.html" class="pageadmin-bar-prdmg">
+                <i class="fa-solid fa-car"></i> Product Management
+            </a>
+            <a href="admin-qlgiohang.html" class="pageadmin-bar-ordermg" id="prdmgn">
+                <i class=" fa-solid fa-cart-shopping"></i> Order Management
+            </a>
+            <a href="login.html" class="pageadmin-bar-ordermg">
+                <i class="fa-sharp fa-solid fa-right-from-bracket"></i>
+                LogOut
+            </a>
+        </div>
+
+        <div class="content">
+            <div class="header">
+                <a href="#">Quản lý đơn hàng /Chi tiết đơn hàng </a>
+            </div>
+
+            <div class="order-details">
+                <div class="flex justify-between items-center mb-4">
+                    <h1 class="text-xl font-semibold">Chi tiết đơn hàng <span class="text-blue-600">ITOP0208#</span>
+                    </h1>
+                    <div class="buttons">
+                        <button class="print">In hóa đơn</button>
+                        <button class="cancel">Hủy đơn hàng</button>
+                        <button class="delete">Xóa đơn hàng</button>
+                        <button class="bg-green-500 text-white px-4 py-2 rounded giaohang">Giao hàng</button>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>SL</th>
+                            <th>Giá</th>
+                            <th>Thành tiền</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="product-info">
+                                <a href="detailproduct.html"><img src="img/chitietsp1.webp" alt="Apple Watch">
+                                </a>
+                                <div>
+                                    <div>Áo thun nam basic </div>
+                                    <div class="text-gray-500">Mã SP: APU23681</div>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td class="text-right">250.000 đ</td>
+                            <td class="text-right">250.000 đ</td>
+                        </tr>
+                        <tr>
+                            <td class="product-info">
+                                <img src="img/chitietsp2.webp" alt="Apple Watch">
+                                <div>
+                                    <div>Áo thun nữ basic</div>
+                                    <div class="text-gray-500">Mã SP: APU23681</div>
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td class="text-right">250.000 đ</td>
+                            <td class="text-right">250.000 đ</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Thành tiền</td>
+                            <td class="text-right">500.000 đ</td>
+                        </tr>
+                        <tr>
+                            <td colspan="3">Phí Ship</td>
+                            <td class="text-right">50,000 đ</td>
+                        </tr>
+                        <tr class="total">
+                            <td colspan="3">Tổng cộng</td>
+                            <td class="text-right">550.000 đ</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="flex justify-end">
+
+                </div>
+            </div>
+
+            <div class="flex space-x-4">
+                <div class="customer-info w-2/3">
+                    <h2>Thông tin người mua hàng</h2>
+                    <div>
+                        <label>Họ tên:</label>
+                        <div>Trần Hoàng Sang</div>
+                    </div>
+                    <div>
+                        <label>Điện thoại:</label>
+                        <div>963251244</div>
+                    </div>
+                    <div>
+                        <label>Email:</label>
+                        <div>hoangsang@imgroup.vn</div>
+                    </div>
+                    <div>
+                        <label>Địa chỉ:</label>
+                        <div>18 trần thiện chánh, Quận 10, TP. Hồ Chí Minh</div>
+                    </div>
+                    <div>
+                        <label>Thành tích:</label>
+                        <div>Khách hàng VIP</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        document.querySelector(".print").addEventListener("click", function (event) {
+            event.preventDefault();
+            alert("Hóa đơn đã được in.");
+        });
+
+        document.querySelector(".cancel").addEventListener("click", function (event) {
+            event.preventDefault();
+            if (confirm("Bạn có chắc muốn hủy đơn hàng này không?")) {
+                // Thực hiện hành động hủy đơn hàng
+                alert("Đơn hàng đã được hủy.");
+            }
+        });
+
+        document.querySelector(".delete").addEventListener("click", function (event) {
+            event.preventDefault();
+            if (confirm("Bạn có chắc muốn xóa đơn hàng này không?")) {
+                alert("Đơn hàng đã được xóa.");
+            }
+        });
+        document.querySelector(".giaohang").addEventListener("click", function (event) {
+            event.preventDefault();
+            alert("Đơn hàng đã được giao");
+        });
+
+    </script>
+
+</body>
+
+</html>

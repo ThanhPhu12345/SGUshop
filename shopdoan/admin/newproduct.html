@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/newproduct.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>newproduct</title>
+</head>
+
+<body>
+    <div class="page-admin">
+        <div class="pageadmin-bar">
+            <div class="admin-profile">
+                <img src="img/avt.jpg" alt="Admin Avatar" class="admin-avatar">
+                <p class="admin-name">Thanh Phu</p>
+            </div>
+
+            <a href="admin-dashboard.html" class="pageadmin-bar-dashboard">
+                <i class="fa-solid fa-house"></i> Dashboard
+            </a>
+            <a href="adminusermgn.html" class="pageadmin-bar-usermg">
+                <i class="fa-solid fa-user"></i> User Management
+            </a>
+            <a href="adminprdmgn.html" class="pageadmin-bar-prdmg" id="prdmgn">
+                <i class="fa-solid fa-car"></i> Product Management
+            </a>
+            <a href="admin-qlgiohang.html" class="pageadmin-bar-ordermg">
+                <i class="fa-solid fa-cart-shopping"></i> Order Management
+            </a>
+            <a href="home.html" class="pageadmin-bar-ordermg">
+                <i class="fa-sharp fa-solid fa-right-from-bracket"></i>
+                LogOut
+            </a>
+        </div>
+
+
+        <!-- main  -->
+
+        <div class="main-content-detail">
+            <!-- Phần thêm hình ảnh sản phẩm -->
+            <div class="header">
+                <a href="#" style="color:black;">Quản lý sản phẩm / Thêm sản phẩm mới</a>
+            </div>
+            <div class="product-image">
+
+                <h3>Hình Ảnh Sản Phẩm</h3>
+                <div class="file-container">
+                    <input type="file" id="prodadd-image-main" accept="image/*" required>
+                    <label for="prodadd-image-main">Hình ảnh chính</label>
+                </div>
+                <div class="product-thumbnails">
+                    <div class="file-container">
+                        <input type="file" id="prodadd-image-thumbnail1" accept="image/*">
+                        <label for="prodadd-image-thumbnail1">Thumbnail 1</label>
+                    </div>
+                    <div class="file-container">
+                        <input type="file" id="prodadd-image-thumbnail2" accept="image/*">
+                        <label for="prodadd-image-thumbnail2">Thumbnail 2</label>
+                    </div>
+                    <div class="file-container">
+                        <input type="file" id="prodadd-image-thumbnail3" accept="image/*">
+                        <label for="prodadd-image-thumbnail3">Thumbnail 3</label>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phần nhập thông tin sản phẩm -->
+            <div class="product-details">
+                <h3>Thông Tin Sản Phẩm</h3>
+                <div class="product-title">
+                    <label for="product-name">Tên sản phẩm:</label>
+                    <input type="text" id="product-name" required>
+                </div>
+
+                <div class="product-rating">
+                    <label for="product-rating">Chọn số sao:</label>
+                    <input type="number" id="product-rating" min="1" max="5" value="5"> ★
+                    <label for="product-reviews">Đánh giá:</label>
+                    <input type="number" id="product-reviews" min="0" value="0">
+                </div>
+
+                <div class="product-availability">
+                    <label for="availability">Tình trạng:</label>
+                    <select id="availability">
+                        <option value="in_stock">In Stock</option>
+                        <option value="out_of_stock">Out of Stock</option>
+                        <option value="pre_order">Pre-order</option>
+                        <option value="coming_soon">Coming Soon</option>
+                        <option value="limited_stock">Limited Stock</option>
+                        <option value="discontinued">Discontinued</option>
+                    </select>
+                </div>
+
+                <div class="product-description">
+                    <label for="description">Mô tả:</label>
+                    <textarea id="description" rows="3"></textarea>
+                </div>
+
+                <div class="product-price">
+                    <label for="new-price">Giá mới:</label>
+                    <input type="number" id="new-price" value="0" step="0.01">
+                    <label for="old-price">Giá cũ:</label>
+                    <input type="number" id="old-price" value="900.00" step="0.01">
+                </div>
+
+                <div class="product-quantity">
+                    <label for="quantity">Số lượng:</label>
+                    <button type="button" id="decrease">-</button>
+                    <input type="number" id="quantity" value="1" min="1">
+                    <button type="button" id="increase">+</button>
+                </div>
+            </div>
+
+            <!-- Phần chi tiết sản phẩm -->
+            <div class="product-info">
+                <h3>Chi Tiết Sản Phẩm</h3>
+                <div class="info-item">
+                    <label for="category">Danh Mục:</label>
+                    <input type="text" id="category">
+                </div>
+                <div class="info-item">
+                    <label for="promo-quantity">Số lượng hàng khuyến mãi:</label>
+                    <input type="number" id="promo-quantity">
+                </div>
+                <div class="info-item">
+                    <label for="stock-quantity">Số sản phẩm còn lại:</label>
+                    <input type="number" id="stock-quantity">
+                </div>
+                <div class="info-item">
+                    <label for="style">Phong cách:</label>
+                    <input type="text" id="style">
+                </div>
+                <div class="info-item">
+                    <label for="origin">Xuất xứ:</label>
+                    <input type="text" id="origin">
+                </div>
+
+                <a href="adminprdmgn.html">
+                    <button id="add-btn">ADD</button>
+
+                </a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+</body>
+
+</html>
