@@ -1,0 +1,466 @@
+ body {
+     font-family: Arial, sans-serif;
+     background-color: #f5f5f5;
+     margin: 0;
+     padding: 0;
+ }
+
+ .page-admin {
+     display: flex;
+
+ }
+
+ .admin-profile {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin-bottom: 30px;
+     width: 100%;
+ }
+
+ .admin-avatar {
+     width: 80px;
+     height: 80px;
+     border-radius: 50%;
+     object-fit: cover;
+     display: flex;
+     justify-content: center;
+ }
+
+ .admin-name {
+     font-size: 16px;
+     font-weight: bold;
+     text-align: center;
+ }
+
+ .pageadmin-bar {
+     height: auto;
+     width: 20%;
+     background-color: #333;
+     color: #fff;
+     padding: 15px;
+
+ }
+
+ .pageadmin-bar a {
+     display: block;
+     color: #fff;
+     text-decoration: none;
+     padding: 15px 10px;
+     margin-bottom: 10px;
+     border-radius: 5px;
+     transition: background 0.3s;
+ }
+
+ .pageadmin-bar a:hover {
+     background-color: #444;
+ }
+
+ #prdmgn {
+     background-color: #444;
+ }
+
+ /* Phần chi tiết đơn hàng */
+ .content {
+     padding: 20px;
+     width: 80%;
+     /* Điều chỉnh phần content chiếm 80% */
+     background-color: white;
+ }
+
+ /* .container {
+
+    margin: 0 auto;
+    padding: 16px;
+} */
+
+ /* Header phần chi tiết đơn hàng */
+ .header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 16px;
+ }
+
+ .header .title {
+     font-size: 1.25rem;
+     font-weight: 600;
+ }
+
+ .header .language img {
+     width: 24px;
+     height: 16px;
+     margin-right: 8px;
+ }
+
+ /* Chi tiết đơn hàng */
+ .order-details {
+     background-color: #ffffff;
+     padding: 16px;
+     border-radius: 8px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+     /* Tăng giá trị để bóng rõ hơn và phủ toàn khung */
+     margin-bottom: 16px;
+ }
+
+ .order-details h1 {
+     font-size: 1.25rem;
+     font-weight: 600;
+ }
+
+ .order-details h1 span {
+     color: #1d4ed8;
+ }
+
+ .order-details .buttons button {
+     padding: 8px 16px;
+     border-radius: 4px;
+     border: none;
+     cursor: pointer;
+     transition: background-color 0.3s;
+ }
+
+ .order-details .buttons .print {
+     background-color: #e5e7eb;
+     color: #1f2937;
+ }
+
+ .order-details .buttons .cancel {
+     background-color: #ef4444;
+     color: #ffffff;
+ }
+
+ .order-details .buttons .delete {
+     background-color: #b91c1c;
+     color: #ffffff;
+ }
+
+ /* Bảng sản phẩm */
+ table {
+     width: 100%;
+     border-collapse: collapse;
+     margin-bottom: 16px;
+ }
+
+ table th,
+ table td {
+     border: 1px solid #d1d5db;
+     padding: 8px;
+     text-align: left;
+ }
+
+ table th {
+     background-color: #f9fafb;
+ }
+
+ table td img {
+     width: 50px;
+     height: 50px;
+     margin-right: 8px;
+ }
+
+ /* Tổng cộng */
+ .total {
+     background-color: #fef3c7;
+     padding: 16px;
+     border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     margin-top: 16px;
+ }
+
+ .total .total-title {
+     font-size: 1.25rem;
+     font-weight: 600;
+     margin-bottom: 8px;
+ }
+
+ .total .total-amount {
+     font-size: 1.5rem;
+     font-weight: 700;
+     color: #1d4ed8;
+ }
+
+ /* Form điều chỉnh thông tin đơn hàng */
+ .form-edit-order {
+     background-color: #ffffff;
+     padding: 16px;
+     border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     margin-bottom: 16px;
+ }
+
+ .form-edit-order label {
+     display: block;
+     font-size: 1rem;
+     margin-bottom: 8px;
+     font-weight: 500;
+ }
+
+ .form-edit-order input,
+ .form-edit-order select {
+     width: 100%;
+     padding: 8px;
+     border: 1px solid #d1d5db;
+     border-radius: 4px;
+     margin-bottom: 16px;
+ }
+
+ .form-edit-order button {
+     padding: 8px 16px;
+     background-color: #1d4ed8;
+     color: white;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: background-color 0.3s;
+ }
+
+ .form-edit-order button:hover {
+     background-color: #2563eb;
+ }
+
+ /* Modal hoặc pop-up */
+ .modal {
+     position: fixed;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(0, 0, 0, 0.5);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     visibility: hidden;
+     opacity: 0;
+     transition: opacity 0.3s ease-in-out;
+ }
+
+ .modal.show {
+     visibility: visible;
+     opacity: 1;
+ }
+
+ .modal .modal-content {
+     background-color: #ffffff;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     max-width: 500px;
+     width: 100%;
+ }
+
+ .modal .modal-header {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 16px;
+ }
+
+ .modal .modal-header .modal-title {
+     font-size: 1.25rem;
+     font-weight: 600;
+ }
+
+ .modal .modal-header .close {
+     cursor: pointer;
+     font-size: 1.5rem;
+     color: #1d4ed8;
+ }
+
+ .modal .modal-body {
+     font-size: 1rem;
+ }
+
+ /* Các trạng thái đơn hàng */
+ .order-status {
+     display: inline-block;
+     padding: 6px 12px;
+     border-radius: 4px;
+     font-size: 0.875rem;
+ }
+
+ .status-pending {
+     background-color: #f59e0b;
+     color: white;
+ }
+
+ .status-approved {
+     background-color: #10b981;
+     color: white;
+ }
+
+ .status-cancelled {
+     background-color: #ef4444;
+     color: white;
+ }
+
+ .status-shipped {
+     background-color: #2563eb;
+     color: white;
+ }
+
+ .status-delivered {
+     background-color: #6ee7b7;
+     color: white;
+ }
+
+ /* Phần xử lý bảng kiểm tra các sản phẩm đã chọn */
+ .checkbox-container {
+     display: flex;
+     align-items: center;
+     margin-right: 8px;
+ }
+
+ .checkbox-container input[type="checkbox"] {
+     margin-right: 8px;
+ }
+
+ .checkbox-container label {
+     font-size: 1rem;
+     font-weight: 500;
+ }
+
+ /* Bảng quản lý đơn hàng */
+ .table-container {
+     background-color: #ffffff;
+     padding: 20px;
+     border-radius: 8px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+     margin-top: 20px;
+ }
+
+ table {
+     width: 100%;
+     border-collapse: collapse;
+ }
+
+ table th,
+ table td {
+     padding: 12px;
+     text-align: left;
+     border-bottom: 1px solid #d1d5db;
+ }
+
+ table th {
+     background-color: #f9fafb;
+     font-weight: 600;
+     color: #1f2937;
+ }
+
+ /* Các phần tử biểu mẫu như select, input */
+ input[type="text"],
+ input[type="email"],
+ select,
+ textarea {
+     width: 100%;
+     padding: 10px;
+     border-radius: 5px;
+     border: 1px solid #d1d5db;
+     margin-bottom: 12px;
+     font-size: 1rem;
+ }
+
+ input[type="text"]:focus,
+ input[type="email"]:focus,
+ select:focus,
+ textarea:focus {
+     outline-color: #1d4ed8;
+ }
+
+ /* Các nút hành động */
+ button {
+     background-color: #1d4ed8;
+     color: white;
+     padding: 10px 20px;
+     border: none;
+     border-radius: 5px;
+     cursor: pointer;
+     font-size: 1rem;
+ }
+
+ button:hover {
+     background-color: #2563eb;
+ }
+
+ button:disabled {
+     background-color: #d1d5db;
+     cursor: not-allowed;
+ }
+
+ /* CSS cho phần Thông tin người mua hàng */
+ .customer-info {
+     padding: 20px;
+     background-color: #f9f9f9;
+     border-radius: 8px;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     margin-top: 20px;
+ }
+
+ .customer-info h2 {
+     font-size: 1.5rem;
+     font-weight: 600;
+     margin-bottom: 15px;
+     color: #333;
+ }
+
+ .customer-info div {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 10px;
+ }
+
+ .customer-info label {
+     font-weight: 500;
+     color: #666;
+     width: 25%;
+     min-width: 100px;
+ }
+
+ .customer-info div div {
+     font-weight: 400;
+     color: #333;
+     width: 70%;
+ }
+
+ .customer-info div div:last-child {
+     text-align: right;
+ }
+
+ /* CSS cho các nút hành động */
+ .buttons button {
+     padding: 8px 16px;
+     font-size: 1rem;
+     margin: 5px;
+     border: none;
+     border-radius: 4px;
+     cursor: pointer;
+     transition: background-color 0.3s ease;
+ }
+
+ .print {
+     background-color: #4CAF50;
+     /* Màu xanh lá cây */
+     color: white;
+ }
+
+ .cancel {
+     background-color: #FFC107;
+     /* Màu vàng */
+     color: white;
+ }
+
+ .delete {
+     background-color: #F44336;
+     /* Màu đỏ */
+     color: white;
+ }
+
+ .buttons button:hover {
+     opacity: 0.8;
+ }
+
+ .qldonhang {
+     text-decoration: none;
+     color: black;
+ }

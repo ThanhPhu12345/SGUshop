@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/admin-taodonhang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="page-admin">
+
+        <div class="pageadmin-bar">
+            <div class="admin-profile">
+                <img src="assets/img/avt.jpg" alt="Admin Avatar" class="admin-avatar">
+                <p class="admin-name">Admin</p>
+            </div>
+
+            <a href="admin-dashboard.html" class="pageadmin-bar-dashboard">
+                <i class="fa-solid fa-house"></i> Dashboard
+            </a>
+            <a href="adminusermgn.html" class="pageadmin-bar-usermg">
+                <i class="fa-solid fa-user"></i> User Management
+            </a>
+            <a href="adminprdmgn.html" class="pageadmin-bar-prdmg">
+                <i class="fa-solid fa-car"></i> Product Management
+            </a>
+            <a href="admin-qlgiohang.html" class="pageadmin-bar-ordermg" id="prdmgn">
+                <i class="fa-solid fa-cart-shopping"></i> Order Management
+            </a>
+        </div>
+
+
+        <div class="content">
+            <div class="header">
+                <a href="#">Quản lý đơn hàng / Tạo đơn hàng mới</a>
+            </div>
+            <div class="container">
+                <div class="step-container">
+                    <div class="step-item active ">
+                        <div class="step-number">1</div>
+                        <span>Chọn sản phẩm</span>
+                    </div>
+                    <div class="step-item ">
+                        <div class="step-number">2</div>
+                        <span>Nhập thông tin đơn hàng</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <span>Xác nhận</span>
+                    </div>
+                </div>
+                <div class="product-selection">
+                    <select>
+                        <option>Tất cả</option>
+                        <option>quần</option>
+                        <option>áo</option>
+                        <option>giày</option>
+                        <option>dép</option>
+                    </select>
+                    <select>
+                        <option>Loại</option>
+                        <option>Nam</option>
+                        <option>Nữ</option>
+                        <option>Trẻ em </option>
+                        <option>Hot</option>
+                    </select>
+                    <div class="search-container">
+                        <!-- Ô tìm kiếm -->
+                        <input class="search-input" placeholder="Nhập mã đơn..." type="text" style="font-size: 16px;" />
+                        <button class="search-btn">
+                            <i class="fa-solid fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-list">
+                    <div class="product-item">
+                        <input type="checkbox" checked />
+                        <img alt="Apple Watch Series 3 GPS 38mm" height="40"
+                            src="assets/img/istockphoto-185301626-1024x1024.jpg" width="40" />
+                        <div class="product-info">
+                            <div>Apple Watch Series 3 GPS 38mm</div>
+                            <div class="product-price">Giá: 5.000.000đ</div> <!-- Thêm giá sản phẩm -->
+                            <span>Số lượng trong kho: 996</span>
+                        </div>
+                        <input class="quantity-input" type="number" min="1" value="1" placeholder="Số lượng" />
+                    </div>
+                    <div class="product-item">
+                        <input type="checkbox" checked />
+                        <img alt="Apple Watch Series 3 GPS 38mm" height="40"
+                            src="https://storage.googleapis.com/a1aa/image/7sdzhDDk6mZoNJ0uiadDj4DCvkUePE3tZzqQsUASjblNUT4JA.jpg"
+                            width="40" />
+                        <div class="product-info">
+                            <div>Apple Watch Series 3 GPS 38mm</div>
+                            <div class="product-price">Giá: 5.000.000đ</div> <!-- Thêm giá sản phẩm -->
+                            <span>Số lượng trong kho: 996</span>
+                        </div>
+                        <input class="quantity-input" type="number" min="1" value="1" placeholder="Số lượng" />
+                    </div>
+                    <div class="product-item">
+                        <input type="checkbox" checked />
+                        <img alt="Apple Watch Series 3 GPS 38mm" height="40"
+                            src="https://storage.googleapis.com/a1aa/image/7sdzhDDk6mZoNJ0uiadDj4DCvkUePE3tZzqQsUASjblNUT4JA.jpg"
+                            width="40" />
+                        <div class="product-info">
+                            <div>Apple Watch Series 3 GPS 38mm</div>
+                            <div class="product-price">Giá: 5.000.000đ</div> <!-- Thêm giá sản phẩm -->
+                            <span>Số lượng trong kho: 996</span>
+                        </div>
+                        <input class="quantity-input" type="number" min="1" value="1" placeholder="Số lượng" />
+                    </div>
+                    <div class="product-item">
+                        <input type="checkbox" checked />
+                        <img alt="Apple Watch Series 3 GPS 38mm" height="40"
+                            src="https://storage.googleapis.com/a1aa/image/7sdzhDDk6mZoNJ0uiadDj4DCvkUePE3tZzqQsUASjblNUT4JA.jpg"
+                            width="40" />
+                        <div class="product-info">
+                            <div>Apple Watch Series 3 GPS 38mm</div>
+                            <div class="product-price">Giá: 5.000.000đ</div> <!-- Thêm giá sản phẩm -->
+                            <span>Số lượng trong kho: 996</span>
+                        </div>
+                        <input class="quantity-input" type="number" min="1" value="1" placeholder="Số lượng" />
+                    </div>
+                    <div class="product-item">
+                        <input type="checkbox" checked />
+                        <img alt="Apple Watch Series 3 GPS 38mm" height="40"
+                            src="https://storage.googleapis.com/a1aa/image/7sdzhDDk6mZoNJ0uiadDj4DCvkUePE3tZzqQsUASjblNUT4JA.jpg"
+                            width="40" />
+                        <div class="product-info">
+                            <div>Apple Watch Series 3 GPS 38mm</div>
+                            <div class="product-price">Giá: 5.000.000đ</div> <!-- Thêm giá sản phẩm -->
+                            <span>Số lượng trong kho: 996</span>
+                        </div>
+                        <input class="quantity-input" type="number" min="1" value="1" placeholder="Số lượng" />
+                    </div>
+                    <div class="product-item">
+                        <input type="checkbox" />
+                        <img alt="Tai nghe Beats Studio 2.0" height="40"
+                            src="https://storage.googleapis.com/a1aa/image/avCaEEC5lrbbA1wavV7IHnNwUmZfk2UTfUa1CsTLJP9domwTA.jpg"
+                            width="40" />
+                        <div class="product-info">
+                            <div>Tai nghe Beats Studio 2.0</div>
+                            <span>Hết hàng</span>
+                            <div class="product-price">Giá: 3.500.000đ</div> <!-- Thêm giá sản phẩm -->
+                        </div>
+                        <input class="quantity-input" type="number" min="0" value="0" disabled />
+                    </div>
+                </div>
+                <div class="pagination">
+                    <a class="page-btn" href="admin-taodonhang.html">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                    <a class="page-btn " href="admin-taodonhang.html" style="text-decoration: none;">1</a>
+                    <a class="page-btn hidden-text-next" href="admin-taodonhang.html"
+                        style="text-decoration: none;">2</a>
+                    <a class="page-btn" href="admin-taodonhang.html">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="order-summary">
+                    <div class="total-price">
+                        Tổng tiền: <span>49.860đ</span>
+                    </div>
+                    <button class="continue-btn">
+                        <a href="admin-taodonhang2.html" style="text-decoration: none; color: white;"> Tiếp tục </a>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

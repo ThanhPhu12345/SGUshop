@@ -1,0 +1,94 @@
+<div class="page-admin">
+    <div class="pageadmin-bar">
+        <div class="admin-profile">
+            <img src="assets/img/avt.jpg" alt="Admin Avatar" class="admin-avatar">
+            <p class="admin-name">Admin</p>
+        </div>
+
+        <a href="admin-dashboard.html" class="pageadmin-bar-dashboard" id="prdmgn">
+            <i class=" fa-solid fa-house"></i> Dashboard
+        </a>
+        <a href="adminusermgn.html" class="pageadmin-bar-usermg">
+            <i class="fa-solid fa-user"></i> User Management
+        </a>
+        <a href="adminprdmgn.html" class="pageadmin-bar-prdmg">
+            <i class="fa-solid fa-car"></i> Product Management
+        </a>
+        <a href="admin-qlgiohang.html" class="pageadmin-bar-ordermg">
+            <i class=" fa-solid fa-cart-shopping"></i> Order Management
+        </a>
+    </div>
+    <!-- content -->
+
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+    }
+
+    .page-admin {
+    display: flex;
+
+    }
+
+    .admin-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+    }
+
+    .admin-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    }
+
+    .admin-name {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    }
+
+    .pageadmin-bar {
+    height: auto;
+    width: 20%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+
+    }
+
+    .pageadmin-bar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+    }
+
+    .pageadmin-bar a:hover {
+    background-color: #444;
+    }
+
+    #prdmgn {
+    background-color: #444;
+    }
+
+    /* phần nội dung */
+    .main-content {
+    width: 80%;
+    /* Content chiếm 80% */
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    /* box-sizing: border-box;
+    Đảm bảo padding không làm tăng kích thước phần tử */
+    }

@@ -1,0 +1,359 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    margin: 0;
+    padding: 0;
+}
+
+.page-admin {
+    display: flex;
+
+}
+
+.admin-profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+    width: 100%;
+}
+
+.admin-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+}
+
+.admin-name {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.pageadmin-bar {
+    height: auto;
+    width: 20%;
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+
+}
+
+.pageadmin-bar a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.pageadmin-bar a:hover {
+    background-color: #444;
+}
+
+#prdmgn {
+    background-color: #444;
+}
+
+.pageadmin-content-prdmg,
+.pageadmin-content-fix,
+.pageadmin-trashbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    display: none;
+}
+
+.pageadmin-trashbox {
+    justify-content: center;
+    align-items: center;
+}
+
+.pageadmin-trashbox-content {
+    width: 30%;
+    height: 40vh;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+
+
+}
+
+.pageadmin-trashbox-content span {
+    font-size: 25px;
+}
+
+.pageadmin-trashbox-button button {
+    width: 70px;
+    background-color: #ddd;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    margin-top: 30px;
+}
+
+.pageadmin-trashbox-button button:hover {
+    background-color: rgb(30, 213, 134);
+}
+
+#preview-img {
+    width: 40%;
+}
+
+.prdadd {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.prdadd i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.prdadd label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.prdadd input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.prdadd-submit {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.prdadd-submit:hover {
+    background-color: #0056b3;
+}
+
+
+
+.table-container {
+    margin-top: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: center;
+}
+
+th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button {
+    cursor: pointer;
+}
+
+.product {
+    width: 80%;
+    margin: 10px;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.product-head {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid black;
+
+}
+
+.product-head-classify {
+    padding: 10px;
+    display: block;
+
+}
+
+.product-head-classify a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+.product-head-classify a:hover {
+    color: blue;
+
+}
+
+.page-wrap a {
+    width: 10px;
+    height: 10px;
+    padding: 5px;
+    border-radius: 3px;
+    background-color: #888;
+    color: white;
+    text-decoration: none;
+}
+
+.page-wrap a:hover {
+    background-color: #555;
+    color: #f2f2f2;
+}
+
+#wrap1 {
+    font-weight: bold;
+    color: #dc3545;
+}
+
+.product-main {
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.product-list {
+    width: 30%;
+    height: 50vh;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    position: relative;
+}
+
+.product-img {
+    width: 100%;
+    height: 60%;
+}
+
+.product-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-name {
+    color: black;
+    font-size: 20px;
+    font-weight: 550;
+    margin: 10px;
+}
+
+.product-star {
+    margin: 10px;
+}
+
+.product-star i {
+    color: #fdd922;
+    border: 1px solid #f2f2f2;
+}
+
+.product-price {
+    margin: 10px;
+}
+
+.product-btn {
+    position: absolute;
+    margin: 10px;
+    width: 90%;
+    height: 50%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.product-btn i {
+    color: white;
+    margin-right: 10px;
+    padding: 10px;
+    margin: 0;
+    background-color: #108bea;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-80px);
+    transition: transform 0.5s ease, opacity 0.3s ease;
+}
+
+.product-btn:hover i {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.product-btn i:hover {
+    background-color: #fdd922;
+    color: black;
+}
+
+
+
+.addproduct {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    border: none;
+    font-size: 50px;
+}
+
+.addproduct:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    ;
+
+}
+
+.product-tail {
+    display: flex;
+    width: 100%;
+    margin: 20px;
+    align-items: center;
+    justify-content: center;
+}

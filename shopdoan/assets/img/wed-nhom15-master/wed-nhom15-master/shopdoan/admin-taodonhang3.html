@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="assets/css/admin-detailbill.css"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Adminpage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+
+        .page-admin {
+            display: flex;
+
+        }
+
+        .admin-profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            width: 100%;
+        }
+
+        .admin-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            display: flex;
+            justify-content: center;
+        }
+
+        .admin-name {
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        .pageadmin-bar {
+            height: auto;
+            width: 20%;
+            background-color: #333;
+            color: #fff;
+            padding: 15px;
+
+        }
+
+        .pageadmin-bar a {
+            display: block;
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .pageadmin-bar a:hover {
+            background-color: #444;
+        }
+
+        #prdmgn {
+            background-color: #444;
+        }
+
+
+        /* Content  */
+        .content {
+            width: 80%;
+            padding: 20px;
+            background-color: #fff;
+        }
+
+        /* Header */
+        .header {
+            background-color: #ffffff;
+            padding: 10px 20px;
+            border-bottom: 1px solid #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+
+        .header a {
+            text-decoration: none;
+            color: #007bff;
+            font-size: 14px;
+        }
+
+        .header .language {
+            display: flex;
+            align-items: center;
+        }
+
+        .header .language img {
+            margin-left: 5px;
+        }
+
+        /* Order Details */
+        .order-details {
+            margin-top: 20px;
+        }
+
+        .order-details h2 {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .order-details table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        .order-details table th,
+        .order-details table td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        .order-details table th {
+            background-color: #f9f9f9;
+        }
+
+        .order-details .total,
+        .order-details .shipping,
+        .order-details .discount,
+        .order-details .final-total {
+            font-weight: bold;
+        }
+
+        .order-details .apply-discount {
+            display: flex;
+            align-items: center;
+        }
+
+        .order-details .apply-discount input {
+            padding: 5px;
+            margin-right: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            flex-grow: 1;
+        }
+
+        .order-details .apply-discount button {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .order-details .apply-discount button:hover {
+            background-color: #0056b3;
+        }
+
+        .order-details .payment-method {
+            margin-top: 20px;
+        }
+
+        .order-details .complete-order {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+        }
+
+        .order-details .complete-order button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .order-details .complete-order button:hover {
+            background-color: #0056b3;
+        }
+
+        .step-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background-color: #e9f5ff;
+        }
+
+        .step-item {
+            text-align: center;
+            flex-grow: 1;
+            position: relative;
+        }
+
+        .step-item:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: -50%;
+            width: 100%;
+            height: 2px;
+            background-color: #ddd;
+            transform: translateY(-50%);
+            z-index: -1;
+        }
+
+        .step-item.active:not(:last-child)::after {
+            background-color: #007bff;
+        }
+
+        .step-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            border-radius: 50%;
+            background-color: #ddd;
+            color: #333;
+            font-weight: bold;
+            margin-bottom: 5px;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .step-item.active .step-number {
+            background-color: #007bff;
+            color: #fff;
+        }
+
+        .step-item span {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .quay-lai {
+            background-color: #f0f0f0 !important;
+        }
+
+        .order-details .complete-order .quay-lai {
+            background-color: #e0e0e0;
+            /* Màu nền sáng hơn để dễ nhìn */
+            color: #000;
+            /* Màu chữ đen */
+            border: 1px solid #ccc;
+            /* Thêm viền để rõ ràng hơn */
+            padding: 10px 20px;
+            /* Giữ kích thước giống với nút khác */
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .order-details .complete-order .quay-lai:hover {
+            background-color: #d6d6d6;
+            /* Màu nền khi hover */
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+
+            .container {
+                margin-left: 0;
+                width: 100%;
+                padding: 20px 10px;
+            }
+        }
+
+        @media (max-width: 768px) {
+
+            .order-details table,
+            .order-details .apply-discount,
+            .order-details .complete-order {
+                display: block;
+                width: 100%;
+                overflow-x: auto;
+            }
+
+            .order-details table th,
+            .order-details table td {
+                padding: 8px;
+                font-size: 14px;
+            }
+
+            .order-details .apply-discount input {
+                width: 70%;
+                margin-bottom: 5px;
+            }
+
+            .order-details .apply-discount button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page-admin">
+
+        <div class="pageadmin-bar">
+            <div class="admin-profile">
+                <img src="assets/img/avt.jpg" alt="Admin Avatar" class="admin-avatar">
+                <p class="admin-name">Admin</p>
+            </div>
+
+            <a href="admin-dashboard.html" class="pageadmin-bar-dashboard">
+                <i class="fa-solid fa-house"></i> Dashboard
+            </a>
+            <a href="adminusermgn.html" class="pageadmin-bar-usermg">
+                <i class="fa-solid fa-user"></i> User Management
+            </a>
+            <a href="adminprdmgn.html" class="pageadmin-bar-prdmg">
+                <i class="fa-solid fa-car"></i> Product Management
+            </a>
+            <a href="admin-qlgiohang.html" class="pageadmin-bar-ordermg" id="prdmgn">
+                <i class="fa-solid fa-cart-shopping"></i> Order Management
+            </a>
+        </div>
+        <div class="content">
+            <div class="header">
+                <a href="#">Quản lý đơn hàng / Tạo đơn hàng mới</a>
+            </div>
+            <div class="container">
+                <div class="step-container">
+                    <div class="step-item  ">
+                        <div class="step-number">1</div>
+                        <span>Chọn sản phẩm</span>
+                    </div>
+                    <div class="step-item ">
+                        <div class="step-number">2</div>
+                        <span>Nhập thông tin đơn hàng</span>
+                    </div>
+                    <div class="step-item active">
+                        <div class="step-number ">3</div>
+                        <span>Xác nhận</span>
+                    </div>
+                </div>
+                <div class="order-details">
+                    <p>Ghi chú: test</p>
+                    <br>
+                    <h2>CHI TIẾT ĐƠN HÀNG</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Hình</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Đơn giá</th>
+                                <th>Số lượng</th>
+                                <th>Thành tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img alt="Apple Watch Series 3 GPS 38mm" height="50"
+                                        src="https://storage.googleapis.com/a1aa/image/dk0YrrptqsKlCpU9aeKsgQToJYSBdeSCSq7omrFKJN8450wTA.jpg"
+                                        width="50" /></td>
+                                <td>Apple Watch Series 3 GPS 38mm</td>
+                                <td>49.860đ</td>
+                                <td>1</td>
+                                <td>49.860đ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table>
+                        <tbody>
+                            <tr class="total">
+                                <td colspan="4">Tổng tiền</td>
+                                <td>49.860đ</td>
+                            </tr>
+                            <tr class="shipping">
+                                <td colspan="4">Phí vận chuyển</td>
+                                <td>50.000đ</td>
+                            </tr>
+                            <tr class="discount">
+                                <td colspan="4">Mã giảm giá</td>
+                                <td class="apply-discount">
+                                    <input placeholder="Nhập mã giảm giá" type="text" />
+                                    <button>Áp dụng</button>
+                                </td>
+                            </tr>
+                            <tr class="discount">
+                                <td colspan="4">Giảm giá</td>
+                                <td>0đ</td>
+                            </tr>
+                            <tr class="final-total">
+                                <td colspan="4">Tổng thanh toán</td>
+                                <td>99.860đ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div class="payment-method">
+                        <label>Thanh toán khi giao hàng (COD)</label>
+                        <label><input type="checkbox" /> Đã thanh toán</label>
+                    </div>
+                    <div class="complete-order">
+                        <button class="quay-lai"> <a href="admin-taodonhang.html"
+                                style="text-decoration: none; color:black ;"> Quay lại </a>
+                        </button></button>
+                        <button><a href="admin-detailbill.html" style="text-decoration: none; color: white;"> Hoàn tất
+                            </a>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+
+</html>

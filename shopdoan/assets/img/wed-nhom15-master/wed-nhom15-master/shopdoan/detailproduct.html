@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Hope</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main2.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <link rel="stylesheet" href="assets/css/detailproduct.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Top bar: Thông báo, hỗ trợ, liên hệ -->
+    <div class="top-bar">
+        <a href="#"><i class="fas fa-bell"></i> Thông báo</a>
+        <a href="#"><i class="fas fa-headset"></i> Hỗ trợ</a>
+        <a href="#"><i class="fas fa-phone"></i> Liên hệ</a>
+        <a href="#"><i class="fa-solid fa-user"></i> THANHPHU</a>
+        <a href="home.html"><i class="fa-solid fa-right-from-bracket"></i>Đăng Xuất</a>
+    </div>
+
+
+    <div class="header_luot">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+                <div class="hinhsgu">
+                    <img src="assets/img/snapedit_1728994377947.png" alt="">
+                </div>
+                <div class="logo_saigonuni">
+                    <a href="#">SAIGONUNI</a>
+                </div>
+            </div>
+            <div class="search-bar">
+                <input type="text" placeholder="Search here...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            <div class="icart">
+                <i class="fas fa-shopping-cart"></i> Cart
+                <span class="cart-count">8</span>
+                <div class="cart-dropdown">
+                    <!-- Sản phẩm trong giỏ hàng -->
+                    <div class="cart-item">
+                        <img src="assets/img/istockphoto-185301626-1024x1024.jpg" alt="Product 1" class="cart-item-img">
+                        <div class="cart-item-details">
+                            <p class="cart-item-name">Giày Nam Phong Cách</p>
+                            <p class="cart-item-price">100,000 VND</p>
+                            <p class="cart-item-quantity">số lượng: 1</p>
+                        </div>
+                    </div>
+
+                    <div class="cart-item">
+                        <img src="assets/img/istockphoto-136795035-1024x1024.jpg" alt="Product 2" class="cart-item-img">
+                        <div class="cart-item-details">
+                            <p class="cart-item-name">Áo Nam</p>
+                            <p class="cart-item-price">150,000 VND</p>
+                            <p class="cart-item-quantity">số lượng: 1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation Bar -->
+    <div class="nav-bar">
+        <span class="Home"><a href="#">HOME</a></span>
+        <div class="dropdown">
+            <a href="#">MAN</a>
+            <div class="dropdown-content">
+                <div class="dropdown-column">
+                    <strong>Men</strong>
+                    <a href="#">Dresses</a>
+                    <a href="#">Shoes</a>
+                    <a href="#">Jackets</a>
+                    <a href="#">Sunglasses</a>
+                    <a href="#">Sport Wear</a>
+                    <a href="#">Blazers</a>
+                    <a href="#">Shirts</a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">WONDER</a>
+            <div class="dropdown-content">
+                <div class="dropdown-column">
+                    <strong>Women</strong>
+                    <a href="#">Handbags</a>
+                    <a href="#">Jewellery</a>
+                    <a href="#">Swimwear</a>
+                    <a href="#">Tops</a>
+                    <a href="#">Flats</a>
+                    <a href="#">Shoes</a>
+                    <a href="#">Winter Wear</a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">CHILDREN<span class="badge new">NEW</span></a>
+            <div class="dropdown-content">
+                <div class="dropdown-column">
+                    <strong>Boys</strong>
+                    <a href="#">Toys & Games</a>
+                    <a href="#">Jeans</a>
+                    <a href="#">Shirts</a>
+                    <a href="#">Shoes</a>
+                    <a href="#">School Bags</a>
+                    <a href="#">Lunch Box</a>
+                    <a href="#">Footwear</a>
+                </div>
+                <div class="dropdown-column">
+                    <strong>Girls</strong>
+                    <a href="#">Sandals</a>
+                    <a href="#">Shorts</a>
+                    <a href="#">Dresses</a>
+                    <a href="#">Jewellery</a>
+                    <a href="#">Bags</a>
+                    <a href="#">Night Dress</a>
+                    <a href="#">Swim Wear</a>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <a href="#">HOTTREND <span class="badge">HOT</span></a>
+            <div class="dropdown-content">
+                <div class="dropdown-column">
+                    <strong>Trending Items</strong>
+                    <a href="#">Item 1</a>
+                    <a href="#">Item 2</a>
+                    <a href="#">Item 3</a>
+                </div>
+            </div>
+        </div>
+        <a href="#">TINTUC</a>
+    </div>
+
+
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="left-page">
+            <div class="hot-deals">
+                <div class="hot-deals-title">
+                    <h2>Hot Deals</h2>
+                </div>
+                <div class="hot-deals-box">
+                    <img src="assets/img/j4.jpg" alt="">
+                </div>
+                <div class="deal-time">
+                    <span>Flash sale:</span>
+                    <span>1D</span>
+                    <span>22h</span>
+                    <span>35p</span>
+                    <span>5s</span>
+                </div>
+                <div class="hot-deals-bottom">
+                    <span class="new-price">$99</span>
+                    <span class="old-price">$299</span>
+                    <a href=""> <button class="details-btn">Details</button></a>
+                </div>
+            </div>
+            <div class="page-tag">
+                <div class="page-tag-title">
+
+                    <h2>Tags</h2>
+                </div>
+                <div class="page-tag-box">
+                    <a href="#" class="tag">Vest</a>
+                    <a href="#" class="tag">Blazer</a>
+                    <a href="#" class="tag">Suit</a>
+                    <a href="#" class="tag">Jacket</a>
+                    <a href="#" class="tag">Coat</a>
+                    <a href="#" class="tag">Sweater</a>
+                    <a href="#" class="tag">Pants</a>
+                    <a href="#" class="tag">Shorts</a>
+                    <a href="#" class="tag">Jeans</a>
+                </div>
+
+
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content-detail">
+            <div class="breadcrumb">
+                <a href="#">Home</a> / <a href="#">Clothing</a> / <a href="#">Floral Print Buttoned</a>
+            </div>
+            <div class="product-layout">
+
+                <div class="product-image">
+                    <button class="prev" onclick="prevImage()">&#10094;</button>
+                    <img id="main-image" src="assets/img/j5.jpg" alt="Floral Print Buttoned Jacket">
+                    <button class="next" onclick="nextImage()">&#10095;</button>
+                    <div class="product-thumbnails">
+                        <img src="assets/img/j5.jpg" alt="Thumbnail 1" onclick="changeImage(this)">
+                        <img src="assets/img/j5.jpg" alt="Thumbnail 2" onclick="changeImage(this)">
+                        <img src="assets/img/j5.jpg" alt="Thumbnail 3" onclick="changeImage(this)">
+                        <img src="assets/img/j5.jpg" alt="Thumbnail 4" onclick="changeImage(this)">
+                    </div>
+                </div>
+
+
+
+                <!-- Product Details -->
+                <div class="product-details">
+                    <h1 class="product-title">Áo Sơ Mi Họa Tiết Hoa</h1>
+                    <div class="product-rating">
+                        ★★★★☆ <span>(13 Đánh Giá)</span>
+                    </div>
+                    <div class="product-availability">
+                        Tình Trạng: <span>Còn Hàng</span>
+                    </div>
+                    <p class="product-description">
+                        Áo sơ mi cotton mềm mại, thoáng mát, họa tiết hoa tươi sáng, dễ phối đồ, phù hợp cho mùa hè.
+                    </p>
+
+                    <div class="product-price">
+                        <label>
+                            GIÁ
+                        </label>
+                        $800.00 <del>$900.00</del>
+                    </div>
+                    <div class="product-options">
+                        <label for="color">
+                            MÀU SẮC
+                        </label>
+                        <div class="colors">
+                            <div class="selected">
+                                Urban ĐEN
+                            </div>
+                            <div>
+                                Urban TRẮNG
+                            </div>
+                            <div>
+                                COLOR01 ĐEN
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-options">
+                        <label for="size">
+                            SIZE
+                        </label>
+                        <div class="sizes">
+                            <div>
+                                S
+                            </div>
+                            <div>
+                                M
+                            </div>
+                            <div>
+                                L
+                            </div>
+                            <div>
+                                XL
+                            </div>
+                            <div>
+                                XXL
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-quantity">
+                        <label for="quantity">Số Lượng</label>
+                        <button onclick="decrease()">-</button>
+                        <input type="text" id="quantity" value="1" />
+                        <button onclick="increase()">+</button>
+                    </div>
+                    <div class="product-actions">
+                        <button class="add-to-cart">
+                            Thêm Vào Giỏ Hàng
+                        </button>
+                        <button class="buy-now">
+                            Mua Ngay
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="product-info">
+                <h3>Chi Tiết Sản Phẩm</h3>
+                <div class="info-item">
+                    <span class="info-label">Danh Mục:</span>
+                    <span class="info-value">Shopee &gt; Thời Trang Nam &gt; Áo &gt; Áo Thun</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Số lượng hàng khuyến mãi:</span>
+                    <span class="info-value">2387</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Số sản phẩm còn lại:</span>
+                    <span class="info-value">857001</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Phong cách:</span>
+                    <span class="info-value">Thể thao, Cơ bản, Hàn Quốc, Đường phố</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Xuất xứ:</span>
+                    <span class="info-value">Việt Nam</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Chiều dài tay áo:</span>
+                    <span class="info-value">Dài 3/4</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Dáng kiểu áo:</span>
+                    <span class="info-value">Oversized</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Cổ áo:</span>
+                    <span class="info-value">Cổ tròn</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Chất liệu:</span>
+                    <span class="info-value">Cotton</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Mẫu:</span>
+                    <span class="info-value">In</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Mùa:</span>
+                    <span class="info-value">Mùa hè</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Gửi từ:</span>
+                    <span class="info-value">Hà Nội</span>
+                </div>
+            </div>
+
+            <div class="review-section">
+                <h2>Đánh Giá Sản Phẩm</h2>
+                <div class="review">
+                    <div class="review-header">
+                        <span class="reviewer-name">John Doe</span>
+                        <span class="review-date">1 Tháng Mười, 2024</span>
+                    </div>
+                    <div class="review-rating">★★★★☆</div>
+                    <p class="review-text">Sản phẩm rất tuyệt! Rất ấm áp và thoải mái, hoàn hảo cho mùa đông. Màu sắc
+                        giống hệt như
+                        hình và hàng giao đúng thời gian. Rất đáng để mua!</p>
+                </div>
+
+                <div class="review">
+                    <div class="review-header">
+                        <span class="reviewer-name">Jane Smith</span>
+                        <span class="review-date">28 Tháng Chín, 2024</span>
+                    </div>
+                    <div class="review-rating">★★★☆☆</div>
+                    <p class="review-text">Áo khoác đẹp, nhưng kích thước hơi nhỏ. Tôi khuyên nên đặt lớn hơn một cỡ.
+                        Nhìn chung,
+                        chất lượng tốt nhưng cần cải thiện độ chính xác về kích cỡ.</p>
+                </div>
+                <button class="view-more-btn">Xem Thêm</button>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+    <script>
+        const imageList = [
+            "assets/img/j5.jpg",
+            "assets/img/j6.jpg",
+            "assets/img/j4.jpg",
+            "assets/img/j5.jpg"
+        ];
+        let currentIndex = 0;
+
+        function updateMainImage() {
+            const mainImage = document.getElementById('main-image');
+            mainImage.style.opacity = 0; // Đưa ảnh về trạng thái mờ trước khi thay đổi
+            setTimeout(() => {
+                mainImage.src = imageList[currentIndex]; // Cập nhật ảnh chính
+                mainImage.style.opacity = 1; // Hiển thị lại ảnh với hiệu ứng mượt mà
+            }, 500); // Đảm bảo thời gian để opacity chuyển qua
+        }
+
+        function nextImage() {
+            currentIndex = (currentIndex + 1) % imageList.length; // Vòng lại từ đầu nếu ở cuối danh sách
+            updateMainImage();
+        }
+
+        function prevImage() {
+            currentIndex = (currentIndex - 1 + imageList.length) % imageList.length; // Vòng lại cuối nếu ở đầu danh sách
+            updateMainImage();
+        }
+
+        function changeImage(thumbnail) {
+            const mainImage = document.getElementById('main-image');
+            mainImage.style.opacity = 0; // Đưa ảnh về trạng thái mờ trước khi thay đổi
+            setTimeout(() => {
+                mainImage.src = thumbnail.src; // Lấy đường dẫn của ảnh thu nhỏ và đặt cho ảnh chính
+                currentIndex = imageList.indexOf(thumbnail.src); // Cập nhật chỉ mục hình ảnh hiện tại
+                mainImage.style.opacity = 1; // Hiển thị lại ảnh với hiệu ứng mượt mà
+            }, 500); // Đảm bảo thời gian để opacity chuyển qua
+        }
+
+    </script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Thông tin</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                    <li><a href="#">Hỗ trợ khách hàng</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Liên hệ</h4>
+                <p>Email: contact@saigonuni.com</p>
+                <p>Điện thoại: 0123-456-789</p>
+            </div>
+            <div class="footer-section social-media">
+                <h4>Mạng xã hội</h4>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SAIGONUNI. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script>
+        function decrease() {
+            let quantity = document.getElementById("quantity");
+            let currentValue = parseInt(quantity.value);
+            if (currentValue > 1) {
+                quantity.value = currentValue - 1;
+            }
+        }
+
+        function increase() {
+            let quantity = document.getElementById("quantity");
+            quantity.value = parseInt(quantity.value) + 1;
+        }
+    </script>
+
+
+
+</body>
+
+</html>

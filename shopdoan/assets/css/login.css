@@ -6,12 +6,13 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: f4f4f9;
+    background-color: #f4f4f9;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     padding: 0 20px;
+
 }
 
 .login-container {
@@ -110,4 +111,17 @@ input[type="checkbox"] {
     text-decoration: none;
     color: white;
     font-size: 19px;
+}
+
+.blog-image {
+    max-width: 60%;
+    /* Đảm bảo ảnh không vượt quá kích thước của khung chứa */
+    height: auto;
+    /* Tự động điều chỉnh chiều cao dựa trên tỉ lệ ảnh */
+    border-radius: 8px;
+    /* Tùy chọn: làm bo góc ảnh để đẹp mắt */
+    margin: 20px 0;
+    /* Khoảng cách trên và dưới để ảnh không sát nội dung */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    /* Tùy chọn: thêm bóng mờ cho ảnh */
 }

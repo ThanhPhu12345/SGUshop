@@ -10,7 +10,6 @@ body {
 body {
     display: flex;
     flex-direction: column;
-    /* Sắp xếp các phần theo chiều dọc */
 }
 
 /* Thanh top-bar chứa thông báo, liên hệ */
@@ -169,10 +168,11 @@ body {
 }
 
 .cart-count {
-    background-color: #e5e5e5;
-    color: black;
+    background-color: #ff6347;
+    padding: 5px 10px;
     border-radius: 50%;
-    padding: 2px 6px;
+    font-size: 14px;
+    color: white;
     margin-left: 5px;
 }
 
@@ -411,10 +411,10 @@ body {
     width: 100%;
     /* max-width: 1520px; */
     /* margin: 0 auto; */
-    padding: 15px;
+    padding: 20px;
     box-sizing: border-box;
-    /* Ensures padding doesn’t cause overflow */
     display: flex;
+    gap: 20px;
 }
 
 /* Sidebar container */
@@ -423,7 +423,7 @@ body {
     width: 20%;
     flex-direction: column;
     background-color: #fff;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     /* padding: 10px 20px; */
     border-radius: 5px;
     font-family: Arial, sans-serif;
@@ -585,15 +585,20 @@ body {
 }
 
 
-/* Định dạng cho phần tử contenttest */
+
 .contenttest {
     width: 80%;
-    /* Điều chỉnh chiều rộng dựa trên bố cục mong muốn */
     padding: 10px;
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    /* Bóng mờ */
+    border-radius: 8px;
+    /* Bo góc nếu cần */
 }
+
+
 
 /* Định dạng cho liên kết trong sanphamhot */
 .sanphamhot a,
@@ -681,7 +686,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-around;
+    justify-content: unset;
 }
 
 .product-main {
@@ -693,7 +698,7 @@ body {
 }
 
 .product-list {
-    width: 30%;
+    width: 23%;
     height: 50vh;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     position: relative;
@@ -713,10 +718,11 @@ body {
 
 .product-name {
     color: black;
-    font-size: 20px;
+    /* font-size: 20px; */
     font-weight: 550;
     margin: 10px;
     height: 13%;
+    overflow: hidden;
 }
 
 .product-star {
@@ -746,10 +752,15 @@ body {
     align-items: flex-end;
 }
 
+.product-sale {
+    display: flex;
+}
+
 .new-price,
 .old-price {
     font-size: 20px;
-    font-weight: 900;
+    font-weight: 600;
+    color: red;
 }
 
 .old-price {
