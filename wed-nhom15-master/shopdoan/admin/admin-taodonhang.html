@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/admin-taodonhang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="page-admin">
+
+        <div class="pageadmin-bar">
+            <div class="admin-profile">
+                <img src="img/avt.jpg" alt="Admin Avatar" class="admin-avatar">
+                <p class="admin-name">Thanh Phu</p>
+            </div>
+
+            <a href="admin-dashboard.html" class="pageadmin-bar-dashboard">
+                <i class="fa-solid fa-house"></i> Dashboard
+            </a>
+            <a href="adminusermgn.html" class="pageadmin-bar-usermg">
+                <i class="fa-solid fa-user"></i> User Management
+            </a>
+            <a href="adminprdmgn.html" class="pageadmin-bar-prdmg">
+                <i class="fa-solid fa-car"></i> Product Management
+            </a>
+            <a href="admin-qlgiohang.html" class="pageadmin-bar-ordermg" id="prdmgn">
+                <i class="fa-solid fa-cart-shopping"></i> Order Management
+            </a>
+            <a href="login.html" class="pageadmin-bar-ordermg">
+                <i class="fa-sharp fa-solid fa-right-from-bracket"></i>
+                LogOut
+            </a>
+        </div>
+
+
+        <div class="content">
+            <div class="header">
+                <a href="#">Quản lý đơn hàng / Tạo đơn hàng mới</a>
+            </div>
+            <div class="container">
+                <div class="step-container">
+                    <div class="step-item active ">
+                        <div class="step-number">1</div>
+                        <span>Chọn sản phẩm</span>
+                    </div>
+                    <div class="step-item ">
+                        <div class="step-number">2</div>
+                        <span>Nhập thông tin đơn hàng</span>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-number">3</div>
+                        <span>Xác nhận</span>
+                    </div>
+                </div>
+                <div class="product-selection">
+                    <select>
+                        <option>Tất cả</option>
+                        <option>quần</option>
+                        <option>áo</option>
+                        <option>giày</option>
+                        <option>dép</option>
+                    </select>
+                    <select>
+                        <option>Loại</option>
+                        <option>Nam</option>
+                        <option>Nữ</option>
+                        <option>Trẻ em </option>
+                        <option>Hot</option>
+                    </select>
+                    <div class="search-container">
+                        <!-- Ô tìm kiếm -->
+                        <input class="search-input" placeholder="tìm kiếm sản phẩm..." type="text"
+                            style="font-size: 16px;" />
+                        <button class="search-btn">
+                            <i class="fa-solid fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="product-list">
+                    <div class="product-item">
+                        <input type="checkbox" checked />
+                        <img alt="Áo thun nam 1" height="40" src="img/chitietsp1.webp" width="40" />
+                        <div class="product-info">
+                            <div>Áo thun nam basic</div>
+                            <div class="product-price">Giá: 250.000đ</div> <!-- Thêm giá sản phẩm -->
+                            <span>Số lượng trong kho: 500</span>
+                        </div>
+                        <input class="quantity-input" type="number" min="1" value="1" placeholder="Số lượng" />
+                    </div>
+                    <div class="product-item">
+                        <input type="checkbox" checked />
+                        <img alt="Áo thun nữ 1" height="40" src="img/chitietsp2.webp" width="40" />
+                        <div class="product-info">
+                            <div>Áo thun nữ</div>
+                            <div class="product-price">Giá: 300.000đ</div> <!-- Thêm giá sản phẩm -->
+                            <span>Số lượng trong kho: 800</span>
+                        </div>
+                        <input class="quantity-input" type="number" min="1" value="1" placeholder="Số lượng" />
+                    </div>
+                    <div class="product-item">
+                        <input type="checkbox" />
+                        <img alt="Áo thun nam 2" height="40" src="img/chitietsp3.webp" width="40" />
+                        <div class="product-info">
+                            <div>Áo thun nam cổ tròn</div>
+                            <div class="product-price">Giá: 200.000đ</div> <!-- Thêm giá sản phẩm -->
+                            <span>Số lượng trong kho: 450</span>
+                        </div>
+                        <input class="quantity-input" type="number" min="1" value="1" placeholder="Số lượng" />
+                    </div>
+                    <div class="product-item">
+                        <input type="checkbox" />
+                        <img alt="Áo thun nữ 2" height="40" src="img/chitietsp5.webp" width="40" />
+                        <div class="product-info">
+                            <div>Áo thun unisex </div>
+                            <div class="product-price">Giá: 350.000đ</div> <!-- Thêm giá sản phẩm -->
+                            <span>Số lượng trong kho: 600</span>
+                        </div>
+                        <input class="quantity-input" type="number" min="1" value="1" placeholder="Số lượng" />
+                    </div>
+                    <div class="product-item">
+                        <input type="checkbox" />
+                        <img alt="Áo thun nam 3" height="40" src="img/sp30.webp" width="40" />
+                        <div class="product-info">
+                            <div>Áo khoác nam basic</div>
+                            <div class="product-price">Giá: 230.000đ</div> <!-- Thêm giá sản phẩm -->
+                            <span>Số lượng trong kho: 700</span>
+                        </div>
+                        <input class="quantity-input" type="number" min="1" value="1" placeholder="Số lượng" />
+                    </div>
+                    <div class="product-item">
+                        <input type="checkbox" />
+                        <img alt="Tai nghe Beats Studio 2.0" height="40" src="img/sp29.webp" width="40" />
+                        <div class="product-info">
+                            <div>Áo khoác cao cấp </div>
+                            <span>Hết hàng</span>
+                            <div class="product-price">Giá: 500.000đ</div> <!-- Thêm giá sản phẩm -->
+                        </div>
+                        <input class="quantity-input" type="number" min="0" value="0" disabled />
+                    </div>
+                </div>
+                <div class="pagination">
+                    <a class="page-btn" href="admin-taodonhang.html">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                    <a class="page-btn " href="admin-taodonhang.html" style="text-decoration: none;">1</a>
+                    <a class="page-btn hidden-text-next" href="admin-taodonhang.html"
+                        style="text-decoration: none;">2</a>
+                    <a class="page-btn" href="admin-taodonhang.html">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+                <div class="order-summary">
+                    <div class="total-price">
+                        Tổng tiền: <span>49.860đ</span>
+                    </div>
+                    <button class="continue-btn">
+                        <a href="admin-taodonhang2.html" style="text-decoration: none; color: white;"> Tiếp tục </a>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
