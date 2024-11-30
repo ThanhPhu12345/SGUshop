@@ -267,6 +267,28 @@
 
 }
 
+.pagination {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.page-btn {
+    padding: 6px 10px;
+    margin: 0 5px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.page-btn:hover {
+    background-color: #2980b9;
+}
+
+
 @media (max-width:1000px) {
     .left-page {
         display: none;

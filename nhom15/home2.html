@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/trangsp.css">
-    <link rel="stylesheet" href="assets/css/cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
@@ -21,9 +20,10 @@
             <a href="#"><i class="fas fa-bell"></i> Thông báo</a>
             <a href="#"><i class="fas fa-headset"></i> Hỗ trợ</a>
             <a href="#"><i class="fas fa-phone"></i> Liên hệ</a>
-            <a href="login.html"><i class="fas fa-right-to-bracket"></i> Đăng nhập</a>
-            <a href="register.html"><i class="fas fa-user-plus"></i> Đăng ký</a>
+            <a href="#"><i class="fa-solid fa-user"></i> THANHPHU</a>
+            <a href="home.html"><i class="fa-solid fa-right-from-bracket"></i>Đăng Xuất</a>
         </div>
+
         <div class="header_luot">
             <!-- Header -->
             <div class="header">
@@ -40,9 +40,9 @@
                     <a href="search-result.html"><button><i class="fas fa-search"></i></button></a>
                 </div>
                 <div class="icart">
-                    <i class="fas fa-shopping-cart"></i> <a href="cart_login.html"
+                    <i class="fas fa-shopping-cart"></i> <a href="shopping_cart.html"
                         style="text-decoration: none;color:white;">Cart</a>
-                    <span class="cart-count">0</span>
+                    <span class="cart-count">8</span>
                 </div>
             </div>
 
@@ -50,72 +50,18 @@
 
         <!-- Navigation Bar -->
         <div class="nav-bar">
-            <span class="Home"><a href="home2.html">HOME</a></span>
+            <span class="Home"><a href="home2.html" class="active">HOME</a></span>
             <div class="dropdown">
-                <a href="trangsp_1.html">MAN</a>
-                <div class="dropdown-content">
-                    <div class="dropdown-column">
-                        <strong>Men</strong>
-                        <a href="trangsp_1.html">Dresses</a>
-                        <a href="trangsp_1.html">Shoes</a>
-                        <a href="trangsp_1.html">Jackets</a>
-                        <a href="trangsp_1.html">Sunglasses</a>
-                        <a href="trangsp_1.html">Sport Wear</a>
-                        <a href="trangsp_1.html">Blazers</a>
-                        <a href="trangsp_1.html">Shirts</a>
-                    </div>
-                </div>
+                <a href="trangsp_1.html">NAM</a>
             </div>
             <div class="dropdown">
-                <a href="trangsp_2.html">WONDER</a>
-                <div class="dropdown-content">
-                    <div class="dropdown-column">
-                        <strong>Women</strong>
-                        <a href="trangsp_2.html">Handbags</a>
-                        <a href="trangsp_2.html">Jewellery</a>
-                        <a href="trangsp_2.html">Swimwear</a>
-                        <a href="trangsp_2.html">Tops</a>
-                        <a href="trangsp_2.html">Flats</a>
-                        <a href="trangsp_2.html">Shoes</a>
-                        <a href="trangsp_2.html">Winter Wear</a>
-                    </div>
-                </div>
+                <a href="trangsp_2.html">NỮ</a>
             </div>
             <div class="dropdown">
-                <a href="trangsp_3.html">CHILDREN<span class="badge new">NEW</span></a>
-                <div class="dropdown-content">
-                    <div class="dropdown-column">
-                        <strong>Boys</strong>
-                        <a href="trangsp_3.html">Toys & Games</a>
-                        <a href="trangsp_3.html">Jeans</a>
-                        <a href="trangsp_3.html">Shirts</a>
-                        <a href="trangsp_3.html">Shoes</a>
-                        <a href="trangsp_3.html">School Bags</a>
-                        <a href="trangsp_3.html">Lunch Box</a>
-                        <a href="trangsp_3.html">Footwear</a>
-                    </div>
-                    <div class="dropdown-column">
-                        <strong>Girls</strong>
-                        <a href="#">Sandals</a>
-                        <a href="#">Shorts</a>
-                        <a href="#">Dresses</a>
-                        <a href="#">Jewellery</a>
-                        <a href="#">Bags</a>
-                        <a href="#">Night Dress</a>
-                        <a href="#">Swim Wear</a>
-                    </div>
-                </div>
+                <a href="trangsp_2.html">TRẺ EM<span class="badge new">NEW</span></a>
             </div>
             <div class="dropdown">
-                <a href="trangsp_1.html">HOTTREND</span></a>
-                <div class="dropdown-content">
-                    <div class="dropdown-column">
-                        <strong>Trending Items</strong>
-                        <a href="trangsp_1.html">Item 1</a>
-                        <a href="trangsp_1.html">Item 2</a>
-                        <a href="trangsp_1.html">Item 3</a>
-                    </div>
-                </div>
+                <a href="trangsp_3.html">HOTTREND<span class="badge">HOT</span></a>
             </div>
             <a href="blog.html">TINTUC</a>
         </div>
@@ -167,7 +113,6 @@
                         </ul>
                         <!-- <button class="filter-btn" onclick="applyFilters()"><a href="trangsp_2.html">Áp dụng</a></button> -->
                         <button class="filter-btn" onclick="applyFiltersAndRedirect()">Áp dụng</button>
-
                     </nav>
                 </div>
                 <div class="grid__column-10">
@@ -1003,27 +948,27 @@
                     </div>
                     <ul class="pagination home-product__pagination">
                         <li class="pagination-item">
-                            <a href="trangsp_1.html" class="pagination-item__link">
+                            <a href="home2.html" class="pagination-item__link">
                                 <i class="pagination-item__icon fas fa-angle-left"></i>
                             </a>
                         </li>
                         <li class="pagination-item pagination-item-active">
-                            <a href="trangsp_1.html" class="pagination-item__link">1</a>
+                            <a href="home2.html" class="pagination-item__link">1</a>
                         </li>
                         <li class="pagination-item">
-                            <a href="trangsp_1.html" class="pagination-item__link">2</a>
+                            <a href="home2.html" class="pagination-item__link">2</a>
                         </li>
                         <li class="pagination-item">
-                            <a href="trangsp_1.html" class="pagination-item__link">3</a>
+                            <a href="home2.html" class="pagination-item__link">3</a>
                         </li>
                         <li class="pagination-item">
-                            <a href="trangsp_1.html" class="pagination-item__link">...</a>
+                            <a href="home2.html" class="pagination-item__link">...</a>
                         </li>
                         <li class="pagination-item">
-                            <a href="trangsp_1.html" class="pagination-item__link">10</a>
+                            <a href="home2.html" class="pagination-item__link">10</a>
                         </li>
                         <li class="pagination-item">
-                            <a href="trangsp_1.html" class="pagination-item__link">
+                            <a href="home2.html" class="pagination-item__link">
                                 <i class="pagination-item__icon fas fa-angle-right"></i>
                             </a>
                         </li>

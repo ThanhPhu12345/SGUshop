@@ -165,35 +165,44 @@
 /* Thanh điều hướng */
 .nav-bar {
     background-color: #005bb5;
+    /* Màu xanh đậm */
     position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
+
 }
 
 .nav-bar a {
     color: white;
+    /* Chữ trắng để nổi bật trên nền xanh */
     text-decoration: none;
     padding: 10px 15px;
     position: relative;
     transition: background-color 0.3s, color 0.3s;
-}
-
-.nav-bar a:hover {
-    background-color: yellow;
-    color: black;
     border-radius: 5px;
 }
 
-.nav-bar .Home {
-    box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.1);
-    border-bottom: 2px solid white;
-    transition: box-shadow 0.3s ease;
+.nav-bar a:hover {
+    background-color: #ffffff;
+    /* Nền trắng khi hover */
+    color: #005bb5;
+    /* Chữ xanh đậm khi hover */
+    border-radius: 5px;
 }
 
-.nav-bar .Home:hover {
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+/* Mục đang hoạt động (active) */
+.nav-bar a.active {
+    color: white;
+    /* Chữ trắng */
+    font-weight: bold;
+    /* Chữ đậm */
+    background-color: #003f7f;
+    /* Xanh đậm hơn để phân biệt */
+    border-radius: 5px;
+    padding: 10px 20px;
+    /* Tăng kích thước cho mục active */
 }
 
 /* Dropdown container */
