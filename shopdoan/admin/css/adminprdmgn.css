@@ -380,3 +380,16 @@ button {
 .page-btn:hover {
     background-color: #2980b9;
 }
+
+.new-price {
+    font-size: 20px;
+    color: #ff4d4d;
+    font-weight: bold;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 14px;
+    margin-left: 10px;
+}

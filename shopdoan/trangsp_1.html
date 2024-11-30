@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Shop Hope</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
     <link rel="stylesheet" href="assets/css/trangsp.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 
 <body>
-    <header class="">
+    <header><!-- Top bar: Thông báo, hỗ trợ, liên hệ -->
+        <!-- Top bar: Thông báo, hỗ trợ, liên hệ -->
         <div class="top-bar">
             <a href="#"><i class="fas fa-bell"></i> Thông báo</a>
             <a href="#"><i class="fas fa-headset"></i> Hỗ trợ</a>
@@ -32,60 +37,63 @@
                 </div>
                 <div class="search-bar">
                     <input type="text" placeholder="Search here...">
-                    <button><a href="search-result.html"><i class="fas fa-search"></i></a></button>
+                    <a href="search-result.html"><button><i class="fas fa-search"></i></button></a>
                 </div>
                 <div class="icart">
-                    <i class="fas fa-shopping-cart"></i> <a href="shopping_cart.html"
-                        style="text-decoration: none;color:white;">Cart</a>
+                    <i class="fas fa-shopping-cart"></i> Cart
                     <span class="cart-count">8</span>
+                    <div class="cart-dropdown">
+                    </div>
                 </div>
             </div>
+
         </div>
+
         <!-- Navigation Bar -->
         <div class="nav-bar">
-            <span class="Home"><a href="#">HOME</a></span>
+            <span class="Home"><a href="home2.html">HOME</a></span>
             <div class="dropdown">
-                <a href="#">MAN</a>
+                <a href="trangsp_1.html">MAN</a>
                 <div class="dropdown-content">
                     <div class="dropdown-column">
                         <strong>Men</strong>
-                        <a href="#">Dresses</a>
-                        <a href="#">Shoes</a>
-                        <a href="#">Jackets</a>
-                        <a href="#">Sunglasses</a>
-                        <a href="#">Sport Wear</a>
-                        <a href="#">Blazers</a>
-                        <a href="#">Shirts</a>
+                        <a href="trangsp_1.html">Dresses</a>
+                        <a href="trangsp_1.html">Shoes</a>
+                        <a href="trangsp_1.html">Jackets</a>
+                        <a href="trangsp_1.html">Sunglasses</a>
+                        <a href="trangsp_1.html">Sport Wear</a>
+                        <a href="trangsp_1.html">Blazers</a>
+                        <a href="trangsp_1.html">Shirts</a>
                     </div>
                 </div>
             </div>
             <div class="dropdown">
-                <a href="#">WONDER</a>
+                <a href="trangsp_2.html">WONDER</a>
                 <div class="dropdown-content">
                     <div class="dropdown-column">
                         <strong>Women</strong>
-                        <a href="#">Handbags</a>
-                        <a href="#">Jewellery</a>
-                        <a href="#">Swimwear</a>
-                        <a href="#">Tops</a>
-                        <a href="#">Flats</a>
-                        <a href="#">Shoes</a>
-                        <a href="#">Winter Wear</a>
+                        <a href="trangsp_2.html">Handbags</a>
+                        <a href="trangsp_2.html">Jewellery</a>
+                        <a href="trangsp_2.html">Swimwear</a>
+                        <a href="trangsp_2.html">Tops</a>
+                        <a href="trangsp_2.html">Flats</a>
+                        <a href="trangsp_2.html">Shoes</a>
+                        <a href="trangsp_2.html">Winter Wear</a>
                     </div>
                 </div>
             </div>
             <div class="dropdown">
-                <a href="#">CHILDREN<span class="badge new">NEW</span></a>
+                <a href="trangsp_3.html">CHILDREN<span class="badge new">NEW</span></a>
                 <div class="dropdown-content">
                     <div class="dropdown-column">
                         <strong>Boys</strong>
-                        <a href="#">Toys & Games</a>
-                        <a href="#">Jeans</a>
-                        <a href="#">Shirts</a>
-                        <a href="#">Shoes</a>
-                        <a href="#">School Bags</a>
-                        <a href="#">Lunch Box</a>
-                        <a href="#">Footwear</a>
+                        <a href="trangsp_3.html">Toys & Games</a>
+                        <a href="trangsp_3.html">Jeans</a>
+                        <a href="trangsp_3.html">Shirts</a>
+                        <a href="trangsp_3.html">Shoes</a>
+                        <a href="trangsp_3.html">School Bags</a>
+                        <a href="trangsp_3.html">Lunch Box</a>
+                        <a href="trangsp_3.html">Footwear</a>
                     </div>
                     <div class="dropdown-column">
                         <strong>Girls</strong>
@@ -100,278 +108,528 @@
                 </div>
             </div>
             <div class="dropdown">
-                <a href="#">HOTTREND <span class="badge">HOT</span></a>
+                <a href="trangsp_1.html">HOTTREND</span></a>
                 <div class="dropdown-content">
                     <div class="dropdown-column">
                         <strong>Trending Items</strong>
-                        <a href="#">Item 1</a>
-                        <a href="#">Item 2</a>
-                        <a href="#">Item 3</a>
+                        <a href="trangsp_1.html">Item 1</a>
+                        <a href="trangsp_1.html">Item 2</a>
+                        <a href="trangsp_1.html">Item 3</a>
                     </div>
                 </div>
             </div>
-            <a href="#">TINTUC</a>
+            <a href="blog.html">TINTUC</a>
         </div>
     </header>
-
-    <!-- noi dung  -->
-
     <div class="main-content">
-        <div class="grid__row app_content">
-            <div class="grid__column-2">
-                <nav class="category">
-                    <h3 class="category-heading">
-                        <i class="category-heading-icon fa-solid fa-list"></i>
-                        Danh mục
-                    </h3>
-
-                    <ul class="category-list">
-                        <li class="category-item">
-                            <a href="javascript:void(0)" class="category-item__link" onclick="toggleDropdown(this)">Men
-                                fashion</a>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" value="somi" /> Sơ mi</label>
-                                <label><input type="checkbox" value="thun" /> Áo thun</label>
-                                <label><input type="checkbox" value="ni" /> Áo nỉ</label>
-                                <label><input type="checkbox" value="khoac" /> Áo khoác</label>
-                                <label><input type="checkbox" value="Polo" /> Áo polo</label>
-                                <label><input type="checkbox" value="jeannam" /> Quần jeannes nam</label>
-                            </div>
-                        </li>
-                        <li class="category-item">
-                            <a href="javascript:void(0)" class="category-item__link"
-                                onclick="toggleDropdown(this)">Women fashion</a>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" value="Vay" /> Váy nữ</label>
-                                <label><input type="checkbox" value="sominu" /> Sơ mi nữ</label>
-                                <label><input type="checkbox" value="thunnu" /> Áo thun nữ</label>
-                                <label><input type="checkbox" value="Dam" /> Đầm dài</label>
-                                <label><input type="checkbox" value="jnu" /> Quần jeanne nữ</label>
-                                <label><input type="checkbox" value="ngannu" /> Quần ngắn nữ</label>
-                            </div>
-                        </li>
-                        <li class="category-item">
-                            <a href="javascript:void(0)" class="category-item__link"
-                                onclick="toggleDropdown(this)">Children fashion</a>
-                            <div class="checkbox-group">
-                                <label><input type="checkbox" value="betraiao" /> Áo bé trai</label>
-                                <label><input type="checkbox" value="quanbetrai" /> Quần bé trai</label>
-                                <label><input type="checkbox" value="vaybegai" /> Váy bé gái</label>
-                                <label><input type="checkbox" value="Dambegai" /> Đầm bé gái</label>
-                            </div>
-                        </li>
-                    </ul>
-                    <button class="filter-btn" onclick="applyFiltersAndRedirect()">Áp dụng</button>
-                </nav>
-            </div>
-            <div class="grid__column-10">
-                <div class="home-filter">
-                    <span class="home-filter__label"><a href="trangsp_2.html" style="text-decoration: none;">Sắp xếp
-                            theo</a></span>
-                    <button class="home-filter__btn btn"><a href="trangsp_2.html" style="text-decoration: none">Phổ
-                            biến</a></button>
-                    <button class="home-filter__btn btn btn--primary"><a href="trangsp_2.html"
-                            style="text-decoration: none">Mới nhất</a></button>
-                    <button class="home-filter__btn btn"><a href="trangsp_2.html" style="text-decoration: none">Bán
-                            chạy</a></button>
-
-                    <div class="select-input">
-                        <span class="select-input__label">Giá tiền</span>
-                        <i class="select-input__icon fas fa-angle-down"></i>
-                        <!-- List options -->
-                        <ul class="select-input__list">
-                            <li class="select-input__item">
-                                <a href="trangsp_2.html" class="select-input__link">Giá thấp tới cao</a>
+        <div class="grid">
+            <div class="grid__row app_content">
+                <div class="grid__column-2">
+                    <nav class="category">
+                        <h3 class="category-heading">
+                            <i class="category-heading-icon fa-solid fa-list"></i>
+                            Danh mục
+                        </h3>
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <a href="javascript:void(0)" class="category-item__link"
+                                    onclick="toggleDropdown(this)">Men fashion</a>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" value="somi" /> Sơ mi</label>
+                                    <label><input type="checkbox" value="thun" /> Áo thun</label>
+                                    <label><input type="checkbox" value="ni" /> Áo nỉ</label>
+                                    <label><input type="checkbox" value="khoac" /> Áo khoác</label>
+                                    <label><input type="checkbox" value="Polo" /> Áo polo</label>
+                                    <label><input type="checkbox" value="jeannam" /> Quần jeannes nam</label>
+                                </div>
                             </li>
-                            <li class="select-input__item">
-                                <a href="trangsp_2.html" class="select-input__link">Giá cao tới thấp</a>
+                            <li class="category-item">
+                                <a href="javascript:void(0)" class="category-item__link"
+                                    onclick="toggleDropdown(this)">Women fashion</a>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" value="Vay" /> Váy nữ</label>
+                                    <label><input type="checkbox" value="sominu" /> Sơ mi nữ</label>
+                                    <label><input type="checkbox" value="thunnu" /> Áo thun nữ</label>
+                                    <label><input type="checkbox" value="Dam" /> Đầm dài</label>
+                                    <label><input type="checkbox" value="jnu" /> Quần jeanne nữ</label>
+                                    <label><input type="checkbox" value="ngannu" /> Quần ngắn nữ</label>
+                                </div>
+                            </li>
+                            <li class="category-item">
+                                <a href="javascript:void(0)" class="category-item__link"
+                                    onclick="toggleDropdown(this)">Children fashion</a>
+                                <div class="checkbox-group">
+                                    <label><input type="checkbox" value="betraiao" /> Áo bé trai</label>
+                                    <label><input type="checkbox" value="quanbetrai" /> Quần bé trai</label>
+                                    <label><input type="checkbox" value="vaybegai" /> Váy bé gái</label>
+                                    <label><input type="checkbox" value="Dambegai" /> Đầm bé gái</label>
+                                </div>
                             </li>
                         </ul>
-                    </div>
+                        <!-- <button class="filter-btn" onclick="applyFilters()"><a href="trangsp_2.html">Áp dụng</a></button> -->
+                        <button class="filter-btn" onclick="applyFiltersAndRedirect()">Áp dụng</button>
+
+                    </nav>
                 </div>
-                <!-- noi dung chinh -->
-                <div class="contenttest"> <!-- Nội dung chính -->
-                    <div class="banner1">
-                        <img src="assets/img/sliders/04.png" />
+                <div class="grid__column-10">
+                    <div class="home-filter">
+                        <span class="home-filter__label">Sắp xếp theo</span>
+                        <button class="home-filter__btn btn"><a href="trangsp_1.html" style="text-decoration: none;">Phổ
+                                biến</a></button>
+                        <button class="home-filter__btn btn btn--primary"><a href="trangsp_1.html"
+                                style="text-decoration: none;">Mới nhất</a></button>
+                        <button class="home-filter__btn btn"><a href="trangsp_1.html" style="text-decoration: none;">Bán
+                                chạy</a></button>
+
+                        <div class="select-input">
+                            <span class="select-input__label">Giá tiền</span>
+                            <i class="select-input__icon fas fa-angle-down"></i>
+                            <!-- List options -->
+                            <ul class="select-input__list">
+                                <li class="select-input__item">
+                                    <a href="trangsp_1.html" class="select-input__link">Giá thấp tới cao</a>
+                                </li>
+                                <li class="select-input__item">
+                                    <a href="trangsp_1.html" class="select-input__link">Giá cao tới thấp</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="home-filter-page">
+
+
+
+                        </div>
                     </div>
-                    <section>
-                        <h1 class="sanphamhot"><span><a href="trangsp_1.html">Sản phẩm HOT</a></span></h1>
-                        <div class="product-gallery">
-                            <!-- Sản phẩm 1 -->
-                            <div class="product-list">
-                                <div class="product-img">
-                                    <img src="assets/img/products/sp1.webp" alt="Áo hoodie nâu">
-                                </div>
-                                <div class="product-name">
-                                    <span>Áo hoodie nâu</span>
-                                </div>
-                                <div class="product-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="new-price">250,000₫</span>
-                                </div>
-                                <div class="product-btn">
-                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
-                                </div>
-                            </div>
-                            <!-- Sản phẩm 2 -->
-                            <div class="product-list">
-                                <div class="product-img">
-                                    <img src="assets/img/products/sp2.webp" alt="Áo sơ mi xanh trẻ trung">
-                                </div>
-                                <div class="product-name">
-                                    <span>Áo sơ mi xanh trẻ trung</span>
-                                </div>
-                                <div class="product-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="new-price">200,000₫</span>
-                                </div>
-                                <div class="product-btn">
-                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                    <h3 class="tendanhmuc">Men fashion</h3>
+                    <div class="home-product">
+                        <div class="grid__row">
+                            <div class="grid__column-2-4">
+                                <!-- Product item -->
+                                <div class="home-product-item">
+                                    <div class="home-product-item__img"
+                                        style="background-image:url(https://down-vn.img.susercontent.com/file/vn-11134207-7r98o-lyl0jw84lxup3c_tn.webp);">
+                                    </div>
+                                    <h4 class="home-product-item__name">Áo sơ mi nam caro ngắn tay có túi lụa hàn chống
+                                        nhăn</h4>
+                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked ">
+                                            <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item__sold">Đã bán 10</span>
+                                    </div>
+                                    <div class="home-product-item__price">
+                                        <span class="home-product-item__price-old">320,000₫</span>
+                                        <span class="home-product-item__price-current">220,000₫</span>
+                                    </div>
+                                    <div class="product-btn">
+                                        <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                    <div class="home-product-item__favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item__sale-off">
+                                        <span class="home-product-item__sale-off-percent">20%</span>
+                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- Sản phẩm 3 -->
-                            <div class="product-list">
-                                <div class="product-img">
-                                    <img src="assets/img/products/sp3.webp" alt="Áo sơ mi caro vải nhung">
-                                </div>
-                                <div class="product-name">
-                                    <span>Áo sơ mi caro vải nhung</span>
-                                </div>
-                                <div class="product-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="new-price">220,000₫</span>
-                                </div>
-                                <div class="product-btn">
-                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
-                                </div>
-                            </div>
-                            <!-- Sản phẩm 4 -->
-                            <div class="product-list">
-                                <div class="product-img">
-                                    <img src="assets/img/products/sp4.webp" alt="Áo sơ mi nâu sành điệu">
-                                </div>
-                                <div class="product-name">
-                                    <span>Áo sơ mi nâu sành điệu</span>
-                                </div>
-                                <div class="product-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="new-price">250,000₫</span>
-                                </div>
-                                <div class="product-btn">
-                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                            <div class="grid__column-2-4">
+                                <!-- Product item -->
+                                <div class="home-product-item">
+                                    <div class="home-product-item__img"
+                                        style="background-image:url(https://product.hstatic.net/200000820307/product/k-9910_kem__6_of_15__748555102c204c2d8124cd241a3f34c1.jpg);">
+                                    </div>
+                                    <h4 class="home-product-item__name">Áo khoác dù cổ đứng LNCHE WANT</h4>
+                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked ">
+                                            <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item__sold">Đã bán 10</span>
+                                    </div>
+                                    <div class="home-product-item__price">
+                                        <span class="home-product-item__price-old">620,000₫</span>
+                                        <span class="home-product-item__price-current">220,000₫</span>
+                                    </div>
+                                    <div class="product-btn">
+                                        <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                    <div class="home-product-item__favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item__sale-off">
+                                        <span class="home-product-item__sale-off-percent">20%</span>
+                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                    </div>
                                 </div>
                             </div>
-                            <!--Sản phẩm 5-->
-                            <div class="product-list">
-                                <div class="product-img">
-                                    <img src="assets/img/products/sp21.webp" alt="Quần tây lưng thun co giãn, vải mịn">
-                                </div>
-                                <div class="product-name">
-                                    <span>Quần tây lưng thun co giãn, vải mịn</span>
-                                </div>
-                                <div class="product-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                </div>
-                                <div class="product-price">
-                                    <span class="new-price">430,000₫</span>
-                                </div>
-                                <div class="product-btn">
-                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                            <div class="grid__column-2-4">
+                                <!-- Product item -->
+                                <div class="home-product-item">
+                                    <div class="home-product-item__img"
+                                        style="background-image:url(https://product.hstatic.net/200000820307/product/k-802_den__5_of_19__63d8e5de9ee243ca8d765cb2a2569efa.jpg);">
+                                    </div>
+                                    <h4 class="home-product-item__name">Áo khoác cổ bẻ phối viền sọc</h4>
+                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked ">
+                                            <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item__sold">Đã bán 5</span>
+                                    </div>
+                                    <div class="home-product-item__price">
+                                        <span class="home-product-item__price-old">670,000₫</span>
+                                        <span class="home-product-item__price-current">520,000₫</span>
+                                    </div>
+                                    <div class="product-btn">
+                                        <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                    <div class="home-product-item__favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item__sale-off">
+                                        <span class="home-product-item__sale-off-percent">20%</span>
+                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                    </div>
                                 </div>
                             </div>
-                            <!--Sản phẩm 6-->
-                            <div class="product-list">
-                                <div class="product-img">
-                                    <img src="assets/img/products/sp22.webp" alt="Quần jean đen dập nổi túi sau">
+                            <div class="grid__column-2-4">
+                                <!-- Product item -->
+                                <div class="home-product-item">
+                                    <div class="home-product-item__img"
+                                        style="background-image:url(https://product.hstatic.net/200000820307/product/b-0027_trang__12_of_18__95a38ff816ed4617a10050b10e749b83.jpg);">
+                                    </div>
+                                    <h4 class="home-product-item__name">Áo polo phối vai thêu chữ E</h4>
+                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked ">
+                                            <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item__sold">Đã bán 10</span>
+                                    </div>
+                                    <div class="home-product-item__price">
+                                        <span class="home-product-item__price-old">310,000₫</span>
+                                        <span class="home-product-item__price-current">230,000₫</span>
+                                    </div>
+                                    <div class="product-btn">
+                                        <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                    <div class="home-product-item__favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item__sale-off">
+                                        <span class="home-product-item__sale-off-percent">20%</span>
+                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                    </div>
                                 </div>
-                                <div class="product-name">
-                                    <span>Quần jean đen dập nổi túi sau</span>
+                            </div>
+                            <div class="grid__column-2-4">
+                                <!-- Product item -->
+                                <div class="home-product-item">
+                                    <div class="home-product-item__img"
+                                        style="background-image:url(https://product.hstatic.net/200000820307/product/sm-8893_bo__10_of_43__86f3a742f58343049f544ab9e8db652f.jpg);">
+                                    </div>
+                                    <h4 class="home-product-item__name">Áo sơ mi kaki phối viền ngực Generation
+                                        [SM-8893]</h4>
+                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked ">
+                                            <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item__sold">Đã bán 19</span>
+                                    </div>
+                                    <div class="home-product-item__price">
+                                        <span class="home-product-item__price-old">430,000₫</span>
+                                        <span class="home-product-item__price-current">365,000₫</span>
+                                    </div>
+                                    <div class="product-btn">
+                                        <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                    <div class="home-product-item__favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item__sale-off">
+                                        <span class="home-product-item__sale-off-percent">20%</span>
+                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                    </div>
                                 </div>
-                                <div class="product-star">
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-solid fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
-                                    <i class="fa-regular fa-star"></i>
+                            </div>
+                            <div class="grid__column-2-4">
+                                <!-- Product item -->
+                                <div class="home-product-item">
+                                    <div class="home-product-item__img"
+                                        style="background-image:url(https://product.hstatic.net/200000820307/product/j-68833__2_of_10__35e0c1f650a7448e9590cc2e96e5acfe.jpg);">
+                                    </div>
+                                    <h4 class="home-product-item__name">Quần jean xanh bạc thêu túi EVUVU</h4>
+                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked ">
+                                            <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item__sold">Đã bán 2</span>
+                                    </div>
+                                    <div class="home-product-item__price">
+                                        <!-- <span class="home-product-item__price-old">320,000₫</span>    -->
+                                        <span class="home-product-item__price-current">495,000₫</span>
+                                    </div>
+                                    <div class="product-btn">
+                                        <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                    <div class="home-product-item__favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item__sale-off">
+                                        <span class="home-product-item__sale-off-percent">20%</span>
+                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                    </div>
                                 </div>
-                                <div class="product-price">
-                                    <span class="new-price">470,000₫</span>
+                            </div>
+                            <div class="grid__column-2-4">
+                                <!-- Product item -->
+                                <div class="home-product-item">
+                                    <div class="home-product-item__img"
+                                        style="background-image:url(https://product.hstatic.net/200000820307/product/qt-203_den__4_of_54__64c53019daaa4ad18447ffe82c1fb296.jpg);">
+                                    </div>
+                                    <h4 class="home-product-item__name">Quần tây vải xéo dày</h4>
+                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked ">
+                                            <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item__sold">Đã bán 10</span>
+                                    </div>
+                                    <div class="home-product-item__price">
+                                        <!-- <span class="home-product-item__price-old">320,000₫</span>    -->
+                                        <span class="home-product-item__price-current">390,000₫</span>
+                                    </div>
+                                    <div class="product-btn">
+                                        <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                    <div class="home-product-item__favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item__sale-off">
+                                        <span class="home-product-item__sale-off-percent">20%</span>
+                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                    </div>
                                 </div>
-                                <div class="product-btn">
-                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
-                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                            </div>
+                            <div class="grid__column-2-4">
+                                <!-- Product item -->
+                                <div class="home-product-item">
+                                    <div class="home-product-item__img"
+                                        style="background-image:url(https://product.hstatic.net/200000820307/product/a-3017_den__31_of_62__886de87cd4364ab8972a51b2324733ee.jpg);">
+                                    </div>
+                                    <h4 class="home-product-item__name">Quần kaki dài vải dày</h4>
+                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked ">
+                                            <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item__sold">Đã bán 10</span>
+                                    </div>
+                                    <div class="home-product-item__price">
+                                        <!-- <span class="home-product-item__price-old">320,000₫</span>    -->
+                                        <span class="home-product-item__price-current">440,000₫</span>
+                                    </div>
+                                    <div class="product-btn">
+                                        <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                    <div class="home-product-item__favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item__sale-off">
+                                        <span class="home-product-item__sale-off-percent">20%</span>
+                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid__column-2-4">
+                                <!-- Product item -->
+                                <div class="home-product-item">
+                                    <div class="home-product-item__img"
+                                        style="background-image:url(https://product.hstatic.net/200000820307/product/b-8057_nau__5_of_11__a73048469c554659abe3b3bb0b5a95ad.jpg);">
+                                    </div>
+                                    <h4 class="home-product-item__name">Áo thun cổ tròn in chữ nổi UP BRAVE+</h4>
+                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked ">
+                                            <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item__sold">Đã bán 10</span>
+                                    </div>
+                                    <div class="home-product-item__price">
+                                        <span class="home-product-item__price-old">150,000₫</span>
+                                        <span class="home-product-item__price-current">290,000₫</span>
+                                    </div>
+                                    <div class="product-btn">
+                                        <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                    <div class="home-product-item__favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item__sale-off">
+                                        <span class="home-product-item__sale-off-percent">20%</span>
+                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid__column-2-4">
+                                <!-- Product item -->
+                                <div class="home-product-item">
+                                    <div class="home-product-item__img"
+                                        style="background-image:url(https://product.hstatic.net/200000820307/product/k-5316_reu__5_of_14__b0bca39f203849dc973e1b51e8bd5692.jpg);">
+                                    </div>
+                                    <h4 class="home-product-item__name">Áo khoác cổ đứng phối túi hộp, vải nỉ phối dù
+                                    </h4>
+                                    <div class="home-product-item__action">
+                                        <span class="home-product-item__like home-product-item__like--liked ">
+                                            <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                            <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                        </span>
+                                        <div class="product-star">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-regular fa-star"></i>
+                                        </div>
+                                        <span class="home-product-item__sold">Đã bán 10</span>
+                                    </div>
+                                    <div class="home-product-item__price">
+                                        <!-- <span class="home-product-item__price-old">320,000₫</span>    -->
+                                        <span class="home-product-item__price-current">580,000₫</span>
+                                    </div>
+                                    <div class="product-btn">
+                                        <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                        <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                    </div>
+                                    <div class="home-product-item__favourite">
+                                        <i class="fas fa-check"></i>
+                                        <span>Yêu thích</span>
+                                    </div>
+                                    <div class="home-product-item__sale-off">
+                                        <span class="home-product-item__sale-off-percent">20%</span>
+                                        <span class="home-product-item__sale-off-label">GIẢM</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </section>
-
+                    </div>
+                    <ul class="pagination home-product__pagination">
+                        <li class="pagination-item">
+                            <a href="trangsp_1.html" class="pagination-item__link">
+                                <i class="pagination-item__icon fas fa-angle-left"></i>
+                            </a>
+                        </li>
+                        <li class="pagination-item pagination-item-active">
+                            <a href="trangsp_1.html" class="pagination-item__link">1</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="trangsp_1.html" class="pagination-item__link">2</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="trangsp_1.html" class="pagination-item__link">3</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="trangsp_1.html" class="pagination-item__link">...</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="trangsp_1.html" class="pagination-item__link">10</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="trangsp_1.html" class="pagination-item__link">
+                                <i class="pagination-item__icon fas fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
-                <!-- phan trang  -->
-                <ul class="pagination home-product__pagination">
-                    <li class="pagination-item">
-                        <a href="trangsp_2.html" class="pagination-item__link">
-                            <i class="pagination-item__icon fas fa-angle-left"></i>
-                        </a>
-                    </li>
-                    <li class="pagination-item pagination-item-active">
-                        <a href="trangsp_2.html" class="pagination-item__link">1</a>
-                    </li>
-                    <li class="pagination-item">
-                        <a href="trangsp_2.html" class="pagination-item__link">2</a>
-                    </li>
-                    <li class="pagination-item">
-                        <a href="trangsp_2.html" class="pagination-item__link">3</a>
-                    </li>
-                    <li class="pagination-item">
-                        <a href="trangsp_2.html" class="pagination-item__link">...</a>
-                    </li>
-                    <li class="pagination-item">
-                        <a href="trangsp_2.html" class="pagination-item__link">10</a>
-                    </li>
-                    <li class="pagination-item">
-                        <a href="trangsp_2.html" class="pagination-item__link">
-                            <i class="pagination-item__icon fas fa-angle-right"></i>
-                        </a>
-                    </li>
-                </ul>
             </div>
         </div>
     </div>
-    </div>
-    </div>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
