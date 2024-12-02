@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/admin-qlgiohang.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <title>Adminpage</title>
+
+</head>
+
+<body>
+    <div class="page-admin">
+
+        <div class="pageadmin-bar">
+            <div class="admin-profile">
+                <img src="img/avt.jpg" alt="Admin Avatar" class="admin-avatar">
+                <p class="admin-name">Thanh Phu</p>
+            </div>
+
+            <a href="admin-dashboard.html" class="pageadmin-bar-dashboard">
+                <i class="fa-solid fa-house"></i> Dashboard
+            </a>
+            <a href="adminusermgn.html" class="pageadmin-bar-usermg">
+                <i class="fa-solid fa-user"></i> User Management
+            </a>
+            <a href="adminprdmgn.html" class="pageadmin-bar-prdmg">
+                <i class="fa-solid fa-car"></i> Product Management
+            </a>
+            <a href="admin-qlgiohang.html" class="pageadmin-bar-ordermg" id="prdmgn">
+                <i class="fa-solid fa-cart-shopping"></i> Order Management
+            </a>
+            <a href="login.html" class="pageadmin-bar-ordermg">
+                <i class="fa-sharp fa-solid fa-right-from-bracket"></i>
+                LogOut
+            </a>
+        </div>
+
+        <div class="content">
+            <div class="header">
+                <div class="title">Quản lý đơn hàng</div>
+                <div class="logoshop"><img
+                        src="img/tạo logo thiết kế cho cửa hàng quần áo Sgu với màu xanh trời êm dịu.png" alt="">
+                </div>
+                <button class="new-order-btn"><a class="hidden-text-next" href="admin-taodonhang.html">Tạo đơn hàng
+                        mới</a></button>
+            </div>
+
+            <div class="table-container">
+                <div class="filter-container">
+                    <div class="filter-options">
+                        <!-- Lọc trạng thái -->
+                        <select>
+                            <option>Trạng thái</option>
+                            <option>Chờ duyệt</option>
+                            <option>Đang vận chuyển</option>
+                            <option>Hoàn tất</option>
+                            <option>Đã Hủy</option>
+                        </select>
+
+                        <!-- Lọc bill -->
+                        <select>
+                            <option>Bill</option>
+                            <option>Dưới 99K</option>
+                            <option>300-500k</option>
+                            <option>Trên 1 triệu</option>
+                            <option>Đơn 0đ</option>
+                        </select>
+
+                        <!-- Lọc theo thời gian -->
+                        <select>
+                            <option value="none">Thời gian</option>
+                            <option value="1day">1 ngày trước</option>
+                            <option value="7days">7 ngày trước</option>
+                            <option value="1month">1 tháng trước</option>
+                        </select>
+
+                        <button class="apply-btn" onclick="applyEffect()">Áp dụng</button>
+
+                    </div>
+
+                    <div class="search-container">
+                        <!-- Ô tìm kiếm -->
+                        <input class="search-input" placeholder="Nhập mã đơn..." type="text" />
+                        <button class="search-btn">
+                            <i class="fa-solid fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Chọn</th>
+                            <th>Đơn hàng</th>
+                            <th>Ngày đặt</th>
+                            <th>Khách hàng</th>
+                            <th>Tổng tiền</th>
+                            <th>Hình thức thanh toán</th>
+                            <th>Thanh toán</th>
+                            <th>Trạng thái</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <input type="checkbox" data-status="Chờ Duyệt">
+                            </td>
+                            <td>
+                                <a class="hidden-text" href="admin-detailbill.html">ITOP0207#</a>
+                            </td>
+                            <td>04/01/2019 9:27:54</td>
+                            <td>test<br>Điện thoại: 0987654321</td>
+                            <td>9,900,000 đ</td>
+                            <td>COD</td>
+                            <td>CHƯA THANH TOÁN</td>
+                            <td>Chờ Duyệt</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" data-status="Chờ Duyệt">
+                            </td>
+                            <td>
+                                <a class="hidden-text" href="admin-detailbill.html">ITOP0207#</a>
+                            </td>
+                            <td>04/01/2019 9:27:54</td>
+                            <td>test<br>Điện thoại: 0987654321</td>
+                            <td>9,900,000 đ</td>
+                            <td>COD</td>
+                            <td>CHƯA THANH TOÁN</td>
+                            <td>Chờ Duyệt</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" data-status="Chờ Duyệt">
+                            </td>
+                            <td>
+                                <a class="hidden-text" href="admin-detailbill.html">ITOP0207#</a>
+                            </td>
+                            <td>04/01/2019 9:27:54</td>
+                            <td>test<br>Điện thoại: 0987654321</td>
+                            <td>9,900,000 đ</td>
+                            <td>COD</td>
+                            <td>CHƯA THANH TOÁN</td>
+                            <td>Chờ Duyệt</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" data-status="Chờ Duyệt">
+                            </td>
+                            <td>
+                                <a class="hidden-text" href="admin-detailbill.html">ITOP0207#</a>
+                            </td>
+                            <td>04/01/2019 9:27:54</td>
+                            <td>test<br>Điện thoại: 0987654321</td>
+                            <td>9,900,000 đ</td>
+                            <td>COD</td>
+                            <td>CHƯA THANH TOÁN</td>
+                            <td>Chờ Duyệt</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" data-status="Chờ Duyệt">
+                            </td>
+                            <td> <a class="hidden-text" href="admin-detailbill.html">ITOP0207#</a></td>
+                            <td>12/09/2018 11:30:52</td>
+                            <td>van</td>
+                            <td>9,800,000 VND</td>
+                            <td>COD</td>
+                            <td>CHƯA THANH TOÁN</td>
+                            <td>Chờ Duyệt</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" data-status="Đang Vận Chuyển">
+                            </td>
+                            <td> <a class="hidden-text" href="admin-detailbill.html">ITOP0207#</a></td>
+                            <td>21/09/2018 10:59:02</td>
+                            <td>support<br>Điện thoại: 0123456789</td>
+                            <td>9,800,000 VND</td>
+                            <td>COD</td>
+                            <td>CHƯA THANH TOÁN</td>
+                            <td>Đang Vận Chuyển</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" data-status="Hoàn Tất">
+                            </td>
+                            <td> <a class="hidden-text" href="admin-detailbill.html">ITOP0207#</a></td>
+                            <td>19/09/2018 4:37:02</td>
+                            <td>smnvajvhebav<br>Điện thoại: 0123456789</td>
+                            <td>22,800,000 VND</td>
+                            <td>COD</td>
+                            <td>ĐÃ THANH TOÁN</td>
+                            <td>Hoàn Tất</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="checkbox" data-status="Đã Hủy">
+                            </td>
+                            <td> <a class="hidden-text" href="admin-detailbill.html">ITOP0207#</a></td>
+                            <td>19/09/2018 4:37:02</td>
+                            <td>smnvajvhebav<br>Điện thoại: 0123456789</td>
+                            <td>22,800,000 VND</td>
+                            <td>COD</td>
+                            <td>ĐÃ THANH TOÁN</td>
+                            <td>Đã Hủy</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="pagination">
+                    <a class="page-btn" href="admin-qlgiohang.html">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </a>
+                    <a class="page-btn hidden-text-next" href="admin-qlgiohang.html">1</a>
+                    <a class="page-btn hidden-text-next" href="admin-qlgiohang.html">2</a>
+                    <a class="page-btn" href="admin-qlgiohang.html">
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+
+
+            <!-- JavaScript chỉ cho phép checkbox khi trạng thái là "Chờ Duyệt" -->
+            <script>
+                document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+                    const status = checkbox.getAttribute('data-status');
+                    if (status !== 'Chờ Duyệt') {
+                        checkbox.checked = true;
+                        checkbox.disabled = true;
+                    }
+
+                    // Xử lý trạng thái "Đã Hủy" để thêm màu đỏ vào checkbox
+                    if (status === 'Đã Hủy') {
+                        checkbox.checked = true;
+                        checkbox.disabled = true;
+                        checkbox.classList.add('cancelled-checkbox');
+                    }
+                });
+                function applyEffect() {
+                    const button = document.querySelector(".apply-btn");
+
+                    // Thêm hiệu ứng
+                    button.classList.add("effect");
+
+                    // Loại bỏ hiệu ứng sau 300ms để có thể nhấn lại
+                    setTimeout(() => {
+                        button.classList.remove("effect");
+                    }, 300);
+                }
+
+            </script>
+
+</body>
+
+</html>
