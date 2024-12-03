@@ -22,7 +22,7 @@
             <a href="#"><i class="fas fa-headset"></i> Hỗ trợ</a>
             <a href="#"><i class="fas fa-phone"></i> Liên hệ</a>
             <a href="#"><i class="fa-solid fa-user"></i> THANHPHU</a>
-            <a href="home.html"><i class="fa-solid fa-right-from-bracket"></i>Đăng Xuất</a>
+            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i>Đăng Xuất</a>
         </div>
 
 
@@ -51,19 +51,20 @@
         </div>
 
         <!-- Navigation Bar -->
+
         <div class="nav-bar">
-            <span><a href="home2.html" class="active">HOME</a></span>
+            <span><a href="home2.html">HOME</a></span>
             <div class="dropdown">
-                <a href="trangsp_1.html">NAM</a>
+                <a href="spnam.html">NAM</a>
             </div>
             <div class="dropdown">
-                <a href="trangsp_2.html">NỮ</a>
+                <a href="spnu.html">NỮ</a>
             </div>
             <div class="dropdown">
-                <a href="trangsp_2.html">TRẺ EM<span class="badge new">NEW</span></a>
+                <a href="sptreem.html">TRẺ EM<span class="badge new">NEW</span></a>
             </div>
             <div class="dropdown">
-                <a href="trangsp_3.html">HOTTREND<span class="badge">HOT</span></a>
+                <a href="hottrend.html">HOTTREND<span class="badge">HOT</span></a>
             </div>
             <a href="blog.html">TINTUC</a>
         </div>
@@ -73,17 +74,21 @@
         <!-- Nội dung trang wed -->
         <div class="cart-container">
             <div class="cart">
-                <i class="fa fa-shopping-cart"></i>
-                <span>Giỏ hàng</span>
-                <div class="cart-count">8</div>
+
+                <div class=" active"><a href="shopping_cart.html" style="text-decoration: none; color: white;">Giỏ
+                        hàng</a></div>
+
+                <div class="address"><a href="oder.html" style="text-decoration: none; color: white;">Đơn hàng</a></div>
+                <div class="address"><a href="diachi.html" style="text-decoration: none; color: white;">Địa
+                        chỉ</a></div>
             </div>
 
             <div class="cart-items">
                 <div class="cart-item">
-                    <input type="checkbox" class="cart-item-checkbox" onchange="updateTotalPrice()">
+                    <input type="checkbox" class="cart-item-checkbox" onchange="updateTotalPrice()" checked>
                     <img src="assets/img/chitietsp1.webp" alt="Product 1" class="cart-item-img">
                     <div class="cart-item-details">
-                        <p class="cart-item-name">Áo thun</p>
+                        <p class="cart-item-name">Áo thun nữ basic</p>
                         <p class="cart-item-price">100,000 VND</p>
                         <div class="counter">
                             <button onclick="decrease(this)">-</button>
@@ -95,17 +100,16 @@
                 </div>
 
                 <div class="cart-item">
-                    <input type="checkbox" class="cart-item-checkbox" onchange="updateTotalPrice()">
+                    <input type="checkbox" class="cart-item-checkbox" onchange="updateTotalPrice()" checked>
                     <img src="assets/img/chitietsp2.webp" alt="Product 2" class="cart-item-img">
                     <div class="cart-item-details">
-                        <p class="cart-item-name">Áo Nam</p>
+                        <p class="cart-item-name">Áo thun nam</p>
                         <p class="cart-item-price">150,000 VND</p>
                         <div class="counter">
                             <button onclick="decrease(this)">-</button>
                             <input type="number" class="quantity" value="1" min="1">
                             <button onclick="increase(this)">+</button>
                         </div>
-
                     </div>
                     <button class="remove-item">Xoá</button>
                 </div>
@@ -141,39 +145,6 @@
                     </div>
                     <button class="remove-item">Xoá</button>
                 </div>
-
-                <div class="cart-item">
-                    <input type="checkbox" class="cart-item-checkbox" onchange="updateTotalPrice()">
-                    <img src="assets/img/polo3.jpg" alt="Product 5" class="cart-item-img">
-                    <div class="cart-item-details">
-                        <p class="cart-item-name">Trang phục bạn bè</p>
-                        <p class="cart-item-price">300,000 VND</p>
-                        <div class="counter">
-                            <button onclick="decrease(this)">-</button>
-                            <input type="number" class="quantity" value="1" min="1">
-                            <button onclick="increase(this)">+</button>
-                        </div>
-
-                    </div>
-                    <button class="remove-item">Xoá</button>
-                </div>
-
-                <div class="cart-item">
-                    <input type="checkbox" class="cart-item-checkbox" onchange="updateTotalPrice()">
-                    <img src="assets/img/polo5.webp" alt="Product 6" class="cart-item-img">
-                    <div class="cart-item-details">
-                        <p class="cart-item-name">Áo thun lạnh</p>
-                        <p class="cart-item-price">350,000 VND</p>
-                        <div class="counter">
-                            <button onclick="decrease(this)">-</button>
-                            <input type="number" class="quantity" value="1" min="1">
-                            <button onclick="increase(this)">+</button>
-                        </div>
-
-                    </div>
-                    <button class="remove-item">Xoá</button>
-                </div>
-
                 <div class="cart-item">
                     <input type="checkbox" class="cart-item-checkbox" onchange="updateTotalPrice()">
                     <img src="assets/img/polo6.jpg" alt="Product 7" class="cart-item-img">
@@ -206,21 +177,12 @@
                     <button class="remove-item">Xoá</button>
                 </div>
             </div>
-
-            <div class="pagination">
-                <button class="page-btn" data-page="1">1</button>
-                <button class="page-btn" data-page="2">2</button>
-                <button class="page-btn" data-page="3">3</button>
+            <div class="cart-summary">
+                <p class="total-price-label">Tổng tiền:</p>
+                <p id="total-price">250,000VND</p>
+                <a href="xacnhantt.html"><button class="order-btn">Đặt hàng</button></a>
             </div>
         </div>
-
-        <div class="cart-summary">
-            <p class="total-price-label">Tổng tiền:</p>
-            <p id="total-price">0 VND</p>
-            <button class="order-btn">Đặt hàng</button>
-        </div>
-
-        <!-- <script src="assets\js\cart.js"></script> -->
 
     </div>
 

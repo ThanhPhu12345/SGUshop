@@ -27,6 +27,20 @@ body {
     justify-content: center;
 }
 
+.logo_saigonuni a {
+    /* font-family: 'Poppins', sans-serif; */
+    font-weight: bold;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
 .admin-name {
     font-size: 16px;
     font-weight: bold;
@@ -308,7 +322,7 @@ table th {
 .page-btn {
     padding: 6px 10px;
     margin: 0 5px;
-    background-color: #3498db;
+    background-color: #b6b6b6;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -317,6 +331,10 @@ table th {
 
 .page-btn:hover {
     background-color: #2980b9;
+}
+
+#page-1 {
+    background-color: #007bff;
 }
 
 /* CSS cho checkbox bị khóa */

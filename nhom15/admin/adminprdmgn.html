@@ -13,11 +13,11 @@
     <div class="page-admin">
         <div class="pageadmin-bar">
             <div class="admin-profile">
-                <img src="img/avt.jpg" alt="Admin Avatar" class="admin-avatar">
-                <p class="admin-name">Thanh Phu</p>
+                <div class="logo_saigonuni">
+                    <a href="#">SAIGONUNI</a>
+                </div>
             </div>
-
-            <a href="admin-dashboard.html" class="pageadmin-bar-dashboard">
+            <a href="../../admin-dashboard.html" class="pageadmin-bar-dashboard">
                 <i class=" fa-solid fa-house"></i> Dashboard
             </a>
             <a href="adminusermgn.html" class="pageadmin-bar-usermg">
@@ -51,9 +51,15 @@
             <div class="product-head">
                 <div class="product-head-classify">
                     <a href="#">All</a>
-                    <a href="">Clothing</a>
-                    <a href="">Electronics</a>
-                    <a href="">Shoe</a>
+                    <a href=""> Nam</a>
+                    <a href=""> Nữ</a>
+                    <a href="">Trẻ Em</a>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Nhập từ khóa..">
+                    <button class="filter-search"><i class="fa-solid fa-magnifying-glass"></i></button>
+
                 </div>
 
             </div>
@@ -78,9 +84,10 @@
                         <span class="old-price">250.000đ</span>
                     </div>
                     <div class="product-btn">
-                        <a href="editproduct.html"><i class="fa-solid fa-wrench" id="fix-icon"></i></a>
-                        <a href="#"><i class="fa-solid fa-trash" id="trash-icon"></i></a>
-                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                        <a href="editproduct.html"><i class="fa-solid fa-pen" id="fix-icon"></i></a>
+                        <a href="#" onclick="return confirm('Bạn có chắc chắn muốn xóa mục này?')"><i
+                                class="fa-solid fa-trash" id="trash-icon"></i></a>
+                        <a href="../detailproduct.html"><i class="fa-solid fa-eye"></i></a>
 
                     </div>
                 </div>
@@ -104,9 +111,10 @@
                         <span class="old-price">200.000đ</span>
                     </div>
                     <div class="product-btn">
-                        <a href="editproduct.html"><i class="fa-solid fa-wrench" id="fix-icon"></i></a>
-                        <a href="#"><i class="fa-solid fa-trash"></i></a>
-                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                        <a href="editproduct.html"><i class="fa-solid fa-pen" id="fix-icon"></i></a>
+                        <a href="#" onclick="return confirm('Bạn có chắc chắn muốn xóa mục này?')"><i
+                                class="fa-solid fa-trash"></i></a>
+                        <a href="../detailproduct.html"><i class="fa-solid fa-eye"></i></a>
 
                     </div>
                 </div>
@@ -130,9 +138,10 @@
                         <span class="old-price">250.000đ</span>
                     </div>
                     <div class="product-btn">
-                        <a href="#"><i class="fa-solid fa-wrench" id="fix-icon"></i></a>
-                        <a href="#"><i class="fa-solid fa-trash"></i></a>
-                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                        <a href="editproduct.html"><i class="fa-solid fa-pen" id="fix-icon"></i></a>
+                        <a href="#" onclick="return confirm('Bạn có chắc chắn muốn xóa mục này?')"><i
+                                class="fa-solid fa-trash"></i></a>
+                        <a href="../detailproduct.html"><i class="fa-solid fa-eye"></i></a>
 
                     </div>
                 </div>
@@ -156,9 +165,10 @@
                         <span class="old-price">300.000đ</span>
                     </div>
                     <div class="product-btn">
-                        <a href="#"><i class="fa-solid fa-wrench" id="fix-icon"></i></a>
-                        <a href="#"><i class="fa-solid fa-trash"></i></a>
-                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                        <a href="editproduct.html"><i class="fa-solid fa-pen" id="fix-icon"></i></a>
+                        <a href="#" onclick="return confirm('Bạn có chắc chắn muốn xóa mục này?')"><i
+                                class="fa-solid fa-trash"></i></a>
+                        <a href="../detailproduct.html"><i class="fa-solid fa-eye"></i></a>
 
                     </div>
                 </div>
@@ -182,9 +192,10 @@
                         <span class="old-price">150.000đ</span>
                     </div>
                     <div class="product-btn">
-                        <a href="#"><i class="fa-solid fa-wrench" id="fix-icon"></i></a>
-                        <a href="#"><i class="fa-solid fa-trash"></i></a>
-                        <a href="#"><i class="fa-solid fa-eye"></i></a>
+                        <a href="editproduct.html"><i class="fa-solid fa-pen" id="fix-icon"></i></a>
+                        <a href="#" onclick="return confirm('Bạn có chắc chắn muốn xóa mục này?')"><i
+                                class="fa-solid fa-trash"></i></a>
+                        <a href="../detailproduct.html"><i class="fa-solid fa-eye"></i></a>
 
                     </div>
                 </div>
@@ -196,15 +207,16 @@
                 <a class="page-btn" href="admin-qlgiohang.html">
                     <i class="fa-solid fa-arrow-left"></i>
                 </a>
-                <a class="page-btn" href="adminprdmgn.html" style="text-decoration: none;">1</a>
+                <a class="page-btn" href="adminprdmgn.html" style="text-decoration: none;" id="page-1">1</a>
                 <a class="page-btn" href="adminprdmgn.html" style="text-decoration: none;">2</a>
+                <a class="page-btn" href="adminprdmgn.html" style="text-decoration: none;">3</a>
                 <a class="page-btn" href="adminprdmgn.html">
                     <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
 
         </div>
-        <script src="js/adminprdmgn.js"></script>
+
 </body>
 
 </html>

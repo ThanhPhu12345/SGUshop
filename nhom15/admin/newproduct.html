@@ -13,12 +13,12 @@
     <div class="page-admin">
         <div class="pageadmin-bar">
             <div class="admin-profile">
-                <img src="img/avt.jpg" alt="Admin Avatar" class="admin-avatar">
-                <p class="admin-name">Thanh Phu</p>
+                <div class="logo_saigonuni">
+                    <a href="../home2.html">SAIGONUNI</a>
+                </div>
             </div>
-
-            <a href="admin-dashboard.html" class="pageadmin-bar-dashboard">
-                <i class="fa-solid fa-house"></i> Dashboard
+            <a href="../../admin-dashboard.html" class="pageadmin-bar-dashboard">
+                <i class=" fa-solid fa-house"></i> Dashboard
             </a>
             <a href="adminusermgn.html" class="pageadmin-bar-usermg">
                 <i class="fa-solid fa-user"></i> User Management
@@ -105,11 +105,39 @@
                     <input type="number" id="old-price" value="900.00" step="0.01">
                 </div>
 
-                <div class="product-quantity">
-                    <label for="quantity">Số lượng:</label>
-                    <button type="button" id="decrease">-</button>
-                    <input type="number" id="quantity" value="1" min="1">
-                    <button type="button" id="increase">+</button>
+
+                <div class="product-colors">
+
+                    <label>Chọn Màu Sắc</label>
+                    <label for="">
+                        <input type="checkbox" name="color" value="red">
+                        <span class="color-box"></span> Đen
+                    </label>
+
+                    <label>
+                        <input type="checkbox" name="color" value="blue">
+                        <span class="color-box"></span> Trắng
+                    </label>
+                    <label>
+                        <input type="checkbox" name="color" value="green">
+                        <span class="color-box"></span> Vanilla
+                    </label>
+                </div>
+
+                <div class="product-sizes">
+                    <label for="">Chọn Kích Cỡ:</label>
+                    <label>
+                        <input type="checkbox" name="size" value="S"> S
+                    </label>
+                    <label>
+                        <input type="checkbox" name="size" value="M"> M
+                    </label>
+                    <label>
+                        <input type="checkbox" name="size" value="L"> L
+                    </label>
+                    <label>
+                        <input type="checkbox" name="size" value="XL"> XL
+                    </label>
                 </div>
             </div>
 
@@ -117,8 +145,13 @@
             <div class="product-info">
                 <h3>Chi Tiết Sản Phẩm</h3>
                 <div class="info-item">
-                    <label for="category">Danh Mục:</label>
-                    <input type="text" id="category">
+                    <label for="availability">Danh Mục</label>
+                    <select id="availability">
+                        <option value="in_stock">Man</option>
+                        <option value="out_of_stock">Woman</option>
+                        <option value="pre_order">Children</option>
+                        <option value="coming_soon">Hot Trend</option>
+                    </select>
                 </div>
                 <div class="info-item">
                     <label for="promo-quantity">Số lượng hàng khuyến mãi:</label>

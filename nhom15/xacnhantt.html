@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thông tin Đặt Hàng</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .order-form {
+            max-width: 600px;
+            margin: 20px auto;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .order-form h2,
+        .order-form h3 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .form-group input[type="text"],
+        .form-group input[type="tel"],
+        .form-group select,
+        .form-group textarea,
+        .form-group button {
+            width: 100%;
+            padding: 10px;
+            font-size: 14px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-group textarea {
+            resize: none;
+        }
+
+        .form-group button {
+            background-color: #28a745;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .form-group button:hover {
+            background-color: #218838;
+        }
+
+        .payment-methods .form-group {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .payment-methods label {
+            font-size: 14px;
+            color: #333;
+        }
+
+        .table-products {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-products th,
+        .table-products td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .table-products th {
+            background-color: #f1f1f1;
+        }
+
+        .product-image {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+
+        .product-details {
+            display: flex;
+            align-items: center;
+        }
+
+        .total-section {
+            margin-top: 20px;
+            text-align: right;
+            font-size: 18px;
+            color: #333;
+            background-color: #f9f9f9;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .total-section strong {
+            color: #d9534f;
+        }
+
+        @media (max-width: 600px) {
+            .order-form {
+                padding: 10px;
+            }
+
+            .form-group {
+                margin-bottom: 10px;
+            }
+
+            .form-group button {
+                font-size: 14px;
+            }
+
+            .total-section {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="order-form">
+        <h2>Xác nhận thông tin đơn hàng</h2>
+        <form id="customer-form">
+            <!-- Thông tin khách hàng -->
+            <div class="form-group">
+                <label for="customer-name">Họ và tên:</label>
+                <input type="text" value="Thanh Phú" id="customer-name" name="customer-name"
+                    placeholder="Nhập họ và tên" required>
+            </div>
+            <div class="form-group">
+                <label for="customer-phone">Số điện thoại:</label>
+                <input type="tel" value="084394553" name="customer-phone" placeholder="Nhập số điện thoại" required>
+            </div>
+            <div class="form-group">
+                <label for="customer-address">Địa chỉ giao hàng:</label>
+                <textarea id="customer-address" name="customer-address" rows="2" placeholder="Nhập địa chỉ giao hàng"
+                    required>464/99A An Dương Vương</textarea>
+            </div>
+            <div class="form-group">
+                <label for="customer-district">Quận/Huyện:</label>
+                <select id="customer-district" name="customer-district" required>
+                    <option value="quan1">Quận 1</option>
+                    <option value="quan2">Quận 2</option>
+                    <option value="quan3">Quận 3</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="customer-city">Thành phố:</label>
+                <select id="customer-city" name="customer-city" required>
+
+                    <option value="hanoi">Hà Nội</option>
+                    <option value="danang">Đà Nẵng</option>
+                    <option value="hochiminh">TP. Hồ Chí Minh</option>
+                </select>
+            </div>
+
+            <!-- Mã giảm giá -->
+            <div class="form-group">
+                <label for="discount-code">Mã giảm giá:</label>
+                <input type="text" id="discount-code" name="discount-code" placeholder="Nhập mã giảm giá">
+            </div>
+
+            <!-- Phương thức thanh toán -->
+            <div class="payment-methods">
+                <h4>Chọn phương thức thanh toán</h4>
+                <div class="form-group">
+                    <input type="radio" id="payment-cash" name="payment-method" value="cash" required>
+                    <label for="payment-cash">Thanh toán tiền mặt khi nhận hàng</label>
+                </div>
+                <div class="form-group">
+                    <input type="radio" id="payment-bank" name="payment-method" value="bank">
+                    <label for="payment-bank">Chuyển khoản ngân hàng</label>
+                </div>
+
+            </div>
+
+
+
+            <!-- Bảng sản phẩm -->
+            <h3>Đơn hàng</h3>
+            <table class="table-products">
+                <thead>
+                    <tr>
+                        <th>Sản phẩm</th>
+                        <th>Số lượng</th>
+                        <th>Đơn giá</th>
+                        <th>Tổng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <div class="product-details">
+                                <img class="product-image" src="assets/img/chitietsp1.webp" alt="Áo thun nữ basic">
+                                Áo thun nữ basic
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>100,000 VNĐ</td>
+                        <td>100,000 VNĐ</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="product-details">
+                                <img class="product-image" src="assets/img/chitietsp2.webp" alt="Áo thun nam">
+                                Áo thun nam
+                            </div>
+                        </td>
+                        <td>1</td>
+                        <td>150,000 VNĐ</td>
+                        <td>150,000 VNĐ</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Tổng tiền -->
+            <div class="total-section">
+                <strong>Tổng tiền: 250,000 VNĐ</strong>
+            </div>
+
+            <!-- Nút xác nhận -->
+            <div class="form-group">
+                <button type="submit" onclick="alert('Đặt hàng thành công!')">Xác nhận đặt hàng</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

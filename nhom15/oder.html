@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Hope</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main2cart.css">
+    <link rel="stylesheet" href="assets/css/main2.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        /* CSS cho phần sản phẩm */
+        .cart-items {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .table-products {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table-products th,
+        .table-products td {
+            padding: 10px;
+            /* Giảm padding */
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .table-products th {
+            background-color: #f2f2f2;
+        }
+
+        .product-details {
+            display: flex;
+            align-items: center;
+        }
+
+        .product-image {
+            width: 40px;
+            /* Giảm kích thước hình ảnh */
+            height: 40px;
+            /* Giảm kích thước hình ảnh */
+            margin-right: 8px;
+            /* Giảm khoảng cách */
+            border-radius: 4px;
+            object-fit: cover;
+        }
+
+        .total-section {
+            margin-top: 20px;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        .order-status {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+
+        .order-date {
+            margin-top: 10px;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header><!-- Top bar: Thông báo, hỗ trợ, liên hệ -->
+        <div class="top-bar">
+            <a href="#"><i class="fas fa-bell"></i> Thông báo</a>
+            <a href="#"><i class="fas fa-headset"></i> Hỗ trợ</a>
+            <a href="#"><i class="fas fa-phone"></i> Liên hệ</a>
+            <a href="#"><i class="fa-solid fa-user"></i> THANHPHU</a>
+            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i>Đăng Xuất</a>
+        </div>
+
+        <div class="header_luot">
+            <!-- Header -->
+            <div class="header">
+                <div class="logo">
+                    <div class="hinhsgu">
+                        <img src="assets/img/snapedit_1728994377947.png" alt="">
+                    </div>
+                    <div class="logo_saigonuni">
+                        <a href="home2.html">SAIGONUNI</a>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search here...">
+                    <a href="search-result.html"><button><i class="fas fa-search"></i></button></a>
+                </div>
+                <div class="icart">
+                    <i class="fas fa-shopping-cart"></i> <a href="shopping_cart.html"
+                        style="text-decoration: none;color:white;">Cart</a>
+                    <span class="cart-count">8</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigation Bar -->
+
+        <div class="nav-bar">
+            <span><a href="home2.html">HOME</a></span>
+            <div class="dropdown">
+                <a href="spnam.html">NAM</a>
+            </div>
+            <div class="dropdown">
+                <a href="spnu.html">NỮ</a>
+            </div>
+            <div class="dropdown">
+                <a href="sptreem.html">TRẺ EM<span class="badge new">NEW</span></a>
+            </div>
+            <div class="dropdown">
+                <a href="hottrend.html">HOTTREND<span class="badge">HOT</span></a>
+            </div>
+            <a href="blog.html">TINTUC</a>
+        </div>
+    </header>
+    <!-- Nội dung chính -->
+    <div class="main-content">
+        <!-- Nội dung trang wed -->
+        <div class="cart-container">
+
+            <div class="cart">
+
+                <div><a href="shopping_cart.html" style="text-decoration: none; color: white;">Giỏ
+                        hàng</a></div>
+
+                <div class="address active"><a href="oder.html" style="text-decoration: none; color: white;">Đơn
+                        hàng</a></div>
+                <div class="address "><a href="diachi.html" style="text-decoration: none; color: white;">Địa
+                        chỉ</a></div>
+            </div>
+
+
+            <div class="cart-items">
+                <h3>Đơn hàng 01</h3>
+                <table class="table-products">
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Đơn giá</th>
+                            <th>Tổng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product-details">
+                                    <img class="product-image" src="assets/img/chitietsp1.webp" alt="Áo thun nữ basic">
+                                    Áo thun nữ basic
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>100,000 VNĐ</td>
+                            <td>100,000 VNĐ</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-details">
+                                    <img class="product-image" src="assets/img/chitietsp2.webp" alt="Áo thun nam">
+                                    Áo thun nam
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>150,000 VNĐ</td>
+                            <td>150,000 VNĐ</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="total-section">
+                    Tổng tiền: 250,000 VNĐ
+                </div>
+                <div class="order-status">
+                    Tình trạng đơn hàng: <strong>Đang vận chuyển</strong>
+                </div>
+                <div class="order-date">
+                    Ngày đặt: <strong>03/12/2024</strong>
+                </div>
+            </div>
+            <div class="cart-items">
+                <h3>Đơn hàng 02</h3>
+                <table class="table-products">
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Đơn giá</th>
+                            <th>Tổng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product-details">
+                                    <img class="product-image" src="assets/img/chitietsp1.webp" alt="Áo thun nữ basic">
+                                    Áo thun nữ basic
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>100,000 VNĐ</td>
+                            <td>100,000 VNĐ</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-details">
+                                    <img class="product-image" src="assets/img/chitietsp2.webp" alt="Áo thun nam">
+                                    Áo thun nam
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>150,000 VNĐ</td>
+                            <td>150,000 VNĐ</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="total-section">
+                    Tổng tiền: 250,000 VNĐ
+                </div>
+                <div class="order-status">
+                    Tình trạng đơn hàng: <strong>Đã nhận hàng</strong>
+                </div>
+                <div class="order-date">
+                    Ngày đặt: <strong>23/11/2024</strong>
+                </div>
+
+            </div>
+            <div class="cart-items">
+                <h3>Đơn hàng 03</h3>
+                <table class="table-products">
+                    <thead>
+                        <tr>
+                            <th>Sản phẩm</th>
+                            <th>Số lượng</th>
+                            <th>Đơn giá</th>
+                            <th>Tổng</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="product-details">
+                                    <img class="product-image" src="assets/img/chitietsp1.webp" alt="Áo thun nữ basic">
+                                    Áo thun nữ basic
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>100,000 VNĐ</td>
+                            <td>100,000 VNĐ</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="product-details">
+                                    <img class="product-image" src="assets/img/chitietsp2.webp" alt="Áo thun nam">
+                                    Áo thun nam
+                                </div>
+                            </td>
+                            <td>1</td>
+                            <td>150,000 VNĐ</td>
+                            <td>150,000 VNĐ</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="total-section">
+                    Tổng tiền: 250,000 VNĐ
+                </div>
+                <div class="order-status">
+                    Tình trạng đơn hàng: <strong>Đã hủy vì lí do bạn không nhận</strong>
+                </div>
+                <div class="order-date">
+                    Ngày đặt: <strong>06/11/2024</strong>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Thông tin</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                    <li><a href="#">Hỗ trợ khách hàng</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Liên hệ</h4>
+                <p>Email: contact@saigonuni.com</p>
+                <p>Điện thoại: 0123-456-789</p>
+            </div>
+            <div class="footer-section social-media">
+                <h4>Mạng xã hội</h4>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SAIGONUNI. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>

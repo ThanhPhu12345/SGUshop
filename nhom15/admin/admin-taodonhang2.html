@@ -20,6 +20,20 @@
 
         }
 
+        .logo_saigonuni a {
+            /* font-family: 'Poppins', sans-serif; */
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: 2px;
+            color: #ffffff;
+            text-transform: uppercase;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 0, 0, 0.6);
+            display: inline-block;
+            position: relative;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
         .admin-profile {
             display: flex;
             flex-direction: column;
@@ -261,12 +275,12 @@
 
         <div class="pageadmin-bar">
             <div class="admin-profile">
-                <img src="img/avt.jpg" alt="Admin Avatar" class="admin-avatar">
-                <p class="admin-name">Thanh Phu</p>
+                <div class="logo_saigonuni">
+                    <a href="#">SAIGONUNI</a>
+                </div>
             </div>
-
-            <a href="admin-dashboard.html" class="pageadmin-bar-dashboard">
-                <i class="fa-solid fa-house"></i> Dashboard
+            <a href="../../admin-dashboard.html" class="pageadmin-bar-dashboard">
+                <i class=" fa-solid fa-house"></i> Dashboard
             </a>
             <a href="adminusermgn.html" class="pageadmin-bar-usermg">
                 <i class="fa-solid fa-user"></i> User Management
@@ -345,7 +359,11 @@
                         <input checked="" id="cod" name="payment-method" type="radio" />
                         <label for="cod">Thanh toán khi giao hàng (COD)</label>
                     </div>
-                    <p>Bạn chỉ phải thanh toán khi nhận được hàng</p>
+                    <div>
+                        <input checked="" id="cod" name="payment-method" type="radio" />
+                        <label for="cod">Thanh toán qua thẻ ngân hàng</label>
+                    </div>
+
                     <div class="note"></div>
                     <div class="buttons">
                         <button class="back-btn"><a href="admin-taodonhang.html"

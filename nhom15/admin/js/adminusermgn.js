@@ -33,20 +33,5 @@ editsave.addEventListener('click', function(){
 editbox.style.display='none';
 })
 
-const trashbox = document.querySelector('.trash-box');
-const deletebtn = document.querySelector('.delete-btn');
-const trashcancel = document.getElementById('trash-cancel');
-const trashok = document.getElementById('trash-ok');
-
-deletebtn.addEventListener('click', function() { 
-    trashbox.style.display = 'flex';
-});
-
-trashcancel.addEventListener('click', function(){
-    trashbox.style.display='none';
-})
-trashok.addEventListener('click', function(){
-    trashbox.style.display='none';
-})
 
 

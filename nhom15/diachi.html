@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Hope</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main2cart.css">
+    <link rel="stylesheet" href="assets/css/main2.css">
+    <link rel="stylesheet" href="assets/css/cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        .form-group {
+            margin-bottom: 15px;
+            /* Khoảng cách giữa các nhóm trường */
+        }
+
+        .form-group label {
+            display: block;
+            /* Hiển thị nhãn như một khối */
+            margin-bottom: 5px;
+            /* Khoảng cách giữa nhãn và trường nhập */
+            font-weight: bold;
+            /* Làm cho nhãn đậm hơn */
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            /* Đặt chiều rộng là 100% */
+            padding: 8px;
+            /* Đệm bên trong cho trường nhập */
+            border: 1px solid #ccc;
+            /* Đường viền xung quanh */
+            border-radius: 4px;
+            /* Bo góc cho đường viền */
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            /* Cho phép thay đổi chiều cao của textarea */
+        }
+
+        h2 {
+            margin-top: 20px;
+            /* Khoảng cách phía trên cho tiêu đề */
+            color: #333;
+            /* Màu chữ cho tiêu đề */
+        }
+
+        .save-button {
+            background-color: chartreuse;
+            font-size: 20px;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            float: right;
+            /* Đặt nút nằm bên phải */
+        }
+
+        .save-button:hover {
+            background-color: #4CAF50;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <header><!-- Top bar: Thông báo, hỗ trợ, liên hệ -->
+        <div class="top-bar">
+            <a href="#"><i class="fas fa-bell"></i> Thông báo</a>
+            <a href="#"><i class="fas fa-headset"></i> Hỗ trợ</a>
+            <a href="#"><i class="fas fa-phone"></i> Liên hệ</a>
+            <a href="#"><i class="fa-solid fa-user"></i> THANHPHU</a>
+            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i>Đăng Xuất</a>
+        </div>
+
+        <div class="header_luot">
+            <!-- Header -->
+            <div class="header">
+                <div class="logo">
+                    <div class="hinhsgu">
+                        <img src="assets/img/snapedit_1728994377947.png" alt="">
+                    </div>
+                    <div class="logo_saigonuni">
+                        <a href="home2.html">SAIGONUNI</a>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search here...">
+                    <a href="search-result.html"><button><i class="fas fa-search"></i></button></a>
+                </div>
+                <div class="icart">
+                    <i class="fas fa-shopping-cart"></i> <a href="shopping_cart.html"
+                        style="text-decoration: none;color:white;">Cart</a>
+                    <span class="cart-count">8</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navigation Bar -->
+
+        <div class="nav-bar">
+            <span><a href="home2.html">HOME</a></span>
+            <div class="dropdown">
+                <a href="spnam.html">NAM</a>
+            </div>
+            <div class="dropdown">
+                <a href="spnu.html">NỮ</a>
+            </div>
+            <div class="dropdown">
+                <a href="sptreem.html">TRẺ EM<span class="badge new">NEW</span></a>
+            </div>
+            <div class="dropdown">
+                <a href="hottrend.html">HOTTREND<span class="badge">HOT</span></a>
+            </div>
+            <a href="blog.html">TINTUC</a>
+        </div>
+    </header>
+    <!-- Nội dung chính -->
+    <div class="main-content">
+        <!-- Nội dung trang wed -->
+        <div class="cart-container">
+            <div class="cart">
+
+                <div><a href="shopping_cart.html" style="text-decoration: none; color: white;">Giỏ
+                        hàng</a></div>
+
+                <div class="address"><a href="oder.html" style="text-decoration: none; color: white;">Đơn hàng</a></div>
+                <div class="address active"><a href="diachi.html" style="text-decoration: none; color: white;">Địa
+                        chỉ</a></div>
+            </div>
+
+            <h2>Thông tin giao hàng</h2>
+            <form id="customer-form">
+                <!-- Thông tin khách hàng -->
+                <div class="form-group">
+                    <label for="customer-name">Họ và tên:</label>
+                    <input type="text" value="Thanh Phú" id="customer-name" name="customer-name"
+                        placeholder="Nhập họ và tên" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-phone">Số điện thoại:</label>
+                    <input type="tel" value="084394553" name="customer-phone" placeholder="Nhập số điện thoại" required>
+                </div>
+                <div class="form-group">
+                    <label for="customer-address">Địa chỉ giao hàng:</label>
+                    <textarea id="customer-address" name="customer-address" rows="2"
+                        placeholder="Nhập địa chỉ giao hàng" required>464/99A An Dương Vương</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="customer-district">Quận/Huyện:</label>
+                    <select id="customer-district" name="customer-district" required>
+                        <option value="quan1">Quận 1</option>
+                        <option value="quan2">Quận 2</option>
+                        <option value="quan3">Quận 3</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="customer-city">Thành phố:</label>
+                    <select id="customer-city" name="customer-city" required>
+
+                        <option value="hanoi">Hà Nội</option>
+                        <option value="danang">Đà Nẵng</option>
+                        <option value="hochiminh">TP. Hồ Chí Minh</option>
+                    </select>
+                </div>
+                <button class="save-button">Save</button>
+
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Thông tin</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                    <li><a href="#">Hỗ trợ khách hàng</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Liên hệ</h4>
+                <p>Email: contact@saigonuni.com</p>
+                <p>Điện thoại: 0123-456-789</p>
+            </div>
+            <div class="footer-section social-media">
+                <h4>Mạng xã hội</h4>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SAIGONUNI. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>

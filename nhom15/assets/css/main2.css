@@ -294,14 +294,14 @@ body {
     padding: 2px 6px;
     border-radius: 5px;
     font-size: 10px;
-    animation: pulse 1s infinite;
+    animation: pulse 0.3s infinite;
 }
 
 
 .nav-bar .badge.new {
     background-color: yellow;
     color: black;
-    animation: bounce 1.2s infinite;
+    animation: bounce 0.5s infinite;
 }
 
 /* Hiệu ứng nhấp nháy */
@@ -690,6 +690,46 @@ body {
     border-radius: 5px;
     border: solid #E8E8E8;
 }
+
+.home-product-item__sale-off {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 40px;
+    height: 36px;
+    background-color: rgba(255, 216, 64, 0.94);
+    text-align: center;
+    border-top-right-radius: 2px;
+}
+
+.home-product-item__sale-off::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    border-width: 0 20px 6px;
+    color: rgba(255, 216, 64, 0.94);
+    border-style: solid;
+    border-color: transparent currentColor transparent currentColor;
+
+}
+
+.home-product-item__sale-off-percent {
+    color: #ee4d2d;
+    font-weight: 800;
+    font-size: 1.2rem;
+    line-height: 1.3rem;
+    position: relative;
+    top: 0;
+}
+
+.home-product-item__sale-off-label {
+    font-weight: 800;
+    line-height: 1.3rem;
+    position: relative;
+    top: -2px;
+}
+
 
 .product-gallery {
     display: flex;

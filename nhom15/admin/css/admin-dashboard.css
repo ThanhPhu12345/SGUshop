@@ -27,10 +27,18 @@ body {
     justify-content: center;
 }
 
-.admin-name {
-    font-size: 16px;
+.logo_saigonuni a {
+    /* font-family: 'Poppins', sans-serif; */
     font-weight: bold;
-    text-align: center;
+    font-size: 28px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 0, 0, 0.6);
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    transition: transform 0.3s ease;
 }
 
 .pageadmin-bar {
@@ -376,4 +384,293 @@ body {
 
 #article-list li:last-child {
     border-bottom: none;
+}
+
+/* Thống kê mặt hàng */
+.statistics,
+.customer-statistics {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-list,
+.customer-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-item,
+.customer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.product-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: white;
+    background-color: #005bb5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007bff;
+}
+
+/* Bảng thống kê */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+table th,
+table td {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+}
+
+table thead {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+/* Định dạng cho cột Tên mặt hàng */
+.product-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Khoảng cách giữa ảnh và tên sản phẩm */
+}
+
+.product-info img {
+    width: 50px;
+    /* Kích thước ảnh */
+    height: 50px;
+    object-fit: cover;
+    /* Giữ tỷ lệ ảnh */
+    border-radius: 5px;
+    /* Tùy chọn: bo tròn góc ảnh */
+    border: 1px solid #ddd;
+    /* Đường viền mỏng cho ảnh */
+}
+
+.product-info .product-name {
+    font-size: 16px;
+    color: #333;
+    /* Màu chữ của tên sản phẩm */
+}
+
+/* Phân trang */
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.pagination a {
+    padding: 10px 15px;
+    margin: 0 5px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease;
+}
+
+.pagination a:hover {
+    background-color: #005bb5;
+    color: white;
+}
+
+/* .order-details {
+    display: none;
+} */
+
+.page:target {
+    display: block;
+}
+
+.customer-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.customer-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 250px;
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.customer-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.customer-name {
+    font-size: 16px;
+    color: #333;
+    font-weight: bold;
+}
+
+.purchase-count,
+.total-spent {
+    font-size: 14px;
+    color: #555;
+}
+
+.summary {
+    margin-top: 20px;
+}
+
+.customer-statistics {
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+}
+
+table th,
+table td {
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+}
+
+table thead {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    font-size: 14px;
+    color: white;
+    background-color: #005bb5;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #007bff;
+}
+
+.order-details {
+    display: none;
+    position: absolute;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 999;
+    width: auto;
+    max-width: 300px;
+    /* Giới hạn chiều rộng */
+}
+
+.summary {
+    margin-top: 20px;
+}
+
+/* Hiệu ứng hover cho hàng chứa sản phẩm */
+table tbody tr:hover {
+    background-color: #f0f8ff;
+    /* Màu nền khi hover */
+    transition: background-color 0.3s ease;
+    /* Hiệu ứng chuyển đổi mượt */
+}
+
+/* Hiệu ứng hover cho thông tin sản phẩm */
+.product-info:hover {
+    color: #007bff;
+    /* Màu chữ khi hover */
+    cursor: pointer;
+    /* Con trỏ chuột thay đổi thành dạng pointer */
+}
+
+.product-info:hover img {
+    border-color: #007bff;
+    /* Đổi màu viền ảnh khi hover */
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    /* Thêm hiệu ứng đổ bóng cho ảnh */
+}
+
+.filter {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+}
+
+.filter label {
+    font-size: 16px;
+    color: #555;
+}
+
+.filter select {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.filter select:hover {
+    border-color: #bbb;
 }

@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clothing admin vip pro</title>
+    <link rel="stylesheet" href="nhom15/admin/css/admin-dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <meta name="google" content="notranslate">
+</head>
+
+<body>
+    <div class="page-admin">
+        <div class="pageadmin-bar">
+            <div class="admin-profile">
+                <div class="logo_saigonuni">
+                    <a href="#">SAIGONUNI</a>
+                </div>
+            </div>
+
+            <a href="admin-dashboard.html" class="pageadmin-bar-dashboard" id="prdmgn">
+                <i class=" fa-solid fa-house"></i> Dashboard
+            </a>
+            <a href="nhom15/admin/adminusermgn.html" class="pageadmin-bar-usermg">
+                <i class="fa-solid fa-user"></i> User Management
+            </a>
+            <a href="nhom15/admin/adminprdmgn.html" class="pageadmin-bar-prdmg">
+                <i class="fa-solid fa-car"></i> Product Management
+            </a>
+            <a href="nhom15/admin/admin-qlgiohang.html" class="pageadmin-bar-ordermg">
+                <i class=" fa-solid fa-cart-shopping"></i> Order Management
+            </a>
+            <a href="nhom15/admin/login.html" class="pageadmin-bar-ordermg">
+                <i class="fa-sharp fa-solid fa-right-from-bracket"></i>
+                LogOut
+            </a>
+        </div>
+        <!-- content -->
+        <div class="main-content">
+            <div class="header">
+                <h1>
+                    Dashboard
+                </h1>
+                <div class="welcome-text">
+                    <span id="welcome-message">Chào mừng đến với SGUNI</span>
+                </div>
+                <div class="icons">
+                    <i class="fas fa-bell"></i>
+                    <div class="user-profile-container">
+                        <i class="fas fa-user-circle" id="user-icon"></i>
+                        <div class="user-profile" id="user-profile">
+                            <p><strong>Admin Name:</strong> Thanh Phú </p>
+                            <p><strong>Email:</strong> admin@example.com</p>
+                            <p><strong>Số điện thoại:</strong> 098342322</p>
+                            <p><strong>Địa chỉ:</strong>Tp.HCM</p>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="cards">
+                <div class="card">
+                    <i class="fas fa-dollar-sign" style="color: #28a745;">
+                    </i>
+                    <div>
+                        <h3>
+                            Revenue
+                        </h3>
+                        <p>
+                            $34,245
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="nhom15/admin/adminusermgn.html"><i class="fas fa-users" style="color: #007bff;"></i></a>
+                    <div>
+                        <h3>
+                            Users
+                        </h3>
+                        <p>
+                            1,245
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <a href="nhom15/adminadmin-qlgiohang.html"><i class="fas fa-shopping-cart"
+                            style="color: #ffc107;"></i></a>
+                    </i>
+                    <div>
+                        <h3>
+                            Orders
+                        </h3>
+                        <p>
+                            765
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <i class="fas fa-comments" style="color: #dc3545;">
+                    </i>
+                    <div>
+                        <h3>
+                            Feedback
+                        </h3>
+                        <p>
+                            89
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="charts">
+                <div class="chart">
+                    <h3>
+                        Sales Overview
+                    </h3>
+                    <img alt="Line chart showing sales overview" height="400"
+                        src="https://storage.googleapis.com/a1aa/image/F8yUJlMGShL6ANvcQ87AqLjcSnCEBml4jEfbeXMqaRhATmxTA.jpg"
+                        width="600" />
+                </div>
+                <div class="chart">
+                    <h3>
+                        User Growth
+                    </h3>
+                    <img alt="Bar chart showing user growth" height="400"
+                        src="https://storage.googleapis.com/a1aa/image/fc60AeykpguOrEvUjbLTG0xcqVeO9FFk4yGbJ1JH8qeEMZGPB.jpg"
+                        width="600" />
+                </div>
+            </div>
+
+
+
+            <section class="statistics">
+                <h2 id="tkmh"> Thống kê mặt hàng</h2>
+                <div class="filter">
+                    <label for="filter-time">Số lượng sản phẩm bán ra trong:</label>
+                    <select id="filter-time" onchange="filterByTime()">
+                        <option value="1">1 ngày</option>
+                        <option value="7">7 ngày</option>
+                        <option value="30">30 ngày</option>
+                    </select>
+                </div>
+                <!-- Trang 1 -->
+                <div class="page" id="page-1">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tên mặt hàng</th>
+                                <th>Số lượng bán ra</th>
+                                <th>Tổng tiền thu được</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <div class="product-info">
+                                        <img src="nhom15/admin/img/chitietsp2.webp" alt="Áo thun nữ basic">
+                                        <div class="product-name">Áo thun nữ basic</div>
+                                    </div>
+                                </td>
+                                <td>100</td>
+                                <td>10,000,000 VNĐ</td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="product-info">
+                                        <img src="nhom15/admin/img/aothun1.webp" alt="Mặt hàng B">
+                                        <div class="product-name">Áo thun cotton</div>
+                                    </div>
+                                </td>
+                                <td>75</td>
+                                <td>7,500,000 VNĐ</td>
+
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="product-info">
+                                        <img src="nhom15/admin/img/chitietsp3.webp" alt="Mặt hàng B">
+                                        <div class="product-name">Áo thun KTos</div>
+                                    </div>
+                                </td>
+                                <td>50</td>
+                                <td>5,000,000 VNĐ</td>
+
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+
+                </div>
+
+
+
+
+                <!-- Phân trang -->
+                <div class="pagination">
+                    <a href="admin-dashboard.html" onclick="goToPage(1)">1</a>
+                    <a href="admin-dashboard.html" onclick="goToPage(2)">2</a>
+                    <a href="admin-dashboard.html" onclick="goToPage(3)">3</a>
+                </div>
+                <div class="summary">
+                    <p><strong>Tổng thu:</strong> 30,000,000 VNĐ</p>
+                    <p><strong>Mặt hàng bán chạy nhất:</strong> Áo thun nữ basic</p>
+                    <p><strong>Mặt hàng bán ít nhất:</strong>Áo thun KTos</p>
+                </div>
+            </section>
+            <section class="customer-statistics">
+                <h2>Thống kê khách hàng</h2>
+                <div class="filter">
+                    <label for="filter-time">Khách hàng đóng góp nhiều nhất trong:</label>
+                    <select id="filter-time" onchange="filterByTime()">
+                        <option value="30">30 ngày</option>
+                        <option value="1">1 ngày</option>
+                        <option value="7">7 ngày</option>
+                    </select>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tên khách hàng</th>
+                            <th>Số lượng đơn hàng</th>
+                            <th>Tổng chi tiêu</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ngọc Linh</td>
+                            <td>50</td>
+                            <td>50,000,000 VNĐ</td>
+                            <td><button onclick="toggleOrderDetails('orders-A', this)">Xem các đơn hàng</button></td>
+                        </tr>
+                        <tr>
+                            <td>Thiên Lý</td>
+                            <td>30</td>
+                            <td>90,000,000 VNĐ</td>
+                            <td><button onclick="toggleOrderDetails('orders-B', this)">Xem các đơn hàng</button></td>
+                        </tr>
+                        <tr>
+                            <td>Phương Tuấn</td>
+                            <td>03</td>
+                            <td>5,000,000 VNĐ</td>
+                            <td><button onclick="toggleOrderDetails('orders-B', this)">Xem các đơn hàng</button></td>
+                        </tr>
+                        <tr>
+                            <td>Jack 97</td>
+                            <td>03</td>
+                            <td>5,000,000 VNĐ</td>
+                            <td><button onclick="toggleOrderDetails('orders-B', this)">Xem các đơn hàng</button></td>
+                        </tr>
+                        <tr>
+                            <td>Khiết Đan</td>
+                            <td>03</td>
+                            <td>5,000,000 VNĐ</td>
+                            <td><button onclick="toggleOrderDetails('orders-B', this)">Xem các đơn hàng</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Bảng chi tiết đơn hàng -->
+                <div id="orders-A" class="order-details">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mã đơn hàng</th>
+                                <th>Ngày mua</th>
+                                <th>Số lượng sản phẩm</th>
+                                <th>Tổng tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="nhom15/admin/admin-detailbill.html"
+                                        style="color: #007bff; text-decoration: none;">#001</a>
+                                </td>
+                                <td>2024-11-10</td>
+                                <td>10</td>
+                                <td>1,000,000 VNĐ</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="nhom15/admin/admin-detailbill.html"
+                                        style="color: #007bff; text-decoration: none;">#002</a>
+                                </td>
+                                <td>2024-11-12</td>
+                                <td>15</td>
+                                <td>1,500,000 VNĐ</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="nhom15/admin/admin-detailbill.html"
+                                        style="color: #007bff; text-decoration: none;">#003</a>
+                                </td>
+                                <td>2024-11-12</td>
+                                <td>15</td>
+                                <td>1,500,000 VNĐ</td>
+                            </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+                <div id="orders-B" class="order-details">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mã đơn hàng</th>
+                                <th>Ngày mua</th>
+                                <th>Số lượng sản phẩm</th>
+                                <th>Tổng tiền</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <a href="nhom15/admin/admin-detailbill.html"
+                                        style="color: #007bff; text-decoration: none;">#001</a>
+                                </td>
+                                <td>2024-11-10</td>
+                                <td>10</td>
+                                <td>1,000,000 VNĐ</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="nhom15/admin/admin-detailbill.html"
+                                        style="color: #007bff; text-decoration: none;">#002</a>
+                                </td>
+                                <td>2024-11-12</td>
+                                <td>15</td>
+                                <td>1,500,000 VNĐ</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <a href="nhom15/admin/admin-detailbill.html"
+                                        style="color: #007bff; text-decoration: none;">#003</a>
+                                </td>
+                                <td>2024-11-12</td>
+                                <td>15</td>
+                                <td>1,500,000 VNĐ</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="pagination">
+                    <a href="admin-dashboard.html" onclick="goToPage(1)">1</a>
+                    <a href="admin-dashboard.html" onclick="goToPage(2)">2</a>
+                    <a href="#" onclick="goToPage(3)">3</a>
+                </div>
+
+                <div class="summary">
+                    <p><strong>Khách hàng mua nhiều đơn nhất:</strong> Ngọc Linh
+                        <strong> ( đơn: 50)</strong>
+                    </p>
+                    <p><strong>Khách hàng đóng góp doanh thu nhiều nhất:</strong> Thiên lý
+                        <strong> (Doanh thu: 90,000,000 VNĐ)</strong>
+                    </p>
+                </div>
+
+            </section>
+
+
+            <!-- <section class="customer-statistics">
+                <h2>Thống kê khách hàng</h2>
+                <div class="customer-list">
+                
+                    <div class="customer-item">
+                        <h3>Khách hàng A</h3>
+                        <p><strong>Tổng tiền đã chi:</strong> 5,000,000 VNĐ</p>
+                        <p><strong>Số hóa đơn:</strong> 3</p>
+                        <button onclick="viewCustomerInvoices('KH_A')">Xem hóa đơn</button>
+                    </div>
+                
+                    <div class="customer-item">
+                        <h3>Khách hàng B</h3>
+                        <p><strong>Tổng tiền đã chi:</strong> 3,000,000 VNĐ</p>
+                        <p><strong>Số hóa đơn:</strong> 2</p>
+                        <button onclick="viewCustomerInvoices('KH_B')">Xem hóa đơn</button>
+                    </div>
+                </div>
+            </section> -->
+
+            <!-- <div class="recent-activity">
+                <h3>Recent Activity</h3>
+                <ul>
+                    <li>
+                        <i class="fa-solid fa-user-circle" style="color: #007bff;"></i>
+                        <p><strong>John Doe</strong> signed up. <span>2 hours ago</span></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-dollar-sign" style="color: #28a745;"></i>
+                        <p><strong>Jane Smith</strong> made a purchase. <span>3 hours ago</span></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-cart-shopping" style="color: #ffc107;"></i>
+                        <p><strong>Michael Brown</strong> placed an order. <span>5 hours ago</span></p>
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-comment-dots" style="color: #dc3545;"></i>
+                        <p><strong>Emily Davis</strong> left a feedback. <span>6 hours ago</span></p>
+                    </li>
+                </ul>
+            </div> -->
+            <div class="post-section">
+                <h3>Đăng bài viết thông báo</h3>
+                <form id="post-form">
+                    <label for="post-title">Tiêu đề:</label>
+                    <input type="text" id="post-title" placeholder="Nhập tiêu đề bài viết" required>
+
+                    <label for="post-content">Nội dung:</label>
+                    <textarea id="post-content" placeholder="Nhập nội dung bài viết" rows="5" required></textarea>
+
+                    <button type="submit">Đăng bài</button>
+                </form>
+                <div class="posted-articles">
+                    <h4>Bài viết đã đăng</h4>
+                    <ul id="article-list">
+                        <!-- Danh sách bài viết sẽ được thêm tự động -->
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <script>
+            // document.addEventListener("DOMContentLoaded", function () {
+            //     var welcomeMessage = document.getElementById("welcome-message");
+
+            //     // Lặp lại văn bản trong vài giây rồi dừng
+            //     setTimeout(function () {
+            //         welcomeMessage.style.animationPlayState = "paused"; // Dừng animation
+            //     }, 10000); // 10s là thời gian bạn muốn chạy hết đoạn văn bản
+            // });
+
+            document.addEventListener("DOMContentLoaded", function () {
+                const userIcon = document.getElementById("user-icon");
+                const userProfile = document.getElementById("user-profile");
+
+                userIcon.addEventListener("click", function () {
+                    // Toggle hiển thị
+                    if (userProfile.style.display === "block") {
+                        userProfile.style.display = "none";
+                    } else {
+                        userProfile.style.display = "block";
+                    }
+                });
+
+                // Ẩn profile khi click ra ngoài
+                document.addEventListener("click", function (e) {
+                    if (!userIcon.contains(e.target) && !userProfile.contains(e.target)) {
+                        userProfile.style.display = "none";
+                    }
+                });
+            });
+            function toggleOrderDetails(orderId, button) {
+                // Lấy đối tượng bảng chi tiết
+                const orderDetails = document.getElementById(orderId);
+
+                // Kiểm tra nếu bảng chi tiết hiện tại đang được hiển thị
+                const isVisible = orderDetails.style.display === 'block';
+
+                // Ẩn tất cả các bảng chi tiết trước
+                const allOrders = document.querySelectorAll('.order-details');
+                allOrders.forEach(order => {
+                    order.style.display = 'none';
+                });
+
+                // Nếu bảng chi tiết không hiển thị, ta sẽ hiện nó lên
+                if (!isVisible) {
+                    orderDetails.style.display = 'block';
+
+                    // Lấy vị trí của nút để đặt bảng chi tiết bên trái và dịch xuống
+                    const rect = button.getBoundingClientRect();
+
+                    // Đặt vị trí cho bảng chi tiết
+                    orderDetails.style.top = rect.bottom + window.scrollY + 'px'; // Xuất hiện ngay dưới nút
+                    orderDetails.style.left = (rect.left - orderDetails.offsetWidth - 10) + 'px'; // Dịch sang trái
+
+                    // Giới hạn kích thước để không tràn khỏi bảng
+                    const maxHeight = window.innerHeight - rect.bottom - 10; // Đảm bảo không tràn khỏi màn hình
+                    const maxWidth = rect.left - 20; // Đảm bảo bảng không tràn khỏi bảng chính
+                    orderDetails.style.maxHeight = maxHeight + 'px';
+                    orderDetails.style.maxWidth = maxWidth + 'px';
+                    orderDetails.style.overflowY = 'auto'; // Thêm thanh cuộn nếu cần
+                }
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>

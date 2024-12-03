@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop Hope</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/trangsp.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header><!-- Top bar: Thông báo, hỗ trợ, liên hệ -->
+        <div class="top-bar">
+            <a href="#"><i class="fas fa-bell"></i> Thông báo</a>
+            <a href="#"><i class="fas fa-headset"></i> Hỗ trợ</a>
+            <a href="#"><i class="fas fa-phone"></i> Liên hệ</a>
+            <a href="#"><i class="fa-solid fa-user"></i> THANHPHU</a>
+            <a href="login.html"><i class="fa-solid fa-right-from-bracket"></i>Đăng Xuất</a>
+        </div>
+        <div class="header_luot">
+            <!-- Header -->
+            <div class="header">
+                <div class="logo">
+                    <div class="hinhsgu">
+                        <img src="assets/img/snapedit_1728994377947.png" alt="">
+                    </div>
+                    <div class="logo_saigonuni">
+                        <a href="home2.html">SAIGONUNI</a>
+                    </div>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search here...">
+                    <a href="search-result.html"><button><i class="fas fa-search"></i></button></a>
+                </div>
+                <div class="icart">
+                    <i class="fas fa-shopping-cart"></i> <a href="shopping_cart.html"
+                        style="text-decoration: none;color:white;">Cart</a>
+                    <span class="cart-count">8</span>
+                </div>
+            </div>
+        </div>
+        <div class="nav-bar">
+            <span class="Home"><a href="home2.html">HOME</a></span>
+            <div class="dropdown">
+                <a href="spnam.html">NAM</a>
+            </div>
+            <div class="dropdown">
+                <a href="spnu.html">NỮ</a>
+            </div>
+            <div class="dropdown">
+                <a href="sptreem.html" class="active">TRẺ EM<span class="badge new">NEW</span></a>
+            </div>
+            <div class="dropdown">
+                <a href="hottrend.html">HOTTREND<span class="badge">HOT</span></a>
+            </div>
+            <a href="blog.html">TINTUC</a>
+        </div>
+
+    </header>
+    <div class="main-content"> <!-- Bao trọn sidebar và nội dung chính -->
+
+        <div class="grid__row app_content">
+            <div class="grid__column-2">
+                <!-- nội dung task3 -->
+                <aside class="sidebar">
+                    <div class="sidebar__search">
+                        <h3>Tìm kiếm nâng cao</h3>
+                        <form action="#" method="GET">
+                            <!-- Tìm kiếm theo tên sản phẩm -->
+                            <div class="sidebar__input-group">
+                                <label for="product-name">Tên sản phẩm</label>
+                                <input type="text" id="product-name" name="product-name"
+                                    placeholder="Nhập tên sản phẩm">
+                            </div>
+
+                            <!-- Chọn phân loại -->
+                            <div class="sidebar__input-group">
+                                <label for="category">Phân loại sản phẩm</label>
+                                <select id="category" name="category">
+                                    <option value="">Chọn phân loại</option>
+                                    <option value="clothing">Nam</option>
+                                    <option value="electronics">Nữ</option>
+                                    <option value="home">Trẻ em</option>
+                                    <option value="books">Phụ kiện đặc biệt</option>
+                                    <option value="accessories">Sản phẩm mới nhất</option>
+                                </select>
+                            </div>
+
+                            <!-- Khoảng giá -->
+                            <div class="sidebar__input-group">
+                                <label for="price-range">Khoảng giá</label>
+                                <div class="price-range">
+                                    <input type="number" id="price-range-min" name="price-range-min" placeholder="Từ"
+                                        min="0">
+                                    <span>-</span>
+                                    <input type="number" id="price-range-max" name="price-range-max" placeholder="Đến"
+                                        min="0">
+                                </div>
+                            </div>
+
+                            <!-- Nút tìm kiếm và đặt lại -->
+                            <div class="sidebar__button-group">
+                                <a href="search-result.html"><button type="button">Tìm kiếm</button></a>
+                                <button type="reset">Đặt lại</button>
+                            </div>
+                        </form>
+                    </div>
+                </aside>
+
+            </div>
+            <div class="grid__column-10">
+                <div class="sanphammoi">
+                    <h1 class="sanphamhot"><span><a href="hottrend.html">Thời Trang Cho Bé</a></span></h1>
+                </div>
+
+                <div class="home-product">
+                    <div class="grid__row">
+                        <div class="grid__column-2-4">
+                            <!-- Product item -->
+                            <div class="home-product-item">
+                                <div class="home-product-item__img"
+                                    style="background-image:url(https://product.hstatic.net/200000465365/product/set-jean-loang-xanh-7_788d76bd2e8e4333a679cf598409ff83_grande.jpg);">
+                                </div>
+                                <h4 class="home-product-item__name">Set jean loang AW21/22 cực ngầu cho bé trai</h4>
+                                <div class="product-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="home-product-item__price">
+                                    <span class="home-product-item__price-old">320,000₫</span>
+                                    <span class="home-product-item__price-current">220,000₫</span>
+                                </div>
+                                <div class="product-btn">
+                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                </div>
+                                <div class="home-product-item__sale-off">
+                                    <span class="home-product-item__sale-off-percent">20%</span>
+                                    <span class="home-product-item__sale-off-label">GIẢM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <!-- Product item -->
+                            <div class="home-product-item">
+                                <div class="home-product-item__img"
+                                    style="background-image:url(https://product.hstatic.net/200000465365/product/set-jeans-hoa-van-trang_af674c0a5d184799961a78741042ef02_grande.jpg);">
+                                </div>
+                                <h4 class="home-product-item__name">Set áo in hoa văn quần jeans wash phối dây gút dễ
+                                    thương cho bé trai đi chơi Lễ Tết BXG1251</h4>
+                                <div class="product-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="home-product-item__price">
+                                    <span class="home-product-item__price-old">620,000₫</span>
+                                    <span class="home-product-item__price-current">220,000₫</span>
+                                </div>
+                                <div class="product-btn">
+                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                </div>
+                                <div class="home-product-item__sale-off">
+                                    <span class="home-product-item__sale-off-percent">20%</span>
+                                    <span class="home-product-item__sale-off-label">GIẢM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <!-- Product item -->
+                            <div class="home-product-item">
+                                <div class="home-product-item__img"
+                                    style="background-image:url(https://product.hstatic.net/200000465365/product/dai-tay-labubu-kem-8_35a025cac2134300aba8983af54900dd_grande.jpg);">
+                                </div>
+                                <h4 class="home-product-item__name">Set dài tay in charm hoạ tiết Labubu nổi nhẹ dễ
+                                    thương cho bé trai BTB28624</h4>
+                                <div class="product-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="home-product-item__price">
+                                    <span class="home-product-item__price-old">670,000₫</span>
+                                    <span class="home-product-item__price-current">520,000₫</span>
+                                </div>
+                                <div class="product-btn">
+                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                </div>
+                                <div class="home-product-item__sale-off">
+                                    <span class="home-product-item__sale-off-percent">20%</span>
+                                    <span class="home-product-item__sale-off-label">GIẢM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <!-- Product item -->
+                            <div class="home-product-item">
+                                <div class="home-product-item__img"
+                                    style="background-image:url(https://product.hstatic.net/200000465365/product/jean-labubu-den-6_3c1bb55699f54bd09e04163c406c81bf_grande.jpg);">
+                                </div>
+                                <h4 class="home-product-item__name">Set jean túi hộp in Labubu Cute dễ thương cho bé
+                                    trai BTB28581</h4>
+                                <div class="product-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="home-product-item__price">
+                                    <span class="home-product-item__price-old">310,000₫</span>
+                                    <span class="home-product-item__price-current">230,000₫</span>
+                                </div>
+                                <div class="product-btn">
+                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                </div>
+                                <div class="home-product-item__sale-off">
+                                    <span class="home-product-item__sale-off-percent">20%</span>
+                                    <span class="home-product-item__sale-off-label">GIẢM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <!-- Product item -->
+                            <div class="home-product-item">
+                                <div class="home-product-item__img"
+                                    style="background-image:url(https://product.hstatic.net/200000465365/product/l00-trang-1_4f418479399e41279e03800a277f96c3_grande.jpg);">
+                                </div>
+                                <h4 class="home-product-item__name">Set áo thun hoạ tiết L V 00 phối quần jogger dễ
+                                    thương cho bé trai BTB28536</h4>
+                                <div class="product-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="home-product-item__price">
+                                    <span class="home-product-item__price-old">430,000₫</span>
+                                    <span class="home-product-item__price-current">365,000₫</span>
+                                </div>
+                                <div class="product-btn">
+                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                </div>
+                                <div class="home-product-item__sale-off">
+                                    <span class="home-product-item__sale-off-percent">20%</span>
+                                    <span class="home-product-item__sale-off-label">GIẢM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <!-- Product item -->
+                            <div class="home-product-item">
+                                <div class="home-product-item__img"
+                                    style="background-image:url(https://product.hstatic.net/200000465365/product/set-chan-vay-1_c8bc1e7a1a0a4f1f9c2a3a64f4036ff4_grande.jpg);">
+                                </div>
+                                <h4 class="home-product-item__name">Set áo thun in nơ phối chân váy viên ren dễ thương
+                                    cho bé gái BGB124055</h4>
+                                <div class="product-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="home-product-item__price">
+                                    <span class="home-product-item__price-current">495,000₫</span>
+                                </div>
+                                <div class="product-btn">
+                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                </div>
+                                <div class="home-product-item__sale-off">
+                                    <span class="home-product-item__sale-off-percent">20%</span>
+                                    <span class="home-product-item__sale-off-label">GIẢM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <!-- Product item -->
+                            <div class="home-product-item">
+                                <div class="home-product-item__img"
+                                    style="background-image:url(https://product.hstatic.net/200000465365/product/bo-legging-gan-cun-7_88b6ba41b51e4a9984b18b45cd5da6ad_grande.jpg);">
+                                </div>
+                                <h4 class="home-product-item__name">Bộ thun Áo gắn Đầu Cún Nổi quần legging dễ thương
+                                    cho bé gái đi chơi, đi học BXG1240</h4>
+                                <div class="product-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="home-product-item__price">
+                                    <span class="home-product-item__price-current">390,000₫</span>
+                                </div>
+                                <div class="product-btn">
+                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                </div>
+                                <div class="home-product-item__sale-off">
+                                    <span class="home-product-item__sale-off-percent">20%</span>
+                                    <span class="home-product-item__sale-off-label">GIẢM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <!-- Product item -->
+                            <div class="home-product-item">
+                                <div class="home-product-item__img"
+                                    style="background-image:url(https://product.hstatic.net/200000465365/product/bo-sort-kaki-labubu-5_82f386f04d1f40fc9b6e5967ada57322_master.jpg);">
+                                </div>
+                                <h4 class="home-product-item__name">Set áo thun Labubu quần sort KAKI dễ thương cho bé
+                                    gái đi học, đi chơi BXG1179</h4>
+                                <div class="product-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="home-product-item__price">
+                                    <span class="home-product-item__price-current">440,000₫</span>
+                                </div>
+                                <div class="product-btn">
+                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                </div>
+                                <div class="home-product-item__sale-off">
+                                    <span class="home-product-item__sale-off-percent">20%</span>
+                                    <span class="home-product-item__sale-off-label">GIẢM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <!-- Product item -->
+                            <div class="home-product-item">
+                                <div class="home-product-item__img"
+                                    style="background-image:url(https://product.hstatic.net/200000465365/product/bo-babytime-trang-bia_612d7aee7edb4c67b983bd252113dabd_grande.jpg);">
+                                </div>
+                                <h4 class="home-product-item__name">Bộ thun Cotton in Cừu BABY THREE dễ thương cho bé
+                                    gái BXG1170</h4>
+                                <div class="product-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="home-product-item__price">
+                                    <span class="home-product-item__price-old">150,000₫</span>
+                                    <span class="home-product-item__price-current">290,000₫</span>
+                                </div>
+                                <div class="product-btn">
+                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                </div>
+                                <div class="home-product-item__sale-off">
+                                    <span class="home-product-item__sale-off-percent">20%</span>
+                                    <span class="home-product-item__sale-off-label">GIẢM</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="grid__column-2-4">
+                            <!-- Product item -->
+                            <div class="home-product-item">
+                                <div class="home-product-item__img"
+                                    style="background-image:url(https://product.hstatic.net/200000465365/product/dam-cappy-tim-1_f59905e078574027b486b2bd8d130690_grande.jpg);">
+                                </div>
+                                <h4 class="home-product-item__name">Đầm suông phối bèo Capy bara dễ thương cho bé gái
+                                    BGB124016</h4>
+                                <div class="product-star">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-regular fa-star"></i>
+                                </div>
+                                <div class="home-product-item__price">
+                                    <span class="home-product-item__price-current">580,000₫</span>
+                                </div>
+                                <div class="product-btn">
+                                    <a href="shopping_cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
+                                    <a href="detailproduct.html"><i class="fa-solid fa-eye"></i></a>
+                                </div>
+                                <div class="home-product-item__sale-off">
+                                    <span class="home-product-item__sale-off-percent">20%</span>
+                                    <span class="home-product-item__sale-off-label">GIẢM</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="pagination home-product__pagination">
+                        <li class="pagination-item">
+                            <a href="trangsp_3.html" class="pagination-item__link">
+                                <i class="pagination-item__icon fas fa-angle-left"></i>
+                            </a>
+                        </li>
+                        <li class="pagination-item pagination-item-active">
+                            <a href="trangsp_3.html" class="pagination-item__link">1</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="trangsp_3.html" class="pagination-item__link">2</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="trangsp_3.html" class="pagination-item__link">3</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="trangsp_3.html" class="pagination-item__link">...</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="trangsp_3.html" class="pagination-item__link">10</a>
+                        </li>
+                        <li class="pagination-item">
+                            <a href="#" class="pagination-item__link">
+                                <i class="pagination-item__icon fas fa-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Thông tin</h4>
+                <ul>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Chính sách bảo mật</a></li>
+                    <li><a href="#">Điều khoản dịch vụ</a></li>
+                    <li><a href="#">Hỗ trợ khách hàng</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Liên hệ</h4>
+                <p>Email: contact@saigonuni.com</p>
+                <p>Điện thoại: 0123-456-789</p>
+            </div>
+            <div class="footer-section social-media">
+                <h4>Mạng xã hội</h4>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 SAIGONUNI. Tất cả quyền được bảo lưu.</p>
+        </div>
+    </footer>
+    <script src="assets/js/sidebar.js"></script>
+</body>
+
+</html>

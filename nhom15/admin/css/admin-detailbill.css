@@ -33,6 +33,20 @@
      text-align: center;
  }
 
+ .logo_saigonuni a {
+     /* font-family: 'Poppins', sans-serif; */
+     font-weight: bold;
+     font-size: 28px;
+     letter-spacing: 2px;
+     color: #ffffff;
+     text-transform: uppercase;
+     text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(0, 0, 0, 0.6);
+     display: inline-block;
+     position: relative;
+     text-decoration: none;
+     transition: transform 0.3s ease;
+ }
+
  .pageadmin-bar {
      height: auto;
      width: 20%;
