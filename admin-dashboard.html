@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clothing admin vip pro</title>
+    <title>Admin SGU Shop</title>
     <link rel="stylesheet" href="nhom15/admin/css/admin-dashboard.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <meta name="google" content="notranslate">
@@ -480,13 +480,11 @@
                     // Đặt vị trí cho bảng chi tiết
                     orderDetails.style.top = rect.bottom + window.scrollY + 'px'; // Xuất hiện ngay dưới nút
                     orderDetails.style.left = (rect.left - orderDetails.offsetWidth - 10) + 'px'; // Dịch sang trái
-
-                    // Giới hạn kích thước để không tràn khỏi bảng
-                    const maxHeight = window.innerHeight - rect.bottom - 10; // Đảm bảo không tràn khỏi màn hình
-                    const maxWidth = rect.left - 20; // Đảm bảo bảng không tràn khỏi bảng chính
+                    const maxHeight = window.innerHeight - rect.bottom - 10;
+                    const maxWidth = rect.left - 20;
                     orderDetails.style.maxHeight = maxHeight + 'px';
                     orderDetails.style.maxWidth = maxWidth + 'px';
-                    orderDetails.style.overflowY = 'auto'; // Thêm thanh cuộn nếu cần
+                    orderDetails.style.overflowY = 'auto';
                 }
             }
 

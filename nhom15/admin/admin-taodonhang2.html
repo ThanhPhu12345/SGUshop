@@ -377,18 +377,10 @@
     </div>
     <script>
         function validateForm(event) {
-            event.preventDefault();
-            const emailInput = document.getElementById("email").value;
-            const phoneInput = document.getElementById("phone").value;
-            const errorMessage = document.querySelector(".note");
-            if (!emailInput || !phoneInput) {
-                errorMessage.textContent = "Vui lòng điền đầy đủ email và số điện thoại.";
-            } else {
-                errorMessage.textContent = "";
-                window.location.href = "admin-taodonhang3.html";
+            window.location.href = "admin-taodonhang3.html";
 
-            }
         }
+
     </script>
 </body>
 
