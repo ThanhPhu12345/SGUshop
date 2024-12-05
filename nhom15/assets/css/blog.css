@@ -1,4 +1,392 @@
 /* Tổng quan blog */
+
+/* Reset mặc định */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Thanh top-bar chứa thông báo, liên hệ */
+.top-bar {
+    background-color: #0078d7;
+    color: white;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.top-bar a {
+    text-decoration: none;
+    color: white;
+    padding: 8px 8px;
+    /* Padding cho các liên kết */
+    border-radius: 4px;
+    /* Bo tròn góc cho các liên kết */
+    transition: background-color 0.3s ease;
+}
+
+.top-bar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Nền sáng hơn khi hover */
+}
+
+.top-bar i {
+    margin-right: 5px;
+    /* Khoảng cách giữa icon và văn bản */
+    font-size: 16px;
+    /* Kích thước của icon */
+}
+
+/* Định dạng biểu tượng người dùng */
+.top-bar a:last-child i {
+    font-size: 18px;
+    /* Kích thước lớn hơn cho biểu tượng người dùng */
+    color: white;
+    /* Màu sắc biểu tượng người dùng */
+}
+
+
+/* Header chính chứa logo, tìm kiếm, và giỏ hàng */
+.header {
+    background-color: #0078d7;
+    padding: 0px 20px 0px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    /* Thêm để căn chỉnh với nav-bar */
+}
+
+.header .logo {
+    display: flex;
+    position: relative;
+}
+
+.header .hinhsgu {
+    align-items: center;
+    /* Căn giữa theo chiều dọc */
+    margin-left: 5px;
+    /* Khoảng cách bên trái giữa logo và hình ảnh */
+}
+
+.header .hinhsgu img {
+    max-height: 90px;
+    /* Thay đổi chiều cao tối đa của hình ảnh */
+    max-width: 100%;
+    /* Đảm bảo hình ảnh không vượt quá chiều rộng */
+
+}
+
+.logo_saigonuni a {
+    /* font-family: 'Poppins', sans-serif; */
+    font-weight: bold;
+    font-size: 38px;
+    letter-spacing: 2px;
+    color: #ffffff;
+    /* Màu trắng */
+    text-transform: uppercase;
+    text-shadow:
+        0 0 10px rgba(255, 255, 255, 0.8),
+        /* Bóng trắng */
+        0 0 20px rgba(0, 0, 0, 0.6);
+    /* Bóng đen */
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    top: 24px;
+    /* Để cho hiệu ứng lửa được chính xác */
+    transition: transform 0.3s ease;
+    /* Hiệu ứng chuyển tiếp */
+}
+
+
+.header .search-bar {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    /* Chiều dài 500px */
+    margin-right: 30px;
+}
+
+.header .search-bar input {
+    position: relative;
+    left: -20px;
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.header .search-bar button {
+    background-color: yellow;
+    border: none;
+    padding: 10px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    position: relative;
+    left: -20px;
+}
+
+.cart {
+    display: flex;
+    align-items: center;
+    background-color: #005bb5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+.cart i {
+    margin-right: 10px;
+}
+
+.icart {
+    display: flex;
+    align-items: center;
+    background-color: #005bb5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    left: -100px;
+}
+
+
+
+.cart i {
+    margin-right: 10px;
+}
+
+.cart-count {
+    background-color: #ff6347;
+    padding: 5px 10px;
+    border-radius: 50%;
+    font-size: 14px;
+    color: white;
+    margin-left: 5px;
+}
+
+/* Thanh điều hướng */
+.nav-bar {
+    background-color: #005bb5;
+    /* Màu xanh đậm */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.nav-bar a {
+    color: white;
+    /* Chữ trắng để nổi bật trên nền xanh */
+    text-decoration: none;
+    padding: 10px 15px;
+    position: relative;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+}
+
+.nav-bar a:hover {
+    background-color: #ffffff;
+    /* Nền trắng khi hover */
+    color: #005bb5;
+    /* Chữ xanh đậm khi hover */
+    border-radius: 5px;
+}
+
+/* Mục đang hoạt động (active) */
+.nav-bar a.active {
+    color: white;
+    /* Chữ trắng */
+    font-weight: bold;
+    /* Chữ đậm */
+    background-color: #003f7f;
+    /* Xanh đậm hơn để phân biệt */
+    border-radius: 5px;
+    padding: 10px 20px;
+    /* Tăng kích thước cho mục active */
+}
+
+/* Dropdown container */
+.dropdown {
+    position: relative;
+}
+
+/* Dropdown content */
+.dropdown-content {
+    display: none;
+    /* Ẩn các menu con */
+    position: absolute;
+    background-color: white;
+    min-width: 300px;
+    /* Chiều rộng tối thiểu cho dropdown */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    padding: 20px;
+    /* Thêm padding cho dropdown */
+    top: 29px;
+    border-radius: 4px;
+}
+
+/* Hiện menu con khi hover vào danh mục */
+.dropdown:hover .dropdown-content {
+    display: flex;
+    /* Sử dụng flexbox để hiển thị menu con */
+    gap: 20px;
+    /* Khoảng cách giữa các cột */
+}
+
+/* Định dạng cột trong dropdown */
+.dropdown-column {
+    flex: 1;
+    /* Chiếm toàn bộ chiều cao */
+}
+
+.dropdown-content a {
+    color: #333;
+    /* Màu chữ tối cho các liên kết */
+    text-decoration: none;
+    /* Không gạch chân */
+    padding: 5px 10px 5px 10px;
+    /* Thêm padding cho các mục trong dropdown */
+    display: block;
+    /* Đảm bảo các mục chiếm toàn bộ chiều rộng */
+    transition: background-color 0.3s, color 0.3s;
+    /* Hiệu ứng chuyển tiếp */
+}
+
+/* Hiệu ứng hover cho các liên kết trong dropdown */
+.dropdown-content a:hover {
+    background-color: #f0f0f0;
+    /* Nền sáng khi hover */
+    color: #005bb5;
+    /* Màu chữ khi hover */
+}
+
+.dropdown-column strong {
+    display: block;
+    margin-bottom: 5px;
+    /* Khoảng cách giữa tiêu đề và các mục con */
+    font-weight: bold;
+    color: #005bb5;
+    /* Màu chữ cho tiêu đề */
+}
+
+/* Style cho badge */
+.nav-bar .badge {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    padding: 2px 6px;
+    border-radius: 5px;
+    font-size: 10px;
+    animation: pulse 0.3s infinite;
+}
+
+
+.nav-bar .badge.new {
+    background-color: yellow;
+    color: black;
+    animation: bounce 0.5s infinite;
+}
+
+/* Hiệu ứng nhấp nháy */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        /* Kích thước ban đầu */
+        opacity: 1;
+        /* Độ mờ ban đầu */
+    }
+
+    50% {
+        transform: scale(1.2);
+        /* Tăng kích thước lên 1.2 lần */
+        opacity: 0.8;
+        /* Giảm độ mờ */
+    }
+
+    100% {
+        transform: scale(1);
+        /* Quay lại kích thước ban đầu */
+        opacity: 1;
+        /* Độ mờ trở lại ban đầu */
+    }
+}
+
+/* Hiệu ứng bật nhảy */
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+    }
+
+    .search-bar {
+        width: 100%;
+        /* Đảm bảo thanh tìm kiếm chiếm hết chiều rộng trên màn hình nhỏ */
+        margin: 10px 0;
+    }
+
+    .nav-bar {
+        flex-direction: column;
+        gap: 10px;
+        /* Giảm khoảng cách giữa các liên kết */
+    }
+
+    .nav-bar a {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header .logo {
+        font-size: 30px;
+    }
+
+    .top-bar a {
+        font-size: 12px;
+    }
+
+    .cart {
+        font-size: 14px;
+    }
+
+    .nav-bar a {
+        padding: 8px;
+        /* Giảm padding cho các liên kết */
+    }
+}
+
 .blog-post {
     width: 80%;
     margin: 20px auto;
@@ -106,4 +494,80 @@
 
 .comment-form button:hover {
     background: #388e3c;
+}
+
+.footer {
+    background-color: #274d74;
+    color: white;
+    padding: 20px 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    padding: 0 20px;
+}
+
+.footer-section h4 {
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 5px 0;
+}
+
+.footer-section a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: yellow;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Mạng xã hội */
+.footer-section.social-media a {
+    margin: 0 10px;
+    color: white;
+    font-size: 20px;
+    transition: color 0.3s;
+}
+
+.footer-section.social-media a:hover {
+    color: yellow;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
 }
