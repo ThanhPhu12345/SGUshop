@@ -5,6 +5,18 @@
 
 }
 
+.icart {
+    display: flex;
+    align-items: center;
+    background-color: #005bb5;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    position: relative;
+    cursor: pointer;
+    left: -100px;
+}
+
 .container {
     display: flex;
     padding: 20px;
