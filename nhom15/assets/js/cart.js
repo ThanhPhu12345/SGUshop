@@ -12,7 +12,6 @@ function displayItems(page) {
     const totalItems = items.length;
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
-    // Tính toán chỉ số bắt đầu và kết thúc của sản phẩm
     const start = (page - 1) * itemsPerPage;
     const end = start + itemsPerPage;
 
@@ -25,8 +24,8 @@ function displayItems(page) {
     });
 
     // Cập nhật trang hiện tại
-      currentPage = page;
-      updateTotalPrice();
+    currentPage = page;
+    updateTotalPrice();
 
 
     // Vô hiệu hóa các nút khi không cần thiết
