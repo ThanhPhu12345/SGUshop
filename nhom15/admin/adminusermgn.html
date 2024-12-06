@@ -53,23 +53,23 @@
                     <div class="addnewac-box-content-body">
                         <div class="input-group">
                             <label for="id">ID</label>
-                            <input type="text" id="id" required>
+                            <input type="text" id="id" placeholder="Enter ID" required>
                         </div>
                         <div class="input-group">
                             <label for="username">Username</label>
-                            <input type="text" id="username" required>
+                            <input type="text" id="username" placeholder="Enter Username" required>
                         </div>
                         <div class="input-group">
                             <label for="password">Password</label>
-                            <input type="password" id="password" required>
+                            <input type="password" id="password" placeholder="Enter Password" required>
                         </div>
                         <div class="input-group">
                             <label for="phone">Phone Number</label>
-                            <input type="text" id="phone" required>
+                            <input type="text" id="phone" placeholder="Enter Phone Number" required>
                         </div>
                         <div class="input-group">
                             <label for="role">Role</label>
-                            <select id="role">
+                            <select id="role" required>
                                 <option value="">Select Role</option>
                                 <option value="admin">Admin</option>
                                 <option value="user">User</option>
@@ -77,14 +77,18 @@
                         </div>
                         <div class="input-group">
                             <label for="gmail">Email</label>
-                            <input type="email" id="gmail" required>
+                            <input type="email" id="gmail" placeholder="Enter Email" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" placeholder="Enter your address" required>
                         </div>
                         <div class="input-group">
                             <label for="createday">Create Day</label>
                             <input type="date" id="createday" required>
                         </div>
-
                     </div>
+
                     <div class="addnewac-box-footer">
                         <button id="addnewac-btn">Add</button>
                     </div>
@@ -124,6 +128,10 @@
                         <div class="input-group">
                             <label for="gmail">Email</label>
                             <input type="email" id="gmail" value="phuongtuan5tr@gmail.com" required>
+                        </div>
+                        <div class="input-group">
+                            <label for="address">Address</label>
+                            <input type="text" id="address" value="123 Đường Lê Lợi, Quận 1" required>
                         </div>
                         <div class="input-group">
                             <label for="createday">Create Day</label>
@@ -175,13 +183,15 @@
                 <div class="usermgn-box-header">
                     <span>Id</span>
                     <span>Username</span>
-                    <span>password</span>
-                    <span>PhoneNumber</span>
+                    <span>Password</span>
+                    <span>Phone</span>
                     <span>Role</span>
                     <span>Gmail</span>
+                    <span>Address</span>
                     <span>Create Day</span>
-                    <span>Status</span>
+                    <span>Active</span>
                 </div>
+
                 <div class="user-list">
                     <span>01</span>
                     <span>nguyenvana</span>
@@ -189,15 +199,17 @@
                     <span>0901234567</span>
                     <span>user</span>
                     <span>nguyenvana@gmail.com</span>
+                    <span>123 Đường Lê Lợi, Quận 1</span>
                     <span>01/01/2024</span>
-                    <span class="status active"> <button class="delete-btn"
-                            onclick="return confirm('Bạn có chắc chắn muốn khóa tài khoản này?')"><i
-                                class="fa-solid fa-lock-open"></i></button>
-                    </span>
-                    <span class="actions">
+                    <span class="status">
+                        <button class="delete-btn"
+                            onclick="return confirm('Bạn có chắc chắn muốn khóa tài khoản này?')">
+                            <i class="fa-solid fa-lock-open"></i>
+                        </button>
                         <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
                     </span>
                 </div>
+
                 <div class="user-list">
                     <span>02</span>
                     <span>tranthib</span>
@@ -205,122 +217,119 @@
                     <span>0902345678</span>
                     <span>user</span>
                     <span>tranthib@gmail.com</span>
+                    <span>456 Đường Nguyễn Thị Minh Khai, Quận 3</span>
                     <span>02/01/2024</span>
-                    <span class="status inactive">
-                        <button class="delete-btn" id="usl1"
-                            onclick="return confirm('Bạn có chắc chắn muốn mở tài khoản này?')">
-                            <i class="fa-solid fa-lock"></i></button>
-                    </span>
-                    <span class="actions">
-
+                    <span class="status">
+                        <button class="delete-btn" onclick="return confirm('Bạn có chắc chắn muốn mở tài khoản này?')">
+                            <i class="fa-solid fa-lock"></i>
+                        </button>
                         <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
                     </span>
                 </div>
+
                 <div class="user-list">
                     <span>03</span>
                     <span>phamvanc</span>
-                    <span>pham***cde</span>
+                    <span>pham***</span>
                     <span>0903456789</span>
                     <span>admin</span>
                     <span>phamvanc@gmail.com</span>
+                    <span>789 Đường Trần Hưng Đạo, Quận 5</span>
                     <span>03/01/2024</span>
-                    <span class="status active">
+                    <span class="status">
                         <button class="delete-btn"
                             onclick="return confirm('Bạn có chắc chắn muốn khóa tài khoản này?')">
-                            <i class="fa-solid fa-lock-open"></i></button>
-                    </span>
-                    <span class="actions">
-
+                            <i class="fa-solid fa-lock-open"></i>
+                        </button>
                         <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
                     </span>
                 </div>
+
                 <div class="user-list">
                     <span>04</span>
-                    <span>doanquynhd</span>
-                    <span>doan***xyz</span>
+                    <span>doanquynh</span>
+                    <span>doan***123</span>
                     <span>0904567890</span>
                     <span>user</span>
-                    <span>doanquynhd@gmail.com</span>
+                    <span>doanquynh@gmail.com</span>
+                    <span>321 Đường Phan Đình Phùng, Quận 7</span>
                     <span>04/01/2024</span>
-                    <span class="status active">
+                    <span class="status">
                         <button class="delete-btn"
                             onclick="return confirm('Bạn có chắc chắn muốn khóa tài khoản này?')">
-                            <i class="fa-solid fa-lock-open"></i></button>
-                    </span>
-                    <span class="actions">
+                            <i class="fa-solid fa-lock-open"></i>
+                        </button>
                         <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
                     </span>
                 </div>
+
                 <div class="user-list">
                     <span>05</span>
-                    <span>lethuye</span>
-                    <span>leth***lmn</span>
+                    <span>lethuy</span>
+                    <span>lethuy***abc</span>
                     <span>0905678901</span>
-                    <span>user</span>
-                    <span>lethuye@gmail.com</span>
+                    <span>admin</span>
+                    <span>lethuy@gmail.com</span>
+                    <span>654 Đường Lý Thường Kiệt, Quận 10</span>
                     <span>05/01/2024</span>
-                    <span class="status inactive">
-                        <button class="delete-btn" id="usl2"
-                            onclick="return confirm('Bạn có chắc chắn muốn mở khóa tài khoản này?')">
-                            <i class="fa-solid fa-lock"></i></button>
-                    </span>
-                    <span class="actions">
+                    <span class="status">
+                        <button class="delete-btn" onclick="return confirm('Bạn có chắc chắn muốn mở tài khoản này?')">
+                            <i class="fa-solid fa-lock"></i>
+                        </button>
                         <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
                     </span>
                 </div>
+
                 <div class="user-list">
                     <span>06</span>
-                    <span>trananhf</span>
-                    <span>anhf***pqr</span>
+                    <span>trananh</span>
+                    <span>trananh***456</span>
                     <span>0906789012</span>
-                    <span>admin</span>
-                    <span>trananhf@gmail.com</span>
+                    <span>user</span>
+                    <span>trananh@gmail.com</span>
+                    <span>987 Đường Nguyễn Văn Cừ, Quận 11</span>
                     <span>06/01/2024</span>
-                    <span class="status active">
+                    <span class="status">
                         <button class="delete-btn"
                             onclick="return confirm('Bạn có chắc chắn muốn khóa tài khoản này?')">
-                            <i class="fa-solid fa-lock-open"></i></button>
-                    </span>
-                    <span class="actions">
-
+                            <i class="fa-solid fa-lock-open"></i>
+                        </button>
                         <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
                     </span>
                 </div>
+
                 <div class="user-list">
                     <span>07</span>
-                    <span>nguyenhoag</span>
-                    <span>nguye***uvw</span>
+                    <span>lehoang</span>
+                    <span>hoang***789</span>
                     <span>0907890123</span>
-                    <span>user</span>
-                    <span>nguyenhoag@gmail.com</span>
+                    <span>admin</span>
+                    <span>lehoang@gmail.com</span>
+                    <span>123 Đường Võ Văn Tần, Quận 5</span>
                     <span>07/01/2024</span>
-                    <span class="status active">
-                        <button class="delete-btn"
-                            onclick="return confirm('Bạn có chắc chắn muốn khóa tài khoản này?')">
-                            <i class="fa-solid fa-lock-open"></i></button></span>
-                    <span class="actions">
-
+                    <span class="status">
+                        <button class="delete-btn" onclick="return confirm('Bạn có chắc chắn muốn mở tài khoản này?')">
+                            <i class="fa-solid fa-lock"></i>
+                        </button>
                         <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
-
                     </span>
                 </div>
+
                 <div class="user-list">
                     <span>08</span>
-                    <span>hoanghuyh</span>
-                    <span>hoang***rst</span>
+                    <span>hoanghuy</span>
+                    <span>hoanghuy***000</span>
                     <span>0908901234</span>
                     <span>user</span>
-                    <span>hoanghuyh@gmail.com</span>
+                    <span>hoanghuy@gmail.com</span>
+                    <span>456 Đường Nguyễn Huệ, Quận 1</span>
                     <span>08/01/2024</span>
-                    <span class="status inactive">
-                        <button class="delete-btn" id="usl3"
-                            onclick="return confirm('Bạn có chắc chắn mở muốn khóa tài khoản này?')">
-                            <i class="fa-solid fa-lock"></i></button>
-                    </span>
-                    <span class="actions">
-
+                    <span class="status">
+                        <button class="delete-btn"
+                            onclick="return confirm('Bạn có chắc chắn muốn khóa tài khoản này?')">
+                            <i class="fa-solid fa-lock-open"></i>
+                        </button>
                         <button class="edit-btn"><i class="fa-solid fa-pen"></i></button>
-
                     </span>
                 </div>
 
